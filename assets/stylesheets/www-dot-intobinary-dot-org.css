@@ -25,7 +25,11 @@ body, html, main {}
 
 .breakingNews-marquee { background-color: black; }
 
-.breakingNews-marquee-text { color: white; }
+.breakingNews-marquee-text-link { color: #AAA; }
+
+.breakingNews-marquee-text,
+.breakingNews-marquee-text-link:hover,
+.breakingNews-marquee-text-link:active { color: white; }
 /*** END COLORS ***/
 
 /*** FONTS ***/
@@ -40,6 +44,8 @@ body, html, main {}
 
 .header-title,
 .header-subtitle { font-weight: bold; }
+
+.breakingNews-marquee-text-link { text-decoration: underline; }
 /*** END FONTS ***/
 
 /*** MEDIA ***/
