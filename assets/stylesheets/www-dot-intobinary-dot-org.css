@@ -45,6 +45,7 @@ body, html, main {}
 .header-title,
 .header-subtitle { font-weight: bold; }
 
+.header-text-p a,
 .breakingNews-marquee-text-link { text-decoration: underline; }
 /*** END FONTS ***/
 
