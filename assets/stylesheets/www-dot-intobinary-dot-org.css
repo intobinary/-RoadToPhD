@@ -14,20 +14,28 @@
 .pg-hashtag .header-hashtag-hash.nthSize8 { height: 8em; }
 .pg-hashtag .header-hashtag-hash.nthSize9 { height: 9em; }
 /*** CANCEL ***/
+body, html, main { background: none !important; }
+main { padding-top: 2em; }
 /*** END CANCEL ***/
 
 /*** Z-INDEXES ***/
-.news-card-front-img { position: relative; z-index: 10; }
-.news-card-front-data { position: relative; z-index: 20; }
+.d-background { position: relative; z-index: 10; }
+main { position: relative; z-index: 20; }
+
+.news-card-front-img { position: relative; z-index: 30; }
+.news-card-front-data { position: relative; z-index: 40; }
+.breakingNews { position: relative; z-index: 50; }
+
+a { position: relative; z-index: 60; }
 /*** END Z-INDEXES ***/
 
 /*** COLORS ***/ 
 .u-card-back { background-color: #03EA60; }
 .news-card-front { border-color: #03EA60; }
 .d-colorGreen { color: #03EA60; }
-body, html, main {}
 
 .news-card-front-data { background-color: rgba(0, 0, 0, .9); }
+main { background-color: rgba(255, 255, 255, .7) !important;}
 
 .news-card-back-data,
 .breakingNews-marquee { background-color: black; }
@@ -115,6 +123,10 @@ body, html, main {}
 /*** END UTILITIES ***/
 
 /*** COMPONENTS ***/
+.breakingNews {
+    position: fixed; top: 0; left: 0;
+    width: 100%; height: 100%;
+}
 .breakingNews-marquee-text {
     display: inline-block;
     padding: .5em;
@@ -233,6 +245,18 @@ body, html, main {}
 /*** END MEDIA-QUERIES ***/
 
 /*** DECORATION ***/
+    /*** .background ***/
+    .d-background {
+        position: absolute; top: 0; left: 0;
+        width: 100%; height: 100%;
+        overflow: hidden;
+    }
+    .d-background-video {
+        position: relative;
+        min-width: 100vw; min-height: 100%;
+        filter: grayscale(1);
+    }
+
 .d-cssCentered {
     display: flex;
     align-items: center;
