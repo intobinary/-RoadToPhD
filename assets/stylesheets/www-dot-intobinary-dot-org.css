@@ -252,7 +252,7 @@ main { background-color: rgba(255, 255, 255, .7) !important;}
         overflow: hidden;
     }
     .d-background-video {
-        position: relative;
+        position: absolute; top: 0; right: 0;
         min-width: 100vw; min-height: 100%;
         filter: grayscale(1);
     }
