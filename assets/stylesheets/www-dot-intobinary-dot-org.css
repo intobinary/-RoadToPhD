@@ -30,8 +30,11 @@ a { position: relative; z-index: 60; }
 /*** END Z-INDEXES ***/
 
 /*** COLORS ***/ 
+.cases-content-law-highlight-text,
+.cases-header-highlight-text,
 .u-card-back { background-color: #03EA60; }
 .news-card-front { border-color: #03EA60; }
+.cases-header-text-quote-cite,
 .d-colorGreen { color: #03EA60; }
 
 .news-card-front-data { background-color: rgba(0, 0, 0, .9); }
@@ -65,9 +68,18 @@ main { background-color: rgba(255, 255, 255, .7) !important;}
 .message-title,
 .news-card-front-data { text-align: right; }
 
+.cases-content-law-highlight-text-span,
+.cases-header-highlight-text-span,
+.cases-header-text-quote-q,
+.cases-title,
 .message-title,
 .message-subtitle,
 .news-title { font-weight: bold; }
+.cases-header-text-p:nth-child(even),
+.cases-title { text-align: right; }
+.cases-title,
+.cases-content-law-highlight-text-span,
+.cases-header-highlight-text-span,
 .news-title { text-transform: uppercase; }
 
 .message-text-p a,
@@ -132,6 +144,40 @@ main { background-color: rgba(255, 255, 255, .7) !important;}
     padding: .5em;
     margin: 0 3em;
 }
+
+    /*** .cases ***/
+    .cases-content-law { position: relative; }
+    .cases-content-law-details-key {
+        display: inline-block;
+        padding: .25em;
+        background-color: black;
+        color: white;
+    }
+    .cases-content-law-details-p {
+        padding: 1em 0;
+    }
+
+    .cases-content-law-highlight-text,
+    .cases-header-highlight-text {
+        display: inline-block;
+        padding: .5em;
+    }
+    .cases-content-law-highlight-text-span,
+    .cases-header-highlight-text-span {
+        display: inline-block;
+    }
+
+    .cases-content-law-highlight {
+        margin: 1em 0;
+    }
+
+    .cases-header-text-p {
+        position: relative;
+    }
+    .cases-header-text-p,
+    .cases-header-text-quote {
+        padding: .5em;
+    }
 
     /*** .header ***/
     .header-logo-img {
@@ -219,7 +265,10 @@ main { background-color: rgba(255, 255, 255, .7) !important;}
 /*** MEDIA-QUERIES ***/
 @media all and (max-width: 50em) {
     body, html, main { font-size: 16px; }
-    
+
+    .cases-content-law-highlight-text-span,
+    .cases-header-highlight-text-span { font-size: 2em; }
+    .cases-title,
     .message-title,
     .message-subtitle,
     .news-title { font-size: 1.5em; }
@@ -232,10 +281,21 @@ main { background-color: rgba(255, 255, 255, .7) !important;}
 }
 @media all and (min-width: 50em) {
     body, html, main { font-size: 18px; }
-    
+
+    .cases-content-law-highlight-text-span,
+    .cases-header-highlight-text-span { font-size: 3em; }   
+    .cases-title,
     .message-title,
     .message-subtitle,
     .news-title { font-size: 2em; }
+
+    .cases-content-law-details { display: flex; }
+
+    .cases-header-text-p,
+    .cases-header-text-quote { width: 75%; }
+    .cases-header-text-p:nth-child(even) { left: 25%; }
+    .cases-content-law { display: block; width: 90%; left: 10%; }
+    .cases-content-law-details-p { padding: 1em .19em; }
 
     .news-content-list { width: 150%; }
 
