@@ -26,7 +26,10 @@ main { position: relative; z-index: 20; }
 .news-card-front-data { position: relative; z-index: 40; }
 .breakingNews { position: relative; z-index: 50; }
 
-a { position: relative; z-index: 60; }
+.cases-content-law-nav,
+.news-content { position: relative; z-index: 60; }
+
+a { position: relative; z-index: 70; }
 /*** END Z-INDEXES ***/
 
 /*** COLORS ***/ 
@@ -35,7 +38,6 @@ a { position: relative; z-index: 60; }
 .cases-content-law-nav-buttons-span,
 .u-card-back { background-color: #03EA60; }
 .news-card-front { border-color: #03EA60; }
-.cases-header-text-quote-cite,
 .d-colorGreen { color: #03EA60; }
 
 .news-card-front-data { background-color: rgba(0, 0, 0, .9); }
@@ -49,6 +51,9 @@ main { background-color: rgba(255, 255, 255, .7) !important;}
 
 .breakingNews-marquee-text-link { color: #AAA; }
 
+.cases-content-law-nav-buttons-span:hover,
+.cases-content-law-nav-buttons-span:active,
+.cases-content-law-nav-buttons-span:focus,
 .news-card-back-data:hover,
 .news-card-back-data:active,
 .news-card-back-data:focus { background-color: white; }
@@ -280,6 +285,7 @@ main { background-color: rgba(255, 255, 255, .7) !important;}
 /*** END PAGES ***/
 
 /*** INTERACTIVITY ***/
+.u-button,
 .u-card-front,
 .u-card-back-data { cursor: pointer; }
 
@@ -287,6 +293,7 @@ main { background-color: rgba(255, 255, 255, .7) !important;}
 #rdb4case1:checked ~ main .cases-content-list-item:nth-child(1),
 #rdb4case2:checked ~ main .cases-content-list-item:nth-child(2),
 #rdb4case3:checked ~ main .cases-content-list-item:nth-child(3),
+#rdb4case4:checked ~ main .cases-content-list-item:nth-child(4),
 .jekyllPlaceholderClassName { display: block; }
 /*** END INTERACTIVITY ***/
 
@@ -318,6 +325,7 @@ main { background-color: rgba(255, 255, 255, .7) !important;}
     .news-title { font-size: 2em; }
 
     .cases-content-law-details { display: flex; }
+    .cases-content-law-details-dock { flex: 1; }
 
     .cases-header-text-p,
     .cases-header-text-quote { width: 75%; }
@@ -367,8 +375,6 @@ main { background-color: rgba(255, 255, 255, .7) !important;}
 /*** END ANIMATION ***/
 
 /*** CSS HACKS ***/
-.cases-content-law-nav,
-.news-content { position: relative; z-index: 100; }
 /*** END CSS HACKS ***/
 
 /*** TO DELETE ***/
