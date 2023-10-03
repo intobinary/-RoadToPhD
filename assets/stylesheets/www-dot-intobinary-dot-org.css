@@ -32,6 +32,7 @@ a { position: relative; z-index: 60; }
 /*** COLORS ***/ 
 .cases-content-law-highlight-text,
 .cases-header-highlight-text,
+.cases-content-law-nav-buttons-span,
 .u-card-back { background-color: #03EA60; }
 .news-card-front { border-color: #03EA60; }
 .cases-header-text-quote-cite,
@@ -64,6 +65,10 @@ main { background-color: rgba(255, 255, 255, .7) !important;}
 * { font-family: "OCR A Extended"; }
 
 .news-card-back-data { text-align: center; }
+.cases-content-law-highlight-text,
+.cases-content-law-nav,
+.cases-header-text-p:nth-child(even),
+.cases-title,
 .message-text-p,
 .message-title,
 .news-card-front-data { text-align: right; }
@@ -75,8 +80,6 @@ main { background-color: rgba(255, 255, 255, .7) !important;}
 .message-title,
 .message-subtitle,
 .news-title { font-weight: bold; }
-.cases-header-text-p:nth-child(even),
-.cases-title { text-align: right; }
 .cases-title,
 .cases-content-law-highlight-text-span,
 .cases-header-highlight-text-span,
@@ -146,7 +149,10 @@ main { background-color: rgba(255, 255, 255, .7) !important;}
 }
 
     /*** .cases ***/
-    .cases-content-law { position: relative; }
+    .cases-content-law {
+        position: relative; left: 10%;
+        width: 90%;
+    }
     .cases-content-law-details-key {
         display: inline-block;
         padding: .25em;
@@ -159,7 +165,6 @@ main { background-color: rgba(255, 255, 255, .7) !important;}
 
     .cases-content-law-highlight-text,
     .cases-header-highlight-text {
-        display: inline-block;
         padding: .5em;
     }
     .cases-content-law-highlight-text-span,
@@ -170,7 +175,24 @@ main { background-color: rgba(255, 255, 255, .7) !important;}
     .cases-content-law-highlight {
         margin: 1em 0;
     }
+    .cases-content-law-highlight-text {
+        display: block;
+    }
 
+    .cases-content-law-nav-buttons,
+    .cases-content-law-nav-text {
+        display: inline-block;
+        vertical-align: middle;
+    }
+    .cases-content-law-nav-buttons-span {
+        display: block;
+        padding: .25em;
+        margin: .5em 0;
+    }
+
+    .cases-header-highlight-text {
+        display: inline-block;
+    }
     .cases-header-text-p {
         position: relative;
     }
@@ -260,6 +282,12 @@ main { background-color: rgba(255, 255, 255, .7) !important;}
 /*** INTERACTIVITY ***/
 .u-card-front,
 .u-card-back-data { cursor: pointer; }
+
+.cases-content-list-item { display: none; }
+#rdb4case1:checked ~ main .cases-content-list-item:nth-child(1),
+#rdb4case2:checked ~ main .cases-content-list-item:nth-child(2),
+#rdb4case3:checked ~ main .cases-content-list-item:nth-child(3),
+.jekyllPlaceholderClassName { display: block; }
 /*** END INTERACTIVITY ***/
 
 /*** MEDIA-QUERIES ***/
@@ -294,7 +322,7 @@ main { background-color: rgba(255, 255, 255, .7) !important;}
     .cases-header-text-p,
     .cases-header-text-quote { width: 75%; }
     .cases-header-text-p:nth-child(even) { left: 25%; }
-    .cases-content-law { display: block; width: 90%; left: 10%; }
+
     .cases-content-law-details-p { padding: 1em .19em; }
 
     .news-content-list { width: 150%; }
@@ -339,7 +367,8 @@ main { background-color: rgba(255, 255, 255, .7) !important;}
 /*** END ANIMATION ***/
 
 /*** CSS HACKS ***/
-.news-card { position: relative; z-index: 100; }
+.cases-content-law-nav,
+.news-content { position: relative; z-index: 100; }
 /*** END CSS HACKS ***/
 
 /*** TO DELETE ***/
