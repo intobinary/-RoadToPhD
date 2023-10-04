@@ -36,15 +36,19 @@ a { position: relative; z-index: 70; }
 .cases-content-law-highlight-text,
 .cases-header-highlight-text,
 .cases-content-law-nav-buttons-span,
+.whitePaper-header-title,
 .u-card-back { background-color: #03EA60; }
 .news-card-front { border-color: #03EA60; }
 .d-colorGreen { color: #03EA60; }
 
-.news-card-front-data { background-color: rgba(0, 0, 0, .9); }
+.news-card-front-data,
+.whitePaper-header-description-p { background-color: rgba(0, 0, 0, .9); }
 main { background-color: rgba(255, 255, 255, .7) !important;}
 
+.breakingNews-marquee,
 .news-card-back-data,
-.breakingNews-marquee { background-color: black; }
+.whitePaper-content-title { background-color: black; }
+.whitePaper-header-description { border-color: black; }
 .news-card-back-data:hover,
 .news-card-back-data:active,
 .news-card-back-data:focus { color: black; }
@@ -61,7 +65,9 @@ main { background-color: rgba(255, 255, 255, .7) !important;}
 .breakingNews-marquee-text-link:hover,
 .breakingNews-marquee-text-link:active,
 .news-card-back-data,
-.news-card-front-data { color: white; }
+.news-card-front-data,
+.whitePaper-content-title,
+.whitePaper-header-description-p { color: white; }
 /*** END COLORS ***/
 
 /*** FONTS ***/
@@ -76,7 +82,9 @@ main { background-color: rgba(255, 255, 255, .7) !important;}
 .cases-title,
 .message-text-p,
 .message-title,
-.news-card-front-data { text-align: right; }
+.news-card-front-data,
+.whitePaper-content-text,
+.whitePaper-content-title { text-align: right; }
 
 .cases-content-law-highlight-text-span,
 .cases-header-highlight-text-span,
@@ -84,11 +92,15 @@ main { background-color: rgba(255, 255, 255, .7) !important;}
 .cases-title,
 .message-title,
 .message-subtitle,
+.whitePaper-header-title,
+.whitePaper-content-title-span,
 .news-title { font-weight: bold; }
 .cases-title,
 .cases-content-law-highlight-text-span,
 .cases-header-highlight-text-span,
-.news-title { text-transform: uppercase; }
+.news-title,
+.whitePaper-header-title,
+.whitePaper-content-title-span { text-transform: uppercase; }
 
 .message-text-p a,
 .breakingNews-marquee-text-link,
@@ -96,13 +108,8 @@ main { background-color: rgba(255, 255, 255, .7) !important;}
 /*** END FONTS ***/
 
 /*** MEDIA ***/
-{ background-image: url("../../assets/images/purple-background.png"); }
-{
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: fixed;
-}
-
+.whitePaper-header-description { background-image: url("../../assets/images/richfield.png"); }
+.whitePaper-header-description,
 .news-card-front-img {
     background-repeat: no-repeat;
     background-position: center;
@@ -143,6 +150,16 @@ main { background-color: rgba(255, 255, 255, .7) !important;}
 /*** END UTILITIES ***/
 
 /*** COMPONENTS ***/
+        /*** COMMONS ***/
+        .whitePaper-header-description,
+        .news-card-front { border-width: .5em; border-style: solid; }
+        
+        .news-card-front-data,
+        .whitePaper-header-description-p {
+            width: 100%; height: 100%;
+            padding: 1em;
+        }
+
 .breakingNews {
     position: fixed; top: 0; left: 0;
     width: 100%; height: 100%;
@@ -173,14 +190,16 @@ main { background-color: rgba(255, 255, 255, .7) !important;}
         padding: .5em;
     }
     .cases-content-law-highlight-text-span,
-    .cases-header-highlight-text-span {
+    .cases-header-highlight-text-span,
+    .whitePaper-content-title-span {
         display: inline-block;
     }
 
     .cases-content-law-highlight {
         margin: 1em 0;
     }
-    .cases-content-law-highlight-text {
+    .cases-content-law-highlight-text,
+    .whitePaper-content-title {
         display: block;
     }
 
@@ -257,13 +276,9 @@ main { background-color: rgba(255, 255, 255, .7) !important;}
 
     .news-card-front {
         position: relative;
-
-        border-width: .5em; border-style: solid;
     }
     .news-card-front-data {
         position: absolute; bottom: 0; right: 0;
-        width: 100%; height: 100%;
-        padding: 1em;
     }
     .news-card-front-img {
         position: relative;
@@ -279,6 +294,45 @@ main { background-color: rgba(255, 255, 255, .7) !important;}
         border: 10px solid red;
     }
     */
+
+    /*** .whitePaper ***/
+    .whitePaper {
+        border: 1px solid purple;
+    }
+
+    .whitePaper-content {
+        position: relative;
+    }
+    .whitePaper-content-text {
+        padding: 1em 0;
+    }
+
+    .whitePaper-header-description {
+        position: absolute;
+    }
+        .whitePaper-header-description { bottom: -3em; right: -3em; }
+    .whitePaper-header-description-p { width: 100%; height: 100%; }
+
+    .whitePaper-header {
+        position: relative;
+        margin-right: 3em;
+        margin-bottom: 3em;
+
+        border: 1px solid purple;
+    }
+    .whitePaper-header-title_wrap {
+        position: absolute; top: 0; left: 0;
+        width: 100%; height: 100%;
+        padding-right: 3em;
+        padding-bottom: 3em;
+
+        border: 1px solid green;
+    }
+    .whitePaper-header-title {
+        display: block;
+        width: 100%; height: 100%;
+        padding: 1em;
+    }
 /*** END COMPONENTS ***/
 
 /*** PAGES ***/
@@ -294,6 +348,7 @@ main { background-color: rgba(255, 255, 255, .7) !important;}
 #rdb4case2:checked ~ main .cases-content-list-item:nth-child(2),
 #rdb4case3:checked ~ main .cases-content-list-item:nth-child(3),
 #rdb4case4:checked ~ main .cases-content-list-item:nth-child(4),
+#rdb4case5:checked ~ main .cases-content-list-item:nth-child(5),
 .jekyllPlaceholderClassName { display: block; }
 /*** END INTERACTIVITY ***/
 
@@ -302,14 +357,22 @@ main { background-color: rgba(255, 255, 255, .7) !important;}
     body, html, main { font-size: 16px; }
 
     .cases-content-law-highlight-text-span,
-    .cases-header-highlight-text-span { font-size: 2em; }
+    .cases-header-highlight-text-span,
+    .whitePaper-content-title-span { font-size: 2em; }
     .cases-title,
     .message-title,
     .message-subtitle,
     .news-title { font-size: 1.5em; }
 
-    .news-content-list { width: 275%; }
-    .news-card-front-img { width: auto; min-height: 15em; }
+    .news-content-list {// width: 275%; }
+    .whitePaper-header,
+    .news-card-front-img { width: 15em; }
+        .whitePaper-header-description { width: 15em; height: 15em; }
+
+    .whitePaper-content {
+        width: 90%; left: 10%;
+    }
+    .whitePaper-content-title { padding: .5em 0; }
     
     .d-midWrap { padding: .5em; }
     .d-midDock { padding: .5em 0; }
@@ -318,7 +381,8 @@ main { background-color: rgba(255, 255, 255, .7) !important;}
     body, html, main { font-size: 18px; }
 
     .cases-content-law-highlight-text-span,
-    .cases-header-highlight-text-span { font-size: 3em; }   
+    .cases-header-highlight-text-span,
+    .whitePaper-content-title-span { font-size: 3em; }
     .cases-title,
     .message-title,
     .message-subtitle,
@@ -333,7 +397,14 @@ main { background-color: rgba(255, 255, 255, .7) !important;}
 
     .cases-content-law-details-p { padding: 1em .19em; }
 
-    .news-content-list { width: 150%; }
+    .news-content-list {// width: 150%; }
+    .whitePaper-header,
+    .news-card-front-img { width: 19em; }
+        .whitePaper-header-description { width: 19em; height: 19em; }
+
+    .whitePaper { display: flex !important; }
+    .whitePaper-content { flex: 1; }
+    .whitePaper-content-title { padding: 1em; }
 
     .d-midWrap { padding: 1em; }
     .d-midDock { padding: 1em 0; }
@@ -375,6 +446,16 @@ main { background-color: rgba(255, 255, 255, .7) !important;}
 /*** END ANIMATION ***/
 
 /*** CSS HACKS ***/
+main { min-width: 19em; }
+
+.whitePaper-header-description-p {
+    background-color: transparent;
+    backdrop-filter: blur(7px);
+}
+.whitePaper-header-description {
+//    backdrop-filter: blur(3.5px);
+//    filter: blur
+}
 /*** END CSS HACKS ***/
 
 /*** TO DELETE ***/
