@@ -63,6 +63,7 @@ main { background-color: rgba(255, 255, 255, .7) !important;}
 .news-card-back-data:active,
 .news-card-back-data:focus { color: black; }
 
+.message-text-box { background-color: #AAA; }
 .breakingNews-marquee-text-link { color: #AAA; }
 
 .cases-content-law-nav-buttons-span:hover,
@@ -91,6 +92,7 @@ main { background-color: rgba(255, 255, 255, .7) !important;}
 .cases-content-law-nav,
 .cases-header-text-p:nth-child(even),
 .cases-title,
+.message-text-box,
 .message-text-p,
 .message-title,
 .movies-content-box-thumbnail-button,
@@ -257,6 +259,10 @@ main { background-color: rgba(255, 255, 255, .7) !important;}
     }
 
     /*** .message ***/
+    .message-text-box {
+        display: block;
+        padding: .5em;
+    }
     .message-text-p {
         padding: 1em;
     }
@@ -413,6 +419,11 @@ main { background-color: rgba(255, 255, 255, .7) !important;}
 #chkbx4movie1:checked ~ main .movies-content-list-item:nth-child(1) .movies-content-box-details,
 #chkbx4movie2:checked ~ main .movies-content-list-item:nth-child(2) .movies-content-box-details,
 .jekyllPlaceholderClassName { display: block; }
+
+.u-letter-details { display: none; }
+#rdb4letter:checked ~ main .u-letter-details { display: block; }
+
+#rdb4letter:checked ~ main .message-text-box { display: none; }
 /*** END INTERACTIVITY ***/
 
 /*** MEDIA-QUERIES ***/
@@ -423,6 +434,7 @@ main { background-color: rgba(255, 255, 255, .7) !important;}
     .cases-header-highlight-text-span,
     .whitePaper-content-title-span { font-size: 2em; }
     .cases-title,
+    .message-text-box-p,
     .message-title,
     .message-subtitle,
     .news-title { font-size: 1.5em; }
@@ -450,6 +462,7 @@ main { background-color: rgba(255, 255, 255, .7) !important;}
     .cases-header-highlight-text-span,
     .whitePaper-content-title-span { font-size: 3em; }
     .cases-title,
+    .message-text-box-p,
     .message-title,
     .message-subtitle,
     .news-title { font-size: 2em; }
@@ -488,9 +501,14 @@ main { background-color: rgba(255, 255, 255, .7) !important;}
         overflow: hidden;
     }
     .d-background-video {
+        position: fixed; top: 0; left: 0;
+        min-width: 100vw; min-height: 100vh;
+        /*
         position: absolute; top: 0; right: 0;
-        min-width: 100vw; min-height: 100%;
+        min-width: 100vw;// min-height: 100% !important;
+        */
         filter: grayscale(1);
+        opacity: .4;
     }
 
 .d-cssCentered {
@@ -522,10 +540,6 @@ main { min-width: 19em; }
     background-color: transparent;
     backdrop-filter: blur(7px);
     filter: blur(7px);
-}
-.whitePaper-header-description {
-//    backdrop-filter: blur(3.5px);
-//    filter: blur
 }
 
 .breakingNews { height: auto; }
