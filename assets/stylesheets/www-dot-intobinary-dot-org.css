@@ -43,6 +43,7 @@ a,
 .cases-content-law-highlight-text,
 .cases-header-highlight-text,
 .cases-content-law-nav-buttons-span,
+.cause-quote,
 .whitePaper-header-title,
 .u-card-back { background-color: #03EA60; }
 .news-card-front { border-color: #03EA60; }
@@ -54,6 +55,7 @@ a,
 main { background-color: rgba(255, 255, 255, .7) !important;}
 
 .breakingNews-marquee,
+.cause-highlight-row,
 .movies-content-box-details-dock,
 .news-card-back-data,
 .whitePaper-content-title { background-color: black; }
@@ -75,6 +77,7 @@ main { background-color: rgba(255, 255, 255, .7) !important;}
 .breakingNews-marquee-text,
 .breakingNews-marquee-text-link:hover,
 .breakingNews-marquee-text-link:active,
+.cause-highlight,
 .movies-content-box-details *,
 .news-card-back-data,
 .news-card-front-data,
@@ -104,6 +107,7 @@ main { background-color: rgba(255, 255, 255, .7) !important;}
 .cases-header-highlight-text-span,
 .cases-header-text-quote-q,
 .cases-title,
+.cause-quote-q,
 .message-title,
 .message-subtitle,
 .whitePaper-header-title,
@@ -113,6 +117,7 @@ main { background-color: rgba(255, 255, 255, .7) !important;}
 .cases-title,
 .cases-content-law-highlight-text-span,
 .cases-header-highlight-text-span,
+.cause-quote-q,
 .news-title,
 .whitePaper-header-title,
 .whitePaper-content-title-span,
@@ -251,6 +256,20 @@ main { background-color: rgba(255, 255, 255, .7) !important;}
     .cases-header-text-p,
     .cases-header-text-quote {
         padding: .5em;
+    }
+
+    /*** .cause ***/
+    .cause-content { display: flex; }
+    .cause-highlight { flex: 1; }
+    .cause-highlight-row {
+        padding: 1em;
+    }
+    .cause {
+    }
+    .cause-quote {
+        width: 90%;
+        display: block;
+        padding: 1em;
     }
 
     /*** .header ***/
@@ -432,12 +451,15 @@ main { background-color: rgba(255, 255, 255, .7) !important;}
 
     .cases-content-law-highlight-text-span,
     .cases-header-highlight-text-span,
+    .cause-quote-q,
     .whitePaper-content-title-span { font-size: 2em; }
     .cases-title,
     .message-text-box-p,
     .message-title,
     .message-subtitle,
     .news-title { font-size: 1.5em; }
+    
+    .cause-content-spacer { width: 3em; }
     
     .movies-content-box-details { padding: 1.9em; }
 
@@ -460,6 +482,7 @@ main { background-color: rgba(255, 255, 255, .7) !important;}
 
     .cases-content-law-highlight-text-span,
     .cases-header-highlight-text-span,
+    .cause-quote-q,
     .whitePaper-content-title-span { font-size: 3em; }
     .cases-title,
     .message-text-box-p,
@@ -475,6 +498,8 @@ main { background-color: rgba(255, 255, 255, .7) !important;}
     .cases-header-text-p:nth-child(even) { left: 25%; }
 
     .cases-content-law-details-p { padding: 1em .19em; }
+
+    .cause-content-spacer { width: 22em; }
     
     .movies-content-box-details { padding: 3em; }
 
