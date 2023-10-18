@@ -55,16 +55,19 @@ a,
 main { background-color: rgba(255, 255, 255, .7) !important;}
 
 .breakingNews-marquee,
-.cause-highlight-row,
+.cause-highlight-content-nav-date,
+.cause-highlight-header,
 .movies-content-box-details-dock,
 .news-card-back-data,
 .whitePaper-content-title { background-color: black; }
 .movies-content-box-thumbnail,
 .whitePaper-header-description { border-color: black; }
+.cause-highlight-content-row,
 .news-card-back-data:hover,
 .news-card-back-data:active,
 .news-card-back-data:focus { color: black; }
 
+.cause-highlight-content-row,
 .message-text-box { background-color: #AAA; }
 .breakingNews-marquee-text-link { color: #AAA; }
 
@@ -74,6 +77,7 @@ main { background-color: rgba(255, 255, 255, .7) !important;}
 .news-card-back-data:hover,
 .news-card-back-data:active,
 .news-card-back-data:focus { background-color: white; }
+.cause-highlight-content-row { border-color: white; }
 .breakingNews-marquee-text,
 .breakingNews-marquee-text-link:hover,
 .breakingNews-marquee-text-link:active,
@@ -90,6 +94,7 @@ main { background-color: rgba(255, 255, 255, .7) !important;}
 
 * { font-family: "OCR A Extended"; }
 
+.cause-highlight-content-nav-date,
 .news-card-back-data { text-align: center; }
 .cases-content-law-highlight-text,
 .cases-content-law-nav,
@@ -117,6 +122,7 @@ main { background-color: rgba(255, 255, 255, .7) !important;}
 .cases-title,
 .cases-content-law-highlight-text-span,
 .cases-header-highlight-text-span,
+.cause-highlight-content-nav-date-row,
 .cause-quote-q,
 .news-title,
 .whitePaper-header-title,
@@ -261,7 +267,21 @@ main { background-color: rgba(255, 255, 255, .7) !important;}
     /*** .cause ***/
     .cause-content { display: flex; }
     .cause-highlight { flex: 1; }
-    .cause-highlight-row {
+    .cause-highlight-content {
+        position: relative;
+    }
+    .cause-highlight-content-nav {
+        position: absolute; top: 0; right: 100%;
+        display: inline-block;
+        padding: .5em;
+    }
+    .cause-highlight-content-row {
+        padding: 1em;
+        border-width: .1em 0; border-style: dashed;
+    }
+    .cause-highlight-content-row:nth-child(2) { border-top: none; }
+    .cause-highlight-content-row:last-child { border-bottom: none; }
+    .cause-highlight-header {
         padding: 1em;
     }
     .cause {
@@ -459,6 +479,9 @@ main { background-color: rgba(255, 255, 255, .7) !important;}
     .message-subtitle,
     .news-title { font-size: 1.5em; }
     
+    .cause-highlight-content-nav-date-row:first-child,
+    .cause-highlight-content-nav-date-row-extra { display: none; }
+    .cause-highlight-content-nav-date { padding: .25em; }
     .cause-content-spacer { width: 3em; }
     
     .movies-content-box-details { padding: 1.9em; }
@@ -499,6 +522,9 @@ main { background-color: rgba(255, 255, 255, .7) !important;}
 
     .cases-content-law-details-p { padding: 1em .19em; }
 
+    .cause-highlight-content-nav-date { display: flex; }
+    .cause-highlight-content-nav-date { padding: .5em; }
+    .cause-highlight-content-nav-date-row { margin: .25em; }
     .cause-content-spacer { width: 22em; }
     
     .movies-content-box-details { padding: 3em; }
