@@ -100,6 +100,7 @@ main { background-color: rgba(255, 255, 255, .7) !important;}
 .cases-content-law-nav,
 .cases-header-text-p:nth-child(even),
 .cases-title,
+.cause-highlight-content-nav,
 .message-text-box,
 .message-text-p,
 .message-title,
@@ -143,6 +144,15 @@ main { background-color: rgba(255, 255, 255, .7) !important;}
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+}
+
+.cause-highlight-content-nav-button { background-image: url("../../assets/images/icon_megaphone_white.png"); }
+.cause-highlight-header-button { background-image: url("../../assets/images/icon_car-key_white.png"); }
+.cause-highlight-content-nav-button,
+.cause-highlight-header-button {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 70%;
 }
 /*** END MEDIA ***/
 
@@ -267,13 +277,34 @@ main { background-color: rgba(255, 255, 255, .7) !important;}
     /*** .cause ***/
     .cause-content { display: flex; }
     .cause-highlight { flex: 1; }
-    .cause-highlight-content {
+    
+    .cause-highlight-content-nav-button,
+    .cause-highlight-header-button {
+        width: 1.9em; height: 1.9em;
+        display: inline-block;
+        background-color: black;
+        box-shadow: 0 0 .1em .1em #AAA;
+//        border: .1em solid #AAA;
+    }
+
+    .cause-highlight-header {
+        position: relative;
+    }
+    .cause-highlight-header-button {
+        position: absolute; bottom: 0; right: 100%;
+        margin-right: .5em;
+    }
+
+    .cause-highlight-content-list-item {
         position: relative;
     }
     .cause-highlight-content-nav {
         position: absolute; top: 0; right: 100%;
         display: inline-block;
         padding: .5em;
+    }
+    .cause-highlight-content-nav-button {
+        margin-top: .5em;
     }
     .cause-highlight-content-row {
         padding: 1em;
@@ -452,6 +483,10 @@ main { background-color: rgba(255, 255, 255, .7) !important;}
 #rdb4case3:checked ~ main .cases-content-list-item:nth-child(3),
 #rdb4case4:checked ~ main .cases-content-list-item:nth-child(4),
 #rdb4case5:checked ~ main .cases-content-list-item:nth-child(5),
+#rdb4case6:checked ~ main .cases-content-list-item:nth-child(6),
+#rdb4case7:checked ~ main .cases-content-list-item:nth-child(7),
+#rdb4case8:checked ~ main .cases-content-list-item:nth-child(8),
+#rdb4case9:checked ~ main .cases-content-list-item:nth-child(9),
 .jekyllPlaceholderClassName { display: block; }
 
 .movies-content-box-details { display: none; }
@@ -463,6 +498,14 @@ main { background-color: rgba(255, 255, 255, .7) !important;}
 #rdb4letter:checked ~ main .u-letter-details { display: block; }
 
 #rdb4letter:checked ~ main .message-text-box { display: none; }
+
+.cause-highlight-content-list { display: none; }
+#chkbx4cause:checked ~ main .cause-highlight-content-list { display: block; }
+
+.cause-highlight-content-list-item { display: none; }
+#rdb4cause1:checked ~ main .cause-highlight-content-list-item:nth-child(1),
+#rdb4cause2:checked ~ main .cause-highlight-content-list-item:nth-child(2),
+.jekyllPlaceholderClassName { display: block; }
 /*** END INTERACTIVITY ***/
 
 /*** MEDIA-QUERIES ***/
