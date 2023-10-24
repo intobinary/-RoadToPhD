@@ -146,7 +146,8 @@ main { background-color: rgba(255, 255, 255, .7) !important;}
     background-size: cover;
 }
 
-.cause-highlight-content-nav-button { background-image: url("../../assets/images/icon_megaphone_white.png"); }
+.cause-highlight-content-nav-button { background-image: url("../../assets/images/icon_protest_white.png"); }
+.cause-highlight-content-nav-button {// background-image: url("../../assets/images/icon_megaphone_white.png"); }
 .cause-highlight-header-button { background-image: url("../../assets/images/icon_car-key_white.png"); }
 .cause-highlight-content-nav-button,
 .cause-highlight-header-button {
