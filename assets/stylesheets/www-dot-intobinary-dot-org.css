@@ -43,6 +43,7 @@ a,
 .cases-content-law-highlight-text,
 .cases-header-highlight-text,
 .cases-content-law-nav-buttons-span,
+.cause-highlight-content-list-item.nthChild-proof .cause-highlight-content-row:nth-child(2),
 .cause-quote,
 .whitePaper-header-title,
 .u-card-back { background-color: #03EA60; }
@@ -146,7 +147,8 @@ main { background-color: rgba(255, 255, 255, .7) !important;}
     background-size: cover;
 }
 
-.cause-highlight-content-nav-button { background-image: url("../../assets/images/icon_protest_white.png"); }
+.cause-highlight-content-nav-button.d-icon_911 { background-image: url("../../assets/images/icon_911_white.png"); }
+.cause-highlight-content-nav-button.d-icon_power { background-image: url("../../assets/images/icon_protest_white.png"); }
 .cause-highlight-content-nav-button {// background-image: url("../../assets/images/icon_megaphone_white.png"); }
 .cause-highlight-header-button { background-image: url("../../assets/images/icon_car-key_white.png"); }
 .cause-highlight-content-nav-button,
@@ -506,6 +508,7 @@ main { background-color: rgba(255, 255, 255, .7) !important;}
 .cause-highlight-content-list-item { display: none; }
 #rdb4cause1:checked ~ main .cause-highlight-content-list-item:nth-child(1),
 #rdb4cause2:checked ~ main .cause-highlight-content-list-item:nth-child(2),
+#rdb4cause3:checked ~ main .cause-highlight-content-list-item:nth-child(3),
 .jekyllPlaceholderClassName { display: block; }
 /*** END INTERACTIVITY ***/
 
@@ -625,6 +628,10 @@ main { background-color: rgba(255, 255, 255, .7) !important;}
 /*** END DECORATION ***/
 
 /*** ANIMATION ***/
+.cause-highlight-content-nav-button.d-icon_911 {
+    animation: button911 .5s alternate infinite;
+}
+@keyframes button911 { from { background-size: 60%; } to { background-size: 50%; } }
 /*** END ANIMATION ***/
 
 /*** CSS HACKS ***/
@@ -641,4 +648,5 @@ main { min-width: 19em; }
 /*** END CSS HACKS ***/
 
 /*** TO DELETE ***/
+.cause-highlight-content-nav-button.d-icon_911 { visibility: hidden; }
 /*** END TO DELETE ***/
