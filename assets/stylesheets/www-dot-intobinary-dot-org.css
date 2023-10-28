@@ -16,6 +16,7 @@
 /*** CANCEL ***/
 body, html, main { background: none !important; }
 main { padding-top: 2em; }
+.proofs { width: 100%; height: 100%; }
 /*** END CANCEL ***/
 
 /*** Z-INDEXES ***/
@@ -37,6 +38,10 @@ a,
 
 .breakingNews { position: relative; z-index: 80; }
 */
+
+.proof { position: relative; z-index: 80; }
+.proof-media-hand { position: relative; z-index: 90; }
+.proof-media-video { position: relative; z-index: 1000; }
 /*** END Z-INDEXES ***/
 
 /*** COLORS ***/ 
@@ -52,15 +57,20 @@ a,
 
 .movies-content-box-details,
 .news-card-front-data,
+.proof,
 .whitePaper-header-description-p { background-color: rgba(0, 0, 0, .9); }
 main { background-color: rgba(255, 255, 255, .7) !important;}
 
 .breakingNews-marquee,
-.cause-highlight-content-nav-date,
+.u-date,
 .cause-highlight-header,
 .movies-content-box-details-dock,
 .news-card-back-data,
+.proof-details-nav,
+.proof-header-title,
+.proof-nav-button,
 .whitePaper-content-title { background-color: black; }
+.proof-media,
 .movies-content-box-thumbnail,
 .whitePaper-header-description { border-color: black; }
 .cause-highlight-content-row,
@@ -69,7 +79,8 @@ main { background-color: rgba(255, 255, 255, .7) !important;}
 .news-card-back-data:focus { color: black; }
 
 .cause-highlight-content-row,
-.message-text-box { background-color: #AAA; }
+.message-text-box,
+.proof_dock { background-color: #AAA; }
 .breakingNews-marquee-text-link { color: #AAA; }
 
 .cases-content-law-nav-buttons-span:hover,
@@ -86,8 +97,13 @@ main { background-color: rgba(255, 255, 255, .7) !important;}
 .movies-content-box-details *,
 .news-card-back-data,
 .news-card-front-data,
+.proof-details-nav,
+.proof-header-title,
+.proof-details-nav-extra a,
+.proof-nav-button,
 .whitePaper-content-title,
-.whitePaper-header-description-p { color: white; }
+.whitePaper-header-description-p,
+.u-date { color: white; }
 /*** END COLORS ***/
 
 /*** FONTS ***/
@@ -95,7 +111,7 @@ main { background-color: rgba(255, 255, 255, .7) !important;}
 
 * { font-family: "OCR A Extended"; }
 
-.cause-highlight-content-nav-date,
+.u-date,
 .news-card-back-data { text-align: center; }
 .cases-content-law-highlight-text,
 .cases-content-law-nav,
@@ -107,6 +123,7 @@ main { background-color: rgba(255, 255, 255, .7) !important;}
 .message-title,
 .movies-content-box-thumbnail-button,
 .news-card-front-data,
+.proof-header-title,
 .whitePaper-content-text,
 .whitePaper-content-title { text-align: right; }
 
@@ -124,7 +141,7 @@ main { background-color: rgba(255, 255, 255, .7) !important;}
 .cases-title,
 .cases-content-law-highlight-text-span,
 .cases-header-highlight-text-span,
-.cause-highlight-content-nav-date-row,
+.u-date-row,
 .cause-quote-q,
 .news-title,
 .whitePaper-header-title,
@@ -439,6 +456,54 @@ main { background-color: rgba(255, 255, 255, .7) !important;}
     }
     */
 
+    /*** .proof ***/
+    .proof,
+    .proof-nav { display: flex; }
+    .proof_dock { display: flex !important; }
+    .proof_dock { flex-direction: column; }
+    .proof-nav { justify-content: flex-end; }
+    .proof-content,
+    .proof_dock { flex: 1; }
+
+    .d-midWrap.proof_dock { padding: 0 !important; }
+
+    .proof,
+    .proof-content,
+    .proof_dock { width: 100%; height: 100%; }
+    .proof {
+        position: fixed; top: 0; left: 0;
+        padding: 3em;
+    }
+    .proof-content {
+        overflow: auto;
+    }
+    .proof-details,
+    .proof-header {
+//        padding: .5em;
+    }
+    .proof-details-nav {
+    }
+    .proof-details-content,
+    .proof-details-people {
+        padding: 1em;
+    }
+    .proof-details-nav,
+    .proof-header-title,
+    .proof-nav-button,
+    .proof-nav-marquee {
+        padding: .75em;
+    }
+    .proof-media,
+    .proof-media-hand {
+        width: auto; height: 100%;
+    }
+    .proof-media {
+        border-width: 1em; border-style: solid;
+    }
+    .proof-nav-marquee {
+//        border: 1px solid purple;
+    }
+
     /*** .whitePaper ***/
     .whitePaper {}
 
@@ -511,6 +576,11 @@ main { background-color: rgba(255, 255, 255, .7) !important;}
 #rdb4cause2:checked ~ main .cause-highlight-content-list-item:nth-child(2),
 #rdb4cause3:checked ~ main .cause-highlight-content-list-item:nth-child(3),
 .jekyllPlaceholderClassName { display: block; }
+
+.proof { display: none; }
+
+#chkbx4proof1:checked ~ main .proof:nth-child(1),
+.jekyllPlaceholderClassName { display: block; }
 /*** END INTERACTIVITY ***/
 
 /*** MEDIA-QUERIES ***/
@@ -527,9 +597,9 @@ main { background-color: rgba(255, 255, 255, .7) !important;}
     .message-subtitle,
     .news-title { font-size: 1.5em; }
     
-    .cause-highlight-content-nav-date-row:first-child,
-    .cause-highlight-content-nav-date-row-extra { display: none; }
-    .cause-highlight-content-nav-date { padding: .25em; }
+    .u-date-row:first-child,
+    .u-date-row-extra { display: none; }
+    .u-date { padding: .25em; }
     .cause-content-spacer { width: 3em; }
     
     .movies-content-box-details { padding: 1.9em; }
@@ -570,9 +640,9 @@ main { background-color: rgba(255, 255, 255, .7) !important;}
 
     .cases-content-law-details-p { padding: 1em .19em; }
 
-    .cause-highlight-content-nav-date { display: flex; }
-    .cause-highlight-content-nav-date { padding: .5em; }
-    .cause-highlight-content-nav-date-row { margin: .25em; }
+    .u-date { display: flex; }
+    .u-date { padding: .5em; }
+    .u-date-row { margin: .25em; }
     .cause-content-spacer { width: 22em; }
     
     .movies-content-box-details { padding: 3em; }
@@ -582,6 +652,17 @@ main { background-color: rgba(255, 255, 255, .7) !important;}
     .news-card-front-img { width: 19em; }
         .whitePaper-header-description { width: 19em; height: 19em; }
         .movies-content-box-thumbnail-img { width: 38em; height: 19em; }
+
+    .proof-content,
+    .proof-details { display: flex; }
+    .proof-details { flex-direction: column; }
+    .proof-content { flex-direction: row-reverse; }
+    .proof-details-content,
+    .proof-header { flex: 1; }
+
+    .proof-header {
+        width: 100%;
+    }
 
     .whitePaper { display: flex !important; }
     .whitePaper-content { flex: 1; }
@@ -646,10 +727,22 @@ main { min-width: 19em; }
 }
 
 .breakingNews { height: auto; }
+
+
+
+
+.proof-media {
+    position: relative;
+}
+.proof-media-video {
+    display: none;
+
+    bordeR: 10px solid purple;
+}
 /*** END CSS HACKS ***/
 
 /*** TO DELETE ***/
-.cause-highlight-content-nav-button.d-icon_911 { visibility: hidden; }
+.cause-highlight-content-nav-button.d-icon_911 {// visibility: hidden; }
 
-.proof { display: none; }
+.proof {// display: none; }
 /*** END TO DELETE ***/
