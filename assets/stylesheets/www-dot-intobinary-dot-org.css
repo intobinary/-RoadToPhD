@@ -650,4 +650,6 @@ main { min-width: 19em; }
 
 /*** TO DELETE ***/
 .cause-highlight-content-nav-button.d-icon_911 { visibility: hidden; }
+
+.proof { display: none; }
 /*** END TO DELETE ***/
