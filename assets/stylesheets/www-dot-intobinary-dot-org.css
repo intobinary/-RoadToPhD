@@ -132,8 +132,9 @@ main { background-color: rgba(255, 255, 255, .7) !important;}
 .d-decoUppercase { text-transform: uppercase; }
 
 .u-decoItalic { font-style: italic !important; color: #03EA60 !important; }
-.message-text-p a,
+.cause-highlight-content-row a,
 .breakingNews-marquee-text-link,
+.message-text-p a,
 .d-decoUnderline { text-decoration: underline; }
 /*** END FONTS ***/
 
