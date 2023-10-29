@@ -477,13 +477,10 @@ main { background-color: rgba(255, 255, 255, .7) !important;}
     .proof-content {
         overflow: auto;
     }
-    .proof-details,
-    .proof-header {
-//        padding: .5em;
-    }
     .proof-details-nav {
     }
     .proof-details-content,
+    .proof-details-extra,
     .proof-details-people {
         padding: 1em;
     }
@@ -498,6 +495,7 @@ main { background-color: rgba(255, 255, 255, .7) !important;}
         width: auto; height: 100%;
     }
     .proof-media {
+        position: sticky;
         border-width: 1em; border-style: solid;
     }
     .proof-nav-marquee {
