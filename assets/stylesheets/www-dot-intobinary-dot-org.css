@@ -573,6 +573,22 @@ main { background-color: rgba(255, 255, 255, .7) !important;}
 #rdb4cause1:checked ~ main .cause-highlight-content-list-item:nth-child(1),
 #rdb4cause2:checked ~ main .cause-highlight-content-list-item:nth-child(2),
 #rdb4cause3:checked ~ main .cause-highlight-content-list-item:nth-child(3),
+#rdb4cause4:checked ~ main .cause-highlight-content-list-item:nth-child(4),
+#rdb4cause5:checked ~ main .cause-highlight-content-list-item:nth-child(5),
+#rdb4cause6:checked ~ main .cause-highlight-content-list-item:nth-child(6),
+#rdb4cause7:checked ~ main .cause-highlight-content-list-item:nth-child(7),
+#rdb4cause8:checked ~ main .cause-highlight-content-list-item:nth-child(8),
+#rdb4cause9:checked ~ main .cause-highlight-content-list-item:nth-child(9),
+#rdb4cause10:checked ~ main .cause-highlight-content-list-item:nth-child(10),
+#rdb4cause11:checked ~ main .cause-highlight-content-list-item:nth-child(11),
+#rdb4cause12:checked ~ main .cause-highlight-content-list-item:nth-child(12),
+#rdb4cause13:checked ~ main .cause-highlight-content-list-item:nth-child(13),
+#rdb4cause14:checked ~ main .cause-highlight-content-list-item:nth-child(14),
+#rdb4cause15:checked ~ main .cause-highlight-content-list-item:nth-child(15),
+#rdb4cause16:checked ~ main .cause-highlight-content-list-item:nth-child(16),
+#rdb4cause17:checked ~ main .cause-highlight-content-list-item:nth-child(17),
+#rdb4cause18:checked ~ main .cause-highlight-content-list-item:nth-child(18),
+#rdb4cause19:checked ~ main .cause-highlight-content-list-item:nth-child(19),
 .jekyllPlaceholderClassName { display: block; }
 
 .proof { display: none; }
