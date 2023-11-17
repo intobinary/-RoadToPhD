@@ -17,6 +17,9 @@
 body, html, main { background: none !important; }
 main { padding-top: 2em; }
 .proofs { width: 100%; height: 100%; }
+
+.d-midDock,
+.d-midWrap { display: block; }
 /*** END CANCEL ***/
 
 /*** Z-INDEXES ***/
@@ -110,6 +113,8 @@ main { background-color: rgba(255, 255, 255, .7) !important;}
 .whitePaper-content-title,
 .whitePaper-header-description-p,
 .u-date { color: white; }
+
+.d-doubleStrike_wrap { background-color: transparent !important; }
 /*** END COLORS ***/
 
 /*** FONTS ***/
@@ -124,7 +129,7 @@ main { background-color: rgba(255, 255, 255, .7) !important;}
 .cases-header-text-p:nth-child(even),
 .cases-title,
 .cause-highlight-content-nav,
-.message-text-box,
+.message .message-text-box,
 .message-text-p,
 .message-title,
 .movies-content-box-thumbnail-button,
@@ -143,6 +148,7 @@ main { background-color: rgba(255, 255, 255, .7) !important;}
 .whitePaper-header-title,
 .whitePaper-content-title-span,
 .news-title,
+.u-title,
 .d-decoBold { font-weight: bold; }
 .cases-title,
 .cases-content-law-highlight-text-span,
@@ -213,6 +219,9 @@ main { background-color: rgba(255, 255, 255, .7) !important;}
             transform: rotateY(0deg);
         }
     .u-card_static .u-card-back-data { display: none !important; }
+
+    /*** .u-title ***/
+    .header .u-title { padding: 0; }
 /*** END UTILITIES ***/
 
 /*** COMPONENTS ***/
@@ -356,6 +365,10 @@ main { background-color: rgba(255, 255, 255, .7) !important;}
     }
 
     /*** .message ***/
+    .message {
+        border-width: .1em; border-style: dashed;
+        border-color: black;
+    }
     .message-text-box {
         display: block;
         padding: .5em;
@@ -364,7 +377,8 @@ main { background-color: rgba(255, 255, 255, .7) !important;}
         padding: 1em;
     }
     .message-title,
-    .message-subtitle {
+    .message-subtitle,
+    .u-title {
         padding: 1em;
     }
 
@@ -567,10 +581,9 @@ main { background-color: rgba(255, 255, 255, .7) !important;}
 #chkbx4movie2:checked ~ main .movies-content-list-item:nth-child(2) .movies-content-box-details,
 .jekyllPlaceholderClassName { display: block; }
 
-.u-letter-details { display: none; }
-#rdb4letter:checked ~ main .u-letter-details { display: block; }
-
-#rdb4letter:checked ~ main .message-text-box { display: none; }
+.message { display: none; }
+#chkbx4letter:checked ~ main .message { display: block; }
+#chkbx4letter:checked ~ main .message-text-box {// display: none; }
 
 .cause-highlight-content-list { display: none; }
 #chkbx4cause:checked ~ main .cause-highlight-content-list { display: block; }
@@ -615,7 +628,8 @@ main { background-color: rgba(255, 255, 255, .7) !important;}
     .message-text-box-p,
     .message-title,
     .message-subtitle,
-    .news-title { font-size: 1.5em; }
+    .news-title,
+    .u-title { font-size: 1.5em; }
     
     .u-date-row:first-child,
     .u-date-row-extra { display: none; }
@@ -637,6 +651,10 @@ main { background-color: rgba(255, 255, 255, .7) !important;}
     
     .d-midWrap { padding: .5em; }
     .d-midDock { padding: .5em 0; }
+    
+    .d-background-video {
+        height: 100%; width: auto;
+    }
 }
 @media all and (min-width: 50em) {
     body, html, main { font-size: 18px; }
@@ -649,7 +667,8 @@ main { background-color: rgba(255, 255, 255, .7) !important;}
     .message-text-box-p,
     .message-title,
     .message-subtitle,
-    .news-title { font-size: 2em; }
+    .news-title,
+    .u-title { font-size: 2em; }
 
     .cases-content-law-details { display: flex; }
     .cases-content-law-details-dock { flex: 1; }
@@ -690,6 +709,10 @@ main { background-color: rgba(255, 255, 255, .7) !important;}
 
     .d-midWrap { padding: 1em; }
     .d-midDock { padding: 1em 0; }
+    
+    .d-background-video {
+        min-width: 100vw; min-height: 100vh;
+    }
 }
 /*** END MEDIA-QUERIES ***/
 
@@ -702,7 +725,6 @@ main { background-color: rgba(255, 255, 255, .7) !important;}
     }
     .d-background-video {
         position: fixed; top: 0; left: 0;
-        min-width: 100vw; min-height: 100vh;
         /*
         position: absolute; top: 0; right: 0;
         min-width: 100vw;// min-height: 100% !important;
@@ -723,23 +745,25 @@ main { background-color: rgba(255, 255, 255, .7) !important;}
     .d-confetti {
         position: absolute; top: 0; left: 0;
 
-        display: flex;
-        justify-content: center;
-        align-items: center;
-//        position: relative;
         width: 100%; height: 100%;
         overflow: hidden;
       }
-      
-      .d-confetti-piece {
-        position: absolute;
-        width: 8px;
-        height: 16px;
-        background: #ffd300;
-        top: 0;
+      /*
+    .d-confetti-piece { width: .75em; height: 1em; }
+        .d-confetti-piece:nth-child(4n) { width: .5em; height: .75em; }
+        .d-confetti-piece:nth-child(3n) { width: .25em; height: .5em; }
+        */
+    .d-confetti-piece { width: .75em; height: 1.5em; }
+        .d-confetti-piece:nth-child(4n) { width: .5em; height: 1em; }
+        .d-confetti-piece:nth-child(3n) { width: .25em; height: .5em; }
+    .d-confetti-piece { background: #ff4e91; }
+        .d-confetti-piece:nth-child(odd) { background: #17d3ff; }
+        .d-confetti-piece:nth-child(4n-7) { background: #ffd300; }
+    .d-confetti-piece {
+        position: absolute; top: 0;
         opacity: 0;
-      }
-      .d-confetti-piece:nth-child(1) {
+    }
+    .d-confetti-piece:nth-child(1) {
         left: 7%;
         transform: rotate(-11deg);
         -webkit-animation: makeItRain 1000ms infinite ease-out;
@@ -869,28 +893,18 @@ main { background-color: rgba(255, 255, 255, .7) !important;}
         -webkit-animation-duration: 1117ms;
                 animation-duration: 1117ms;
       }
-      .d-confetti-piece:nth-child(odd) {
-        background: #17d3ff;
-      }
       .d-confetti-piece:nth-child(even) {
         z-index: 1;
       }
       .d-confetti-piece:nth-child(4n) {
-        width: 5px;
-        height: 12px;
         -webkit-animation-duration: 2000ms;
                 animation-duration: 2000ms;
       }
       .d-confetti-piece:nth-child(3n) {
-        width: 3px;
-        height: 10px;
         -webkit-animation-duration: 2500ms;
                 animation-duration: 2500ms;
         -webkit-animation-delay: 1000ms;
                 animation-delay: 1000ms;
-      }
-      .d-confetti-piece:nth-child(4n-7) {
-        background: #ff4e91;
       }
       
       @-webkit-keyframes makeItRain {
@@ -925,12 +939,10 @@ main { background-color: rgba(255, 255, 255, .7) !important;}
 }
 .d-midWrap {
     max-width: 70em;
-    display: block;
     margin: 0 auto;
 }
 .d-midDock {
     max-width: 50em;
-    display: block;
     margin: 0 auto;
 }
 /*** END DECORATION ***/
@@ -955,6 +967,7 @@ main { min-width: 19em; }
 .breakingNews { height: auto; }
 
 
+.d-doubleStrike { display: flex; }
 
 
 .proof-media {
