@@ -49,7 +49,7 @@ a,
 
 .proof { position: relative; z-index: 80; }
 .proof-media-hand { position: relative; z-index: 90; }
-.proof-media-video { position: relative; z-index: 1000; }
+.proof-media-video { position: relative; z-index: 500; }
 /*** END Z-INDEXES ***/
 
 /*** COLORS ***/ 
@@ -58,6 +58,7 @@ a,
 .cases-content-law-nav-buttons-span,
 .cause-highlight-content-list-item.nthChild-proof .cause-highlight-content-row:nth-child(2),
 .cause-quote,
+.NAO,
 .whitePaper-header-title,
 .u-card-back { background-color: #03EA60; }
 .d-confetti_wrap { background-color: #03EA60 !important; }
@@ -123,6 +124,7 @@ main { background-color: rgba(255, 255, 255, .7) !important;}
 * { font-family: "OCR A Extended"; }
 
 .u-date,
+.NAO-announcement,
 .news-card-back-data { text-align: center; }
 .cases-content-law-highlight-text,
 .cases-content-law-nav,
@@ -147,6 +149,7 @@ main { background-color: rgba(255, 255, 255, .7) !important;}
 .message-subtitle,
 .whitePaper-header-title,
 .whitePaper-content-title-span,
+.NAO-announcement-title,
 .news-title,
 .u-title,
 .d-decoBold { font-weight: bold; }
@@ -155,6 +158,8 @@ main { background-color: rgba(255, 255, 255, .7) !important;}
 .cases-header-highlight-text-span,
 .u-date-row,
 .cause-quote-q,
+.NAO-announcement-subtitle,
+.NAO-announcement-title,
 .news-title,
 .whitePaper-header-title,
 .whitePaper-content-title-span,
@@ -164,6 +169,7 @@ main { background-color: rgba(255, 255, 255, .7) !important;}
 .cause-highlight-content-row a,
 .breakingNews-marquee-text-link,
 .message-text-p a,
+.NAO-announcement-link,
 .d-decoUnderline { text-decoration: underline; }
 /*** END FONTS ***/
 
@@ -425,7 +431,21 @@ main { background-color: rgba(255, 255, 255, .7) !important;}
         width: 100%; height: 100%;
         display: block;
     }
-    
+
+    /*** .NAO ***/
+    .NAO, .NAO-dock {
+        min-height: 100vh;
+    }
+    .NAO-dock {
+        width: 100%; height: 100%;
+    }
+    .NAO-announcement-link {
+        margin: 1em;
+    }
+    .NAO-announcement-subtitle,
+    .NAO-announcement-title {
+        display: block;
+    }
 
     /*** .news ***/
     .news-content-list,
@@ -623,11 +643,13 @@ main { background-color: rgba(255, 255, 255, .7) !important;}
     .cases-content-law-highlight-text-span,
     .cases-header-highlight-text-span,
     .cause-quote-q,
+    .NAO-announcement-title,
     .whitePaper-content-title-span { font-size: 2em; }
     .cases-title,
     .message-text-box-p,
     .message-title,
     .message-subtitle,
+    .NAO-announcement-subtitle,
     .news-title,
     .u-title { font-size: 1.5em; }
     
@@ -662,11 +684,13 @@ main { background-color: rgba(255, 255, 255, .7) !important;}
     .cases-content-law-highlight-text-span,
     .cases-header-highlight-text-span,
     .cause-quote-q,
+    .NAO-announcement-title,
     .whitePaper-content-title-span { font-size: 3em; }
     .cases-title,
     .message-text-box-p,
     .message-title,
     .message-subtitle,
+    .NAO-announcement-subtitle,
     .news-title,
     .u-title { font-size: 2em; }
 
