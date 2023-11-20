@@ -61,6 +61,7 @@ a,
 .NAO,
 .whitePaper-header-title,
 .u-card-back { background-color: #03EA60; }
+.d-backgroundGreen,
 .d-confetti_wrap { background-color: #03EA60 !important; }
 .news-card-front { border-color: #03EA60; }
 .d-colorGreen { color: #03EA60; }
@@ -594,6 +595,7 @@ main { background-color: rgba(255, 255, 255, .7) !important;}
 #rdb4case7:checked ~ main .cases-content-list-item:nth-child(7),
 #rdb4case8:checked ~ main .cases-content-list-item:nth-child(8),
 #rdb4case9:checked ~ main .cases-content-list-item:nth-child(9),
+#rdb4case10:checked ~ main .cases-content-list-item:nth-child(10),
 .jekyllPlaceholderClassName { display: block; }
 
 .movies-content-box-details { display: none; }
