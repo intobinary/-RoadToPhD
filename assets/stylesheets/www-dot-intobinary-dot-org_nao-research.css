@@ -183,7 +183,10 @@
 }
 
 .vision-toggle { display: none !important; }
+
+main { min-width: 50em; }
 /*** END CSS HACKS ***/
 
 /*** TO DELETE ***/
+
 /*** END TO DELETE ***/
