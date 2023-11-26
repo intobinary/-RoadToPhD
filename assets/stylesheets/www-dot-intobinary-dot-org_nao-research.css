@@ -184,7 +184,7 @@
 
 .vision-toggle { display: none !important; }
 
-main { min-width: 50em; }
+html, body, main { min-width: 50em !important; }
 /*** END CSS HACKS ***/
 
 /*** TO DELETE ***/
