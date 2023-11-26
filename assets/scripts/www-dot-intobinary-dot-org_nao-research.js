@@ -29,5 +29,5 @@ const impetus = new Impetus({
 });
 images[frame].classList.add('active');
 //	cursor
-addEventListener('mousedown', e => document.getElementByClass("robot360-zone").style.cursor = 'grabbing');
-addEventListener('mouseup', e => document.getElementByClass("robot360-zone").style.cursor = 'grab');
+document.getElementByClass("robot360-zone").addEventListener('mousedown', e => document.getElementByClass("robot360-zone").style.cursor = 'grabbing');
+document.getElementByClass("robot360-zone").addEventListener('mouseup', e => document.getElementByClass("robot360-zone").style.cursor = 'grab');
