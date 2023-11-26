@@ -17,22 +17,17 @@ for (let i = 1; i <= 36; ++i) {
 const threshold = 5;
 const total = images.length - 1;
 let frame = 0;
-let isRotating = false;
-
-// Modify the impetus update function
 const impetus = new Impetus({
     source: document,
     update(x) {
-        if (isRotating) {
-            images[frame].classList.remove('active');
-            frame = Math.floor(-x / threshold) % total;
-            frame = frame <= 0 ? total + frame : frame;
-            images[frame].classList.add('active');
-        }
+        // console.log(x)
+        images[frame].classList.remove('active');
+        frame = Math.floor(-x / threshold) % total;
+        frame = frame <= 0 ? total + frame : frame;
+        images[frame].classList.add('active');
     }
 });
 images[frame].classList.add('active');
 //	cursor
-// Add event listeners for 'touchstart' and 'touchend' events
-addEventListener('touchstart', () => isRotating = true);
-addEventListener('touchend', () => isRotating = false);
+addEventListener('mousedown', e => document.body.style.cursor = 'grabbing');
+addEventListener('mouseup', e => document.body.style.cursor = 'grab');
