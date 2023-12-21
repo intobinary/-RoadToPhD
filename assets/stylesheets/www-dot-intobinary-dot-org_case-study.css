@@ -92,11 +92,14 @@ main { background-color: rgba(255, 255, 255, .7) !important;}
 .cause-highlight-content-row,
 .message-text-box,
 .proof_dock { background-color: #AAA; }
+.guess-content-aside-button { background-color: #AAA !important; }
 .breakingNews-marquee-text-link { color: #AAA; }
 
 .cases-content-law-nav-buttons-span:hover,
 .cases-content-law-nav-buttons-span:active,
 .cases-content-law-nav-buttons-span:focus,
+.guess-content-fieldset-textarea,
+.guess-header-aside,
 .news-card-back-data:hover,
 .news-card-back-data:active,
 .news-card-back-data:focus { background-color: white; }
@@ -365,6 +368,21 @@ main { background-color: rgba(255, 255, 255, .7) !important;}
         display: block;
         padding: 1em;
     }
+	
+	/*** .guess ***/
+	.guess-content-aside-button {
+		width: 70%;
+		padding: .5em 1em;
+		margin: 0 auto;
+	}
+	.guess-content-fieldset-textarea {
+		width: 100%; min-height: 7em;
+	}
+	.guess-header-aside-gif {
+		width: 70%;
+		display: block;
+		margin: 0 auto;
+	}
 
     /*** .header ***/
     .header-logo-img {
@@ -709,6 +727,15 @@ main { background-color: rgba(255, 255, 255, .7) !important;}
     .u-date { padding: .5em; }
     .u-date-row { margin: .25em; }
     .cause-content-spacer { width: 22em; }
+	
+	.guess-content,
+	.guess-content-aside,
+	.guess-header { display: flex; }
+	.guess-content-aside { flex-direction: column-reverse; }
+	.guess-content-fieldset,
+	.guess-header-text { flex: 1; }
+	.guess-content-aside,
+	.guess-header-aside { width: 25em; }
     
     .movies-content-box-details { padding: 3em; }
 
