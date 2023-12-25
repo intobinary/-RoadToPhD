@@ -1,0 +1,174 @@
+/*** CANCEL ***/
+/*** END CANCEL ***/
+
+/*** Z-INDEXES ***/
+.robot360-zone { position: relative; z-index: 10; }
+.robot360-title { position: relative; z-index: 20; }
+/*** END Z-INDEXES ***/
+
+/*** COLORS ***/ {% assign vColorGreen = "#03EA60" %}
+.robot360-title,
+.vision-content,
+.vision-toggle-button { background-color: rgba(170, 170, 170, 1); }
+/*** END COLORS ***/
+
+/*** FONTS ***/
+@font-face{ font-family:"OCR A Extended";src:url("../../assets/fonts/OCRAEXT.TTF"); }
+
+* { font-family: "OCR A Extended"; }
+
+.vision-content-text-p { font-size: 1.9em; }
+
+.partners-logos-figure:nth-child(2),
+.partners-text-p,
+.vision-content-text,
+.vision-toggle { text-align: center; }
+.partners-logos-figure:nth-child(1) { text-align: left; }
+.partners-logos-figure:nth-child(3) { text-align: right; }
+
+.css-textBold { font-weight: bold; }
+/*** END FONTS ***/
+
+/*** MEDIA ***/
+/*** END MEDIA ***/
+
+/*** UTILITIES ***/
+/*** END UTILITIES ***/
+
+/*** COMPONENTS ***/
+	/*** .footer ***/
+
+	/*** .partners ***/
+	.partners-logos { display: flex; }
+	.partners-logos-figure { flex: 1; }
+	
+	.partners-logos-figure-img {
+		width: auto; height: 1.9em;
+	}
+
+	/*** .robot360 ***/
+	.robot360-title {// flex-direction: column; }
+	
+	.robot360 {
+		position: relative;
+		width: 100%; height: 100vh;
+		overflow-x: hidden;
+	}
+	.robot360-title {
+		position: absolute;
+		
+		padding: 1em;
+	}
+	.robot360-title-span {
+//		display: block;
+//		padding: .25em;
+	}
+	.robot360-title-span {
+		margin: 0 .5em;
+	}
+	.robot360-title-span:first-child {
+		font-weight: bold;
+	}
+	.robot360-zone {
+		position: relative;
+		width: auto; height: 90%;
+		filter: grayscale(100%);
+	}
+	.robot360-zone img {
+	  position: absolute; top: 0; left: 0;
+	  width: auto; height: 100%;
+	  opacity: 0;
+	}
+	.robot360-zone img:first-child {
+	  position: relative;
+	}
+	.robot360-zone img.active {
+	  opacity: 1;
+	}
+	.robot360-zone::before {
+	  padding-bottom: 56.25%;
+	  float: left;
+	}
+	.robot360-zone::before, .robot360-zone::after {
+	  content: "";
+	  display: table;
+	  clear: both;
+	}
+	
+	/*** .vision ***/
+	.vision-content-text {
+		padding: 1.9em;
+	}
+	.vision-toggle-button {
+		padding: .25em .5em;
+	}
+	
+/*** END COMPONENTS ***/
+
+/*** PAGES ***/
+/*** END PAGES ***/
+
+/*** INTERACTIVITY ***/
+/*** END INTERACTIVITY ***/
+
+/*** MEDIA-QUERIES ***/
+@media all and (max-width: 50em) {
+    body, html, main { font-size: 16px; }
+	
+	.partners-logos-figure-img.is-logo { display: none; }
+
+	.footer,
+	.partners-logos-figure,
+	.partners-text-p { padding: .5em; }
+}
+@media all and (min-width: 50em) {
+    body, html, main { font-size: 18px; }
+	
+	.partners-logos-figure-img.is-icon { display: none; }
+	
+	.footer,
+	.partners-logos-figure,
+	.partners-text-p { padding: 1em; }
+	
+	.partners-text { width: 90%; margin: 0 auto; }
+	.vision-content-text { width: 75%; margin: 0 auto; }
+}
+/*** END MEDIA-QUERIES ***/
+
+/*** DECORATION ***/
+.d-cssCentered {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.d-midWrap {
+    max-width: 70em;
+    margin: 0 auto;
+}
+.d-midDock {
+    max-width: 50em;
+    margin: 0 auto;
+}
+/*** END DECORATION ***/
+
+/*** ANIMATION ***/
+/*** END ANIMATION ***/
+
+/*** CSS HACKS ***/
+.robot360-zone,
+.robot360-zone *, .robot360-zone:before, .robot360-zone:after {
+		-webkit-transition: initial !important;
+		-moz-transition: initial !important;
+		-o-transition: initial !important;
+	-webkit-transition: initial !important;
+}
+.robot360-title {
+	margin-top: 19em;
+}
+
+.vision-toggle { display: none !important; }
+/*** END CSS HACKS ***/
+
+/*** TO DELETE ***/
+/*** END TO DELETE ***/

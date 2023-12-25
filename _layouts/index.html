@@ -1,0 +1,24 @@
+---
+---
+<!DOCTYPE html>
+<html class="js-html pg-{{ page.key }}">
+	<head>
+		{% include components/meta-tags.html %}
+	</head>
+	
+	<body>
+		<section class="breakingNews">
+			<marquee class="breakingNews-marquee">
+				<div class="breakingNews-marquee-text">Are you looking for the Richfield case-study? <a href="/richfield-case-study/" class="breakingNews-marquee-text-link">Click here.</a> Get angry! Get involved!</div>
+			</marquee>
+		</section>
+			
+		<main>
+			{% include components/case-study/NAO.html %}
+			{% include components/index/case-study.html %}
+		</main>
+		
+	{% for i in (1..36) %}
+	<link rel="preload" href="/assets/images/nao-research/nao-3d/{{ i }}.jpg" as="image" />{% endfor %}
+	</body>
+</html>

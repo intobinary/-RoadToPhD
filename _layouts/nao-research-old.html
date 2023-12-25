@@ -1,0 +1,25 @@
+---
+---
+<!DOCTYPE html>
+<html class="js-html pg-{{ page.key }}">
+	<head>
+		{% include components/meta-tags.html %}
+	</head>
+	
+	<body>
+		{% include/components/nao-research-old/partners.html %}
+		{% include/components/nao-research-old/vision.html %}
+		{% include/components/nao-research-old/360.html %}
+		{% include/components/nao-research-old/audio.html %}
+		
+		<footer class="footer d-cssCentered">&copy; Copyrights Into Binary 2023. All rights reserved.<footer>
+	
+	<script src="https://cdn.jsdelivr.net/npm/impetus@0.8.8/dist/impetus.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/inobounce/0.2.0/inobounce.min.js"></script>
+	<script src="https://cdpn.io/cpe/boomboom/pen.js?key=pen.js-1fe769e4-5362-bdfb-c70b-d7956b56de84" crossorigin=""></script>
+	<script src="/assets/scripts/www-dot-intobinary-dot-org_{{ page.layout }}.js"></script>
+	
+	{% for i in (1..36) %}
+	<link rel="preload" href="/assets/images/nao-research/nao-3d/{{ i }}.jpg" as="image" />{% endfor %}
+	</body>
+</html>

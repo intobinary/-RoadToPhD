@@ -1,0 +1,2 @@
+{% for i in (1..9) %}
+.pg-hashtag .header-hashtag-hash.nthSize{{ i }} { height: {{ i }}em; }{% endfor %}

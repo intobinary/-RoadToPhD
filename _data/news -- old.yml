@@ -1,0 +1,35 @@
+- 1:
+  - date: ""
+  - thumbnail: "winning-a-nobel-2023.png"
+  - description: "USA, Germany and Sweden are sharing the 2023 Nobel Prize in Physics, today. In the world of science, nationalities matter not!"
+  - IG:
+    - account: "NobelPrize_org"
+    - post: "https://www.instagram.com/p/Cx7sX4kN-r-/"
+- 2:
+  - date: ""
+  - thumbnail: "university-of-phoenix-defrauded-students.png"
+  - description: "This week, President Biden approved $37 million in debt cancellation for over 1.200 students who were deceived and defrauded by the University of Phoenix."
+  - IG:
+    - account: "JoeBiden"
+    - post: "https://www.instagram.com/p/CxeHcWNMWXB/"
+- 3:
+  - date: ""
+  - thumbnail: "kamala-college-tour.png"
+  - description: "The US Administration, in the leadership of Madam Kamala Harris, is currently on a nationwide college tour, addressing education reforms."
+  - IG:
+    - account: "KamalaHarris"
+    - post: "https://www.instagram.com/reel/CxOK0DeuY8g/?igshid=NTc4MTIwNjQ2YQ=="
+- 4:
+  - date: ""
+  - thumbnail: "wef-on-weu-and-the-digital-markets-act.png"
+  - description: "The EU unveiled a raft of new laws, a few days ago. The Digital Markets Act, aims at ending the 'gatekeeping' by select companies with a set of new rules."
+  - IG:
+    - account: "WorldEconomicForum"
+    - post: "https://www.instagram.com/p/CxQi7DGM2PH/?igshid=NTc4MTIwNjQ2YQ=="
+- 5:
+  - date: ""
+  - thumbnail: "apple-type-c-charger.png"
+  - description: "Apple now use Type-C charger! 'Welcome to 2014, iPhone!' -- signed, Android users."
+  - IG:
+    - account: ""
+    - post: ""
