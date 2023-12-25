@@ -17,14 +17,19 @@
 /*** END CANCEL ***/
 
 /*** Z-INDEXES ***/
-.robot360-zone { position: relative; z-index: 10; }
-.robot360-title { position: relative; z-index: 20; }
+.banner { position: relative; z-index: 10; }
+.menu { position: relative; z-index: 20; }
 /*** END Z-INDEXES ***/
 
 /*** COLORS ***/ 
-.robot360-title,
-.vision-content,
-.vision-toggle-button { background-color: rgba(170, 170, 170, 1); }
+.m-thesis-header { background-color: #03EA60; }
+.banner-title { color: #03EA60; }
+
+.menu-link,
+.m-thesis-content { background-color: rgba(0, 0, 0, .7); }
+
+.menu-link,
+.menu-tooltip { color: white; }
 /*** END COLORS ***/
 
 /*** FONTS ***/
@@ -32,26 +37,125 @@
 
 * { font-family: "OCR A Extended"; }
 
-.vision-content-text-p { font-size: 1.9em; }
+.menu-tooltip { font-size: .9em; }
+.menu-link,
+.m-thesis-header { font-size: 1.19em; }
+.banner-title { font-size: 2.5em; }
 
+.banner-title,
+.menu,
 .partners-logos-figure:nth-child(2),
-.partners-text-p,
-.vision-content-text,
-.vision-toggle { text-align: center; }
+.partners-text-p { text-align: center; }
+.content-item:nth-child(1) .m-thesis-header,
 .partners-logos-figure:nth-child(1) { text-align: left; }
+.content-item:nth-child(3) .m-thesis-header,
 .partners-logos-figure:nth-child(3) { text-align: right; }
 
-.css-textBold { font-weight: bold; }
+.menu-link { font-variant: small-caps; }
+.banner-title { font-weight: bold; }
 /*** END FONTS ***/
 
 /*** MEDIA ***/
+.banner-placeholder:nth-child(1) { background-image: url("../../assets/images/nao-research/gallery/banner-1.jpg"); }
+.banner-placeholder:nth-child(2) { background-image: url("../../assets/images/nao-research/gallery/banner-2.jpg"); }
+.banner-placeholder:nth-child(3) { background-image: url("../../assets/images/nao-research/gallery/banner-3.jpg"); }
+.banner-placeholder:nth-child(4) { background-image: url("../../assets/images/nao-research/gallery/banner-4.jpg"); }
+.banner-placeholder:nth-child(5) { background-image: url("../../assets/images/nao-research/gallery/banner-5.jpg"); }
+.banner-placeholder:nth-child(6) { background-image: url("../../assets/images/nao-research/gallery/banner-6.jpg"); }
+.banner-placeholder {
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.banner-placeholder,
+.robot360-placeholder { filter: grayscale(100%); }
 /*** END MEDIA ***/
 
 /*** UTILITIES ***/
+    /*** .u-card ***/
+    .u-card {
+        position: relative;
+    }
+    .u-card .u-card-front, .u-card .u-card-back {
+        display: block;
+        transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        transition-duration: 0.5s;
+        transition-property: transform, opacity;
+    }
+    .u-card .u-card-front {
+        transform: rotateY(0deg);
+    }
+        .u-card:hover .u-card-front,
+        .u-card:active .u-card-front,
+        .u-card:focus .u-card-front {
+            transform: rotateY(180deg);
+        }
+    .u-card  .u-card-back {
+		opacity: 0;
+        visibility: hidden;
+        transform: rotateY(-180deg);
+    }
+        .u-card:hover .u-card-back,
+        .u-card:active .u-card-back,
+        .u-card:focus .u-card-back {
+			opacity: 1;
+            visibility: visible;
+            transform: rotateY(0deg);
+        }
+        .u-card:hover .u-card-front,
+        .u-card:active .u-card-front,
+        .u-card:focus .u-card-front {
+			opacity: 0;
+            visibility: hidden;
+		}
+    .u-card_static .u-card-back-data { display: none !important; }
 /*** END UTILITIES ***/
 
+/*** MIXINS ***/
+	/*** .m-thesis ***/
+	.m-thesis-content,
+	.m-thesis-header {
+		width: 100%; height: 100%;
+		padding: 1em;
+	}
+	.m-thesis-content {
+		position: absolute; top: 0; left: 0;
+	}
+/*** END MIXINS ***/
+
 /*** COMPONENTS ***/
-	/*** .footer ***/
+	/*** .banner ***/
+	.banner-placeholder {
+		display: block;
+		float: left;
+	}
+	.banner-title {
+		position: absolute; bottom: 1em; left: 0; right: 0;
+	}
+	
+	/*** .content ***/
+	.content {
+		display: grid;
+	}
+
+	/*** .menu ***/
+	.menu {
+		position: absolute; left: 0; right: 0;
+		width: 100%;
+	}
+	.menu-list {
+		padding: 1em;
+	}
+	.menu-list-item {
+		position: relative;
+		padding: .5em;
+	}
+	.menu-link,
+	.menu-tooltip { display: block; }
+	.menu-link {
+		padding: .5em .1em;
+	}
 
 	/*** .partners ***/
 	.partners-logos { display: flex; }
@@ -60,70 +164,14 @@
 	.partners-logos-figure-img {
 		width: auto; height: 1.9em;
 	}
-
-	/*** .robot360 ***/
-	.robot360-title {// flex-direction: column; }
-	
-	.robot360 {
-		position: relative;
-		width: 100%; height: 100vh;
-		overflow-x: hidden;
-	}
-	.robot360-title {
-		position: absolute;
-		
-		padding: 1em;
-	}
-	.robot360-title-span {
-//		display: block;
-//		padding: .25em;
-	}
-	.robot360-title-span {
-		margin: 0 .5em;
-	}
-	.robot360-title-span:first-child {
-		font-weight: bold;
-	}
-	.robot360-zone {
-		position: relative;
-		width: auto; height: 90%;
-		filter: grayscale(100%);
-	}
-	.robot360-zone img {
-	  position: absolute; top: 0; left: 0;
-	  width: auto; height: 100%;
-	  opacity: 0;
-	}
-	.robot360-zone img:first-child {
-	  position: relative;
-	}
-	.robot360-zone img.active {
-	  opacity: 1;
-	}
-	.robot360-zone::before {
-	  padding-bottom: 56.25%;
-	  float: left;
-	}
-	.robot360-zone::before, .robot360-zone::after {
-	  content: "";
-	  display: table;
-	  clear: both;
-	}
-	
-	/*** .vision ***/
-	.vision-content-text {
-		padding: 1.9em;
-	}
-	.vision-toggle-button {
-		padding: .25em .5em;
-	}
-	
 /*** END COMPONENTS ***/
 
 /*** PAGES ***/
 /*** END PAGES ***/
 
 /*** INTERACTIVITY ***/
+.menu-tooltip { display: none; }
+.menu-link:hover ~ .menu-tooltip { display: block; }
 /*** END INTERACTIVITY ***/
 
 /*** MEDIA-QUERIES ***/
@@ -131,22 +179,61 @@
     body, html, main { font-size: 16px; }
 	
 	.partners-logos-figure-img.is-logo { display: none; }
+	
+	.partners {// background-color: rgba(0, 0, 0, .1); }
+	
+	.banner { height: 70vh; }
+	.banner-placeholder { height: 50%; }
+	.banner-placeholder:nth-child(1),
+	.banner-placeholder:nth-child(3),
+	.banner-placeholder:nth-child(4),
+	.banner-placeholder:nth-child(6) { width: 25%; }
+	.banner-placeholder:nth-child(2),
+	.banner-placeholder:nth-child(5) { width: 50%; }
+	
+	.content-item {
 
-	.footer,
+	}
+	.content-item:nth-child(1) {
+		grid-column-start: 1; grid-column-end: 2;
+		grid-row-start: 2; grid-row-end: 3;
+	}
+	.content-item:nth-child(2) {
+		grid-column-start: 1; grid-column-end: 3;
+		grid-row-start: 1; grid-row-end: 2;
+	}
+	.content-item:nth-child(3) {
+		grid-column-start: 2; grid-column-end: 3;
+		grid-row-start: 2; grid-row-end: 3;
+	}
+
 	.partners-logos-figure,
 	.partners-text-p { padding: .5em; }
+	
+	.menu-list { display: none; }
+	#chkbx4menu:checked ~ main .menu-list { display: block; }
 }
 @media all and (min-width: 50em) {
     body, html, main { font-size: 18px; }
-	
+
+	.menu-button,
 	.partners-logos-figure-img.is-icon { display: none; }
 	
-	.footer,
+	.banner { height: 60vh; }
+	.banner-placeholder { width: 33.333%; height: 50%; }
+	
+	.content {
+		grid-template-columns: 25% 50% 25%;
+		grid-template-rows: auto;
+	}
+	
+	.menu-list { display: flex; }
+	.menu-list-item { flex: 1; }
+	
 	.partners-logos-figure,
 	.partners-text-p { padding: 1em; }
 	
 	.partners-text { width: 90%; margin: 0 auto; }
-	.vision-content-text { width: 75%; margin: 0 auto; }
 }
 /*** END MEDIA-QUERIES ***/
 
@@ -171,22 +258,9 @@
 /*** END ANIMATION ***/
 
 /*** CSS HACKS ***/
-.robot360-zone,
-.robot360-zone *, .robot360-zone:before, .robot360-zone:after {
-		-webkit-transition: initial !important;
-		-moz-transition: initial !important;
-		-o-transition: initial !important;
-	-webkit-transition: initial !important;
-}
-.robot360-title {
-	margin-top: 19em;
-}
-
-.vision-toggle { display: none !important; }
-
-html, body, main { min-width: 50em !important; }
+.m-thesis .u-card-back,
+.m-thesis .u-card-front { display: flex !important; }
 /*** END CSS HACKS ***/
 
 /*** TO DELETE ***/
-
 /*** END TO DELETE ***/
