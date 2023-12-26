@@ -171,20 +171,19 @@
 	.banner-placeholder:nth-child(2),
 	.banner-placeholder:nth-child(5) { width: 50%; }
 	
-	.content-item {
-
+	.content-item:nth-child(1),
+	.content-item:nth-child(3) {
+		grid-row-start: 1; grid-row-end: 2;
 	}
 	.content-item:nth-child(1) {
 		grid-column-start: 1; grid-column-end: 2;
-		grid-row-start: 2; grid-row-end: 3;
 	}
 	.content-item:nth-child(2) {
 		grid-column-start: 1; grid-column-end: 3;
-		grid-row-start: 1; grid-row-end: 2;
+		grid-row-start: 2; grid-row-end: 3;
 	}
 	.content-item:nth-child(3) {
 		grid-column-start: 2; grid-column-end: 3;
-		grid-row-start: 2; grid-row-end: 3;
 	}
 
 	.partners-logos-figure,
