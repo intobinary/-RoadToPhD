@@ -1,0 +1,151 @@
+/*** CANCEL ***/
+html, body, main { width: 100%; height: 100%; }
+.footer,
+.header,
+.menu { width: 100%; }
+/*** END CANCEL ***/
+
+/*** Z-INDEXES ***/
+/*** END Z-INDEXES ***/
+
+/*** COLORS ***/ {% assign vColorGreen = "#03EA60" %}
+.menu-box-extra-button { background-color: {{ vColorGreen }}; }
+.menu-box.is-message { background-color: {{ vColorGreen }} !important; }
+
+.menu-box-extra { background-color: black; }
+
+.menu-box { background-color: #AAA; }
+
+.menu-box-extra-text { color: white; }
+/*** END COLORS ***/
+
+/*** FONTS ***/
+@font-face{font-family:"OCR A Extended";src:url("../../assets/fonts/OCRAEXT.TTF");}
+
+* { font-family: "OCR A Extended"; }
+
+.menu-box-title { font-size: 1.9em; }
+
+.menu-box-title { font-variant: small-caps; }
+.menu-box-title { font-weight: bold; }
+.footer,
+.menu-box-sign { text-align: right; }
+.menu-box-extra-button:hover,
+.menu-box-extra-button:active,
+.menu-box-extra-button:focus { text-decoration: underline; }
+/*** END FONTS ***/
+
+/*** MEDIA ***/
+/*** END MEDIA ***/
+
+/*** UTILITIES ***/
+/*** END UTILITIES ***/
+
+/*** COMPONENTS ***/
+	/*** COMMONS ***/
+	main,
+	.menu { display: flex; flex-direction: column; }
+	.menu { justify-content: center; }
+	.menu { flex: 1; }
+
+	main {
+		width: 100%; height: 100%;
+//		padding: .5em;
+	}
+	.footer,
+	.header { padding: 1em; }
+
+	/*** .header ***/
+	.header-logo {
+		width: auto; height: 1.9em;
+	}
+
+	/*** .menu ***/
+	.menu-box,
+	.menu-box-extra { display: flex; }
+	.menu-box { flex-direction: column; }
+	.menu-box-extra-text,
+	.menu-box-title { flex: 1; }
+	
+	.menu-box {
+			position: relative;
+		width: 60%;
+		padding: 1em;
+		overflow: hidden;
+	}
+	.menu-box:nth-child(1) { left: 30%; }
+	.menu-box:nth-child(2) { left: 5%; }
+	.menu-box:nth-child(3) { left: 25%; }
+	.menu-box:nth-child(4) { left: 35%; }
+	.menu-box:nth-child(5) { left: 15%; }
+	
+	.menu-box-extra {
+		position: absolute; left: 0;
+		width: 100%; height: 100%;
+	}
+	.menu-box-extra-button,
+	.menu-box-extra-text {
+		padding: .5em;
+	}
+	.menu-box-extra-button {
+		width: 25%;
+	}
+	.menu-box-extra-text {
+//		overflow-y: auto;
+	}
+	
+	.menu-box-sign { display: block; }
+/*** END COMPONENTS ***/
+
+/*** PAGES ***/
+/*** END PAGES ***/
+
+/*** INTERACTIVITY ***/
+ { cursor: pointer; }
+ 
+.menu-box-extra { top: 100%; }{% for i in (1..19) %}
+.menu-box:nth-child({{ i }}):hover .menu-box-extra,
+.menu-box:nth-child({{ i }}):active .menu-box-extra,
+.menu-box:nth-child({{ i }}):focus .menu-box-extra { top: 0; }{% endfor %}
+/*** END INTERACTIVITY ***/
+
+/*** MEDIA-QUERIES ***/
+@media all and (max-width: 50em) {
+    body, html, main { font-size: 16px; }
+	
+	.menu-box { margin: 1em 0; }
+	.menu-box { min-height: 7em; }
+}
+@media all and (min-width: 50em) {
+    body, html, main { font-size: 18px; }
+	
+	.menu-box { margin: 1.9em 0; }
+}
+/*** END MEDIA-QUERIES ***/
+
+/*** DECORATION ***/
+.d-cssCentered {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.d-midWrap {
+    max-width: 70em;
+    margin: 0 auto;
+}
+.d-midDock {
+    max-width: 50em;
+    margin: 0 auto;
+}
+/*** END DECORATION ***/
+
+/*** ANIMATION ***/
+/*** END ANIMATION ***/
+
+/*** CSS HACKS ***/
+/*** END CSS HACKS ***/
+
+/*** TO DELETE ***/
+.menu-box-extra {// top: 0 !important; }
+/*** END TO DELETE ***/

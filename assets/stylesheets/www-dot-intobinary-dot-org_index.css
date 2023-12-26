@@ -1,9 +1,0 @@
----
----
-/*** RESET ***/
-{% include assets/reset.css %}
-/*** END RESET ***/
-
-{% include assets/jekyll.css %}
-{% include assets/style_case-study.css %}
-{% include assets/style_index.css %}

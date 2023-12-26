@@ -1,0 +1,32 @@
+---
+---
+<!DOCTYPE html>
+<html class="js-html pg-{{ page.key }}">
+	<head>
+		{% include components/meta-tags.html %}
+	</head>
+	
+	<body>
+		<main>
+			<header class="header d-midWrap">
+				<img src="/assets/images/logo_green.png" class="header-logo" />
+				<p class="header-tagline">Madam Ella is on a #RoadToPhD.</p>
+			</header>
+			
+			<nav class="menu d-midWrap">{% for file in site.data.welcome.menu %}{% for data in file %}
+				<div class="menu-box {% if data[0] == '' %}is-message{% endif %}" tabindex="0">{% if data[0] == "" %}{% assign vContentUrl = "" %}
+					<p class="menu-box-message">{{ data[1] }}</p>{% else %}
+					<h6 class="menu-box-title">{{ data[0] }}</h6>
+					<span class="menu-box-sign">&rarr;</span>
+					
+					<div class="menu-box-extra">
+						<p class="menu-box-extra-text d-cssCentered">{% for content in data[1] %}{{ content.intro }}{% endfor %}</p>{% capture vContentUrl %}{% for content in data[1] %}{{ content.url }}{% endfor %}{% endcapture %}{% if vContentUrl != "" %}
+						<a href="{{ vContentUrl }}" class="menu-box-extra-button d-cssCentered">See inside &rarr;</a>{% endif %}
+					</div>{% endif %}
+				</div>{% endfor %}{% endfor %}
+			</nav>
+			
+			<footer class="footer d-midWrap">&copy; 2023 Into Binary. All Rights Reserved.</footer>
+		</main>
+	</body>
+</html>
