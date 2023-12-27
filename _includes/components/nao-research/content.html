@@ -17,7 +17,11 @@
 		</div>
 	</div>
 	
-	<div class="content-item robot360">
+	<div class="content-item robot360">{% for i in (1..6) %}
+		<img src="/assets/images/nao-research/nao-3d/{{ i }}.jpg" class="robot360-placeholder" />{% endfor %}
+
+		<!--
 		<img src="/assets/images/nao-research/nao-3d/1.jpg" class="robot360-placeholder" />
+		-->
 	</div>
 </section>

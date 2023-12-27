@@ -281,4 +281,8 @@ main {// min-width: 25em; }
 /*** END CSS HACKS ***/
 
 /*** TO DELETE ***/
+.robot360-placeholder {
+	display: none;
+}
+.robot360-placeholder:first-child { display: block; }
 /*** END TO DELETE ***/
