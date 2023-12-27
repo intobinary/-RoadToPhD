@@ -1,12 +1,7 @@
 ---
+layout: default
 ---
-<!DOCTYPE html>
-<html class="js-html pg-{{ page.key }}">
-	<head>
-		{% include components/meta-tags.html %}
-	</head>
-	
-	<body>{% for file in site.data.cases %}
+		{% for file in site.data.cases %}
 		<input type="radio" id="rdb4case{{ forloop.index }}" name="rdbs4cases"{% if forloop.first %} checked{% endif %} />{% endfor %}{% for file in site.data.movies %}
 		<input type="checkbox" id="chkbx4movie{{ forloop.index }}" name="chkbxs4movies" />{% endfor %}{% for i in (1..19) %}
 		{% if forloop.first == false %}	{% endif %}<input type="radio" id="rdb4cause{{ i }}" name="rdbs4causes"{% if forloop.index==11  %}checked{% endif %} />{% endfor %}{% for i in (1..1) %}
@@ -104,8 +99,3 @@
 		<aside class="d-background"><video class="d-background-video" autoplay loop muted>
 			<source type="video/mp4" src="/assets/videos/math-background.mp4" />
 		</video></aside>
-		
-	{% for i in (1..36) %}
-	<link rel="preload" href="/assets/images/nao-research/nao-3d/{{ i }}.jpg" as="image" />{% endfor %}
-	</body>
-</html>
