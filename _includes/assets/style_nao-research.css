@@ -281,8 +281,10 @@ main {// min-width: 25em; }
 /*** END CSS HACKS ***/
 
 /*** TO DELETE ***/
-.robot360-placeholder {
-	display: none;
+.threesixty {
+	border: 1px solid purple;
 }
-.robot360-placeholder:first-child { display: block; }
+.threesixty img {
+	border: 1px solid green;
+}
 /*** END TO DELETE ***/

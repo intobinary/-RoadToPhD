@@ -1,26 +1,4 @@
-$(function(){
-	var pic_X=$('.robot360').offset().left;
-	var pic_Y=$('.robot360').offset().top;
-	var pic_W=$('.robot360').width()/2;
-	var pic_H=$('.robot360').height()/2;
-	var center_X=pic_X+pic_W;
-	var center_Y=pic_Y+pic_H;
-	var movestop=pic_W/10;
-	$('.robot360').mousemove(function(event){
-		var mouse_X=event.pageX;
-		var mouse_Y=event.pageY;
-		if(mouse_X-center_X<=0){
-			moveImg(mouse_X,mouse_Y,'left')
-		}else{
-			moveImg(mouse_X,mouse_Y)
-		}
-	});
-	function moveImg(m_X,m_Y,dir){
-		var index=Math.ceil(Math.abs(m_X-center_X)/movestop);
-		if(dir){
-			$('.robot360 img').eq(index).show().siblings().hide();
-		}else{
-			$('.robot360 img').eq(36-index).show().siblings().hide();
-		}
-	}
-})
+
+            jQuery(document).ready(function() {
+                jQuery('.robot360').j360();
+            });
