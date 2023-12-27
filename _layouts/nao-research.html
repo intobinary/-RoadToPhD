@@ -9,7 +9,12 @@ layout: default
 {% include/components/nao-research/content.html %}
 {% include/components/nao-research/partners.html %}
 		</main>
-		
-		<script src="/assets/scripts/script_jQuery.min.js"></script>
-		<script src="/assets/scripts/script_js360.js"></script>
+
+		<script type="text/javascript" src="/assets/scripts/script_pdt360DegViewer.js"></script>
+		<script>
+			var path = '/assets/images/nao-research/nao-3d/';
+
+			pdt360DegViewer('car3', 36, path, 'jpg', false, false, true, false, false, false, false);   //draggable
+		</script>
 		<script type="text/javascript" src="/assets/scripts/www-dot-intobinary-dot-org_nao-research.js"></script>
+		

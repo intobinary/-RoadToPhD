@@ -64,6 +64,7 @@
 }
 
 .banner-placeholder,
+.robot360 img,
 .robot360-placeholder { filter: grayscale(100%); }
 /*** END MEDIA ***/
 
@@ -281,10 +282,4 @@ main {// min-width: 25em; }
 /*** END CSS HACKS ***/
 
 /*** TO DELETE ***/
-.threesixty {
-	border: 1px solid purple;
-}
-.threesixty img {
-	border: 1px solid green;
-}
 /*** END TO DELETE ***/
