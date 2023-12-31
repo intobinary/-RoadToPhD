@@ -1,0 +1,323 @@
+/*** CANCEL ***/
+html, body, main { width: 100%; height: 100%; }
+/*** END CANCEL ***/
+
+/*** Z-INDEXES ***/
+.d-background,
+.d-matrix { position: relative; z-index: 10; }
+main { position: relative; z-index: 20; }
+
+.menu-box-veil { position: relative; z-index: 30; }
+.menu-box-header { position: relative; z-index: 40; }
+/*** END Z-INDEXES ***/
+
+/*** COLORS ***/ {% assign vColorGreen = "#03EA60" %}
+.menu-box.nthChild-1 .menu-box-header,
+.menu-box.nthChild-4 .menu-box-header { background-color: {{ vColorGreen }}; }
+.menu-aside-h1 {// color: {{ vColorGreen }}; }
+
+.footer-wrap,
+.menu-box.nthChild-1 .menu-box-content,
+.menu-box.nthChild-4 .menu-box-content,
+.menu-box-veil { background-color: black; }
+
+.menu-box.nthChild-2,
+.menu-box.nthChild-3,
+.menu-box.nthChild-5 { background-color: #eee; }
+
+.menu-aside-wrap { background-color: white; }
+.footer *,
+.menu-box.nthChild-1 .menu-box-content,
+.menu-box.nthChild-4 .menu-box-content,
+.menu-box.nthChild-4 .menu-box-header,
+.menu-box.nthChild-2:hover .menu-box-header,
+.menu-box.nthChild-2:active .menu-box-header,
+.menu-box.nthChild-2:focus .menu-box-header,
+.menu-box.nthChild-3:hover .menu-box-header,
+.menu-box.nthChild-3:active .menu-box-header,
+.menu-box.nthChild-3:focus .menu-box-header,
+.menu-box.nthChild-5:hover .menu-box-header,
+.menu-box.nthChild-5:active .menu-box-header,
+.menu-box.nthChild-5:focus .menu-box-header { color: white; }
+/*** END COLORS ***/
+
+/*** FONTS ***/
+@font-face{font-family:"OCR A Extended";src:url("../../assets/fonts/OCRAEXT.TTF");}
+
+* { font-family: "OCR A Extended"; }
+
+.menu-aside-h1,
+.menu-box-header { font-weight: bold; }
+.footer-wrap,
+.menu-box-header { text-align: center; }
+.menu-header { text-align: right; }
+.footer a { text-decoration: underline; }
+/*** END FONTS ***/
+
+/*** MEDIA ***/
+.d-matrix { background-image: url("../../assets/images/richfield-case-study/logo_background_black.png"); }
+.d-matrix {
+	background-position: center;
+	background-size: 10em;
+}
+
+.menu-box.nthChild-4 .menu-box-header { background-image: url("../../assets/images/richfield-case-study/photo-op_madam-ella.png"); }
+.menu-box-header {
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+.menu-aside-img { filter: grayscale(100%); }
+/*** END MEDIA ***/
+
+/*** UTILITIES ***/
+    /*** .u-card ***/
+    .u-card {
+        position: relative;
+    }
+    .u-card .u-card-front, .u-card .u-card-back {
+		position: absolute; top: 0; left: 0;
+		width: 100%; height: 100%;
+        display: block;
+        transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        transition-duration: 0.5s;
+        transition-property: transform, opacity;
+    }
+    .u-card .u-card-front {
+        transform: rotateY(0deg);
+    }
+        .u-card:hover .u-card-front,
+        .u-card:active .u-card-front,
+        .u-card:focus .u-card-front {
+			opacity: 0;
+            transform: rotateY(180deg);
+        }
+    .u-card  .u-card-back {
+        opacity: 0;
+        transform: rotateY(-180deg);
+    }
+        .u-card:hover .u-card-back,
+        .u-card:active .u-card-back,
+        .u-card:focus .u-card-back {
+            opacity: 1;
+            transform: rotateY(0deg);
+        }
+    .u-card_static .u-card-back-data { opacity: 0; }
+
+    /*** .u-title ***/
+    .header .u-title { padding: 0; }
+/*** END UTILITIES ***/
+
+/*** COMPONENTS ***/
+        /*** COMMONS ***/
+		main { display: flex; }
+		main { flex-direction: column; }
+		.menu { flex: 1; }
+	
+	/*** .footer ***/
+	.footer {
+		padding: .5em 1em 1em 1em;
+	}
+	.footer-wrap {
+		padding: 1em;
+	}
+	
+	/*** .menu ***/
+	.menu-box-header { display: flex !important; }
+	.menu {
+		padding: .5em;
+	}
+	
+	.menu-aside {
+		padding: .5em;
+	}
+	.menu-aside-img {
+		width: auto; height: 50%;
+	}
+	.menu-aside-wrap {
+	}
+	
+	.menu-header {
+		padding: .5em;
+	}
+	.menu-header-logo-img {
+		width: auto; height: 1.9em;
+	}
+	
+	.menu-box {
+		position: relative;
+	}
+	.menu-box {
+		margin: 0 .5em;
+//		padding: 0 1em;
+	}
+	.menu-box.nthChild-2,
+	.menu-box.nthChild-4 {// margin: 0; }
+	.menu-box.nthChild-1 { margin-top: .5em; }
+	.menu-box-header {
+		padding: 1em .5em;
+		width: 100%; height: 100%;
+	}
+	.menu-box.nthChild-2 .menu-box-header,
+	.menu-box.nthChild-3 .menu-box-header,
+	.menu-box.nthChild-5 .menu-box-header {// padding: 1em 0 !important; }
+	.menu-box-veil {
+		position: absolute; top: 0; left: 0;
+		display: block;
+		width: 100%; height: 100%;
+	}
+/*** END COMPONENTS ***/
+
+/*** PAGES ***/
+/*** END PAGES ***/
+
+/*** INTERACTIVITY ***/
+ { cursor: pointer; }
+
+.menu-box-veil { opacity: 0; }
+.menu-box:hover .menu-box-veil,
+.menu-box:active .menu-box-veil,
+.menu-box:focus .menu-box-veil { animation: appear 1.9s ease-in; opacity: 1; }
+	.menu-box:hover .menu-box-header { animation-delay: 1.9s; }
+/*** END INTERACTIVITY ***/
+
+/*** MEDIA-QUERIES ***/
+@media all and (max-width: 50em) {
+    body, html, main { font-size: 16px; }
+	
+	.menu-aside-h1 { font-size: 2em; }
+	.menu-box-header { font-size: 1.5em; }
+	
+	.menu-box {
+		margin: 1em .5em;
+	}
+	.menu-box.nthChild-1,
+	.menu-box.nthChild-4 { min-height: 25vh; }
+	.menu-box.nthChild-1 .menu-box-header,
+	.menu-box.nthChild-4 .menu-box-header { align-items: flex-end; }
+	.menu-box.nthChild-2 .menu-box-header,
+	.menu-box.nthChild-3 .menu-box-header,
+	.menu-box.nthChild-5 .menu-box-header { justify-content: flex-end; }
+	
+    .d-background-video {
+        height: 100%; width: auto;
+    }
+}
+@media all and (min-width: 50em) {
+    body, html, main { font-size: 18px; }
+	
+	.menu-aside-h1 { font-size: 3em; }
+	.menu-box-header { font-size: 1.9em; }
+
+	.menu {
+		display: grid;
+		grid-template-columns: 20% 20% 20% 20% 20%;
+	}
+	.menu-aside {
+		grid-column-start: 3; grid-column-end: 6;
+		grid-row-start: 1; grid-row-end: 3;
+	}
+	
+	.menu-box.nthChild-1 .menu-box-header,
+	.menu-box.nthChild-3 .menu-box-header,
+	.menu-box.nthChild-4 .menu-box-header,
+	.menu-box.nthChild-5 .menu-box-header { align-items: flex-end; }
+	.menu-box.nthChild-1 {
+		grid-column-start: 1; grid-column-end: 2;
+		grid-row-start: 1; grid-row-end: 4;
+	}
+	.menu-box.nthChild-2 {
+		grid-column-start: 2; grid-column-end: 3;
+		grid-row-start: 2; grid-row-end: 4;
+	}
+	.menu-box.nthChild-3 {
+		grid-column-start: 3; grid-column-end: 4;
+		grid-row-start: 3; grid-row-end: 4;
+	}
+	.menu-box.nthChild-4 {
+		grid-column-start: 4; grid-column-end: 5;
+		grid-row-start: 3; grid-row-end: 4;
+	}
+	.menu-box.nthChild-5 {
+		grid-column-start: 5; grid-column-end: 6;
+		grid-row-start: 3; grid-row-end: 4;
+	}
+	.menu-header {
+		grid-column-start: 2; grid-column-end: 3;
+		grid-row-start: 1; grid-column-end: 2;
+	}
+	
+    .d-background-video {
+        min-width: 100vw; min-height: 100vh;
+    }
+}
+/*** END MEDIA-QUERIES ***/
+
+/*** DECORATION ***/
+    /*** .d-background ***/
+    .d-background {
+        position: absolute; top: 0; left: 0;
+        width: 100%; height: 100%;
+        overflow: hidden;
+    }
+    .d-background-video {
+        position: fixed; top: 0; left: 0;
+        /*
+        position: absolute; top: 0; right: 0;
+        min-width: 100vw;// min-height: 100% !important;
+        */
+        filter: grayscale(1);
+        opacity: .4;
+    }
+	
+	/*** .d-matrix ***/
+	.d-matrix {
+		position: absolute; top: 0; left: 0;
+		width: 100%; height: 100%;
+	}
+	
+.d-cssCentered {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.d-midWrap {
+    max-width: 70em;
+    margin: 0 auto;
+}
+.d-midDock {
+    max-width: 50em;
+    margin: 0 auto;
+}
+/*** END DECORATION ***/
+
+/*** ANIMATION ***/
+	/*** .menu-box-veil ***/
+	@keyframes appear { from { opacity: 0; } to { opacity: 1; } }
+/*** END ANIMATION ***/
+
+/*** CSS HACKS ***/
+.menu-aside-wrap { display: flex; }
+.menu-aside-wrap { flex-direction: row; }
+
+.menu-aside-wrap {
+	width: 100%; height: 100%;
+}
+.menu-aside-img {
+	width: auto; height: 33.333vh;
+}
+
+.d-background,
+.d-matrix { display: none !important; }
+.d-matrix {
+    background-color: transparent;
+    backdrop-filter: blur(7px);
+    filter: blur(7px);
+}
+/*** END CSS HACKS ***/
+
+/*** TO DELETE ***/
+.menu-header-logo-img.is-icon { display: none; }
+/*** END TO DELETE ***/

@@ -1,4 +1,4 @@
 ---
-layout: case-study-new
+layout: case-study
 key: "richfield"
 ---
