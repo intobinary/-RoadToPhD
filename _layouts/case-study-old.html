@@ -1,0 +1,95 @@
+---
+layout: default
+---
+		{% for file in site.data.cases %}
+		<input type="radio" id="rdb4case{{ forloop.index }}" name="rdbs4cases"{% if forloop.first %} checked{% endif %} />{% endfor %}{% for file in site.data.movies %}
+		<input type="checkbox" id="chkbx4movie{{ forloop.index }}" name="chkbxs4movies" />{% endfor %}{% for i in (1..19) %}
+		{% if forloop.first == false %}	{% endif %}<input type="radio" id="rdb4cause{{ i }}" name="rdbs4causes"{% if forloop.index==11  %}checked{% endif %} />{% endfor %}{% for i in (1..1) %}
+		{% if forloop.first == false %}	{% endif %}<input type="checkbox" id="chkbx4proof{{ i }}" name="chkbxs4proofs"{% if forloop.first %}{% endif %} />
+		{% endfor %}
+
+		<input type="checkbox" id="chkbx4letter" name="chkbx4letter" />
+		<input type="checkbox" id="chkbx4cause" name="chkbx4cause" checked />
+
+		<main>
+			<section class="breakingNews">
+				<marquee class="breakingNews-marquee">
+					<div class="breakingNews-marquee-text">Send your testimony to <a href="mailto:madam.ella@intobinary.org" class="breakingNews-marquee-text-link">madam.ella@intobinary.org</a>. Get angry! Get involved!</div>
+				</marquee>
+			</section>
+
+			<!--
+			<section class="breakingNews">
+				<marquee class="breakingNews-marquee">
+					<div class="breakingNews-marquee-text">(BREAKING NEWS) This week, President Biden approved $37 million in debt cancellation for over 1.200 students who were deceived and defrauded by the University of Phoenix. <a href="https://www.instagram.com/p/CxeHcWNMWXB/" class="breakingNews-marquee-text-link">(View on IG: Biden)</a></div>
+
+					<div class="breakingNews-marquee-text">(BREAKING NEWS) The US Administration, in the leadership of Madam Kamala Harris, is currently on a nationwide college tour, addressing education reforms. <a href="https://www.instagram.com/reel/CxOK0DeuY8g/?igshid=NTc4MTIwNjQ2YQ==" class="breakingNews-marquee-text-link">(View on IG: Kamala)</a></div>
+					
+					<div class="breakingNews-marquee-text">(BREAKING NEWS) The EU unveiled a raft of new laws, a few days ago. The Digital Markets Act, aims at ending the "gatekeeping" by select companies with a set of new rules. <a href="https://www.instagram.com/p/CxQi7DGM2PH/?igshid=NTc4MTIwNjQ2YQ==" class="breakingNews-marquee-text-link">(View on IG: WEF)</a></div>
+
+					<div class="breakingNews-marquee-text">(BREAKING NEWS) Apple now use Type-C charger! "Welcome to 2014, iPhone!" -- signed, Android users.</div>
+				</marquee>
+			</section>
+			-->
+
+			<header class="header d-midWrap">
+				<figure class="header-logo">
+					<img src="/assets/images/logo_green.png" class="header-logo-img" />
+				</figure>
+
+				<h2 class="header-tagline">Bonjour. Je suis Madam Ella.<!-- <br />Sur mon chemin, un beau jour, je suis devenue chevaliere de tous les étudiants. <br />To the "seekers", of every field, in every sense of the word...--></h2>
+				
+				<h2 class="u-title">Welcome to my #RoadToPhD!</h2>
+				
+				<label for="chkbx4letter" class="message-text-box">
+					<p class="message-text-box-p">An institution that penalizes the students for its own ommissions? I've studied in 3 continents, and I'm only seeing this in South Africa!</p>
+					<!--
+					<p class="message-text-box-p">Nowhere else in the world have I ever been penalized for the omissions of the organization.</p>
+					-->
+					<span>Tap here to continue reading the first message.</span>
+				</label>
+			</header>
+
+			<section class="message d-midDock">
+				<div class="message-text u-letter">
+					<p class="message-text-p">After my college in India, I went about building my career as most would. It was a great few years. I built chat bots before it was a thing. I helped people too; as a member of the World Economic Forum, community impact was always at sight.</p>
+
+				<!--
+					<label for="chkbx4letter" class="message-text-box">
+						<p class="message-text-box-p">An institution that penalizes the students for its own ommissions? I've studied in 3 continents, and I'm only seeing this in South Africa!</p>
+						<span>Tap here to continue reading the first message.</span>
+					</label>
+				-->
+
+					<p class="message-text-p u-letter-details">When it was time to get to academia, my new school told me to restart despite all the documents, because they "don't know India". And SAQA refused to intervene; no effort whatsoever! <br /><br />I was so eager to get to my destination, I just agreed. <br /><br />Fast forward my 3rd year in South Africa, and I was told that I must redo my degree from the begining! AGAIN! They're trying to make the new graduation date in 2026! <br /><br />Needless to say I am not as heartwarming as I was. I have seen this pattern before! <br /><br /><br/>This is a dedicated zone for this journey of mine. Madam Ella is on a #RoadToPhD! Come and follow along, as I dodge the oppressors and get to doctorate.</p>
+
+					<p class="message-text-p">Shoutout to the Stellenbosch campaigners; <span class="d-decoBold">my turn!</span> [** joke]</p>
+				</div>
+			</section>
+
+			<section class="message d-midDock">
+				<h2 class="message-subtitle">We speak French here because English gave them deniability! <span class="d-colorGreen">Bookmark this link!</span></h2>
+
+				<div class="message-text">
+					<p class="message-text-p">"The most common way people give up their power is by thinking they don't have any." -- A.W. PS: Guess the institution? And guess the story? <a href="mailto:madam.ella@intobinary.org">Email me</a> directly if you have a similar story. I need your voices! Are you enraged too? Show the hearts on <a href="https://www.instagram.com/p/CwlWU8JNELq/?igshid=NTc4MTIwNjQ2YQ==">this link!</a> Thank you to those who have already shown their support. <br/>Get angry! Get involved!</p>
+				</div>
+			</section>
+			
+			{% include components/case-study-old/guess.html %}
+			
+			{% include components/case-study-old/cases.html %}
+
+			{% include components/case-study-old/cause.html %}
+			
+			{% include components/case-study-old/proof.html %}
+			
+			{% include components/case-study-old/white-paper.html %}
+			
+			{% include components/case-study-old/movies.html %}
+			
+			{% include components/case-study-old/news.html %}
+		</main>
+		
+		<aside class="d-background"><video class="d-background-video" autoplay loop muted>
+			<source type="video/mp4" src="/assets/videos/math-background.mp4" />
+		</video></aside>

@@ -2,3 +2,14 @@ collections:
   pages:
     output: true
     permalink: /:path/
+  case-study-toc:
+    output: true
+    permalink: /richfield-case-study/:path/
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "case-study-toc"
+    values:
+      layout: "case-study_page"

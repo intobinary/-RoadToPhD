@@ -1,0 +1,47 @@
+<section class="cases d-midWrap">
+	<h3 class="cases-title">Applauding Justice!</h3>
+
+	<header class="cases-header">
+		<div class="cases-header-highlight">
+			<div class="cases-header-highlight-text"><span class="cases-header-highlight-text-span">Cases</span></div>
+		</div>
+		<div class="cases-header-text">
+			<p class="cases-header-text-p">Thank you all who have sent their testimonies. I feel your pain. I understand how difficult these years are to recount.</p>
+
+			<p class="cases-header-text-p">This section is to honor your testimonies by shedding the light on the beauty of our justice system. Take comfort in discovering these cases where injustice was overruled.</p>
+
+			<blockquote class="cases-header-text-quote"><p class="cases-header-text-quote-q">"Judicial secrecy hinders society. Where there is darkness, light should be shed. And where there is no law, law should be written."</p> <cite class="cases-header-text-quote-cite">-- Madam Ella</cite></blockquote>
+
+			<!--
+			<p class="cases-header-text-p">This section is to honor your testimonies by shedding the light on the beauty of our justice system. Take comfort in discovering these cases where injustice was overruled. Society evolves one just cause at a time. Thank you for being the brave ones making impact in the world.</p>
+			-->
+		</div>
+	</header>
+
+	<div class="cases-content"><ul class="cases-content-list">{% for file in site.data.cases %}
+		<li class="cases-content-list-item"><div class="cases-content-law">
+			<div class="cases-content-law-highlight">
+				<div class="cases-content-law-highlight-text"><span class="cases-content-law-highlight-text-span">{% for data in file[forloop.index] %}{{ data.case }}{% endfor %}</span></div>
+			</div>
+
+			<nav class="cases-content-law-nav">
+				<span class="cases-content-law-nav-text">Case <br />{{ forloop.index }}/{{ forloop.length }}</span>
+				<div class="cases-content-law-nav-buttons">
+					<label for="rdb4case{% if forloop.last %}1{% else %}{{ forloop.index | plus: 1 }}{% endif %}" class="cases-content-law-nav-buttons-span u-button">Next</label>
+					<label for="rdb4case{% if forloop.first %}{{ forloop.length }}{% else %}{{ forloop.index | minus: 1 }}{% endif %}" class="cases-content-law-nav-buttons-span u-button">Prev</label>
+				</div>
+			</nav>
+
+			<div class="cases-content-law-details">
+				<div class="cases-content-law-details-dock">
+					<span class="cases-content-law-details-key">Detail:</span>
+					<p class="cases-content-law-details-p">{% for data in file[forloop.index] %}{{ data.detail }}{% endfor %}</p>
+				</div>
+				<div class="cases-content-law-details-dock">
+					<span class="cases-content-law-details-key">Conclusion:</span>
+					<p class="cases-content-law-details-p">{% for data in file[forloop.index] %}{{ data.conclusion }}{% endfor %}</p>
+				</div>
+			</div>
+		</div></li>{% endfor %}
+	</ul></div>
+</section>

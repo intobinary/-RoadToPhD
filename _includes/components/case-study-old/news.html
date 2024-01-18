@@ -1,0 +1,15 @@
+<section class="news d-midWrap">
+	<h3 class="news-title">In The News...</h3>
+
+	<div class="news-content"><ul class="news-content-list">{% for file in site.data.news %}{% capture vClassUCard%}{% if forloop.last %}u-card_static{% else %}u-card{% endif %}{% endcapture %}{% for fileData in file %}
+		<li class="news-content-list-item"><div class="news-card {{ vClassUCard% }}">
+			<div class="news-card-front u-card-front">
+				<p class="news-card-front-data">{% for data in fileData[1] %}{{ data.description }}{% endfor %}</p>
+				<img src="/assets/images/placeholder-1x1.png" class="news-card-front-img" style="background-image: url('/assets/images/news/{% for data in fileData[1] %}{{ data.thumbnail }}{% endfor %}');" />
+			</div>
+			<div class="news-card-back u-card-back"><div class="news-card-back-dock d-cssCentered">
+				<a href="{% for data in fileData[1] %}{% for dataIG in data.IG %}{{ dataIG.post }}{% endfor %}{% endfor %}" class="news-card-back-data u-card-back-data">View on IG: <br /><span class="d-decoUnderline">@{% for data in fileData[1] %}{% for dataIG in data.IG %}{{ dataIG.account }}{% endfor %}{% endfor %}</span></a>
+			</div></div>
+		</div></li>{% endfor %}{% endfor %}
+	</ul></div>
+</section>

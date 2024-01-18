@@ -1,12 +1,12 @@
 ---
 ---
 <!DOCTYPE html>
-<html class="js-html pg-{{ page.key }}">
+<html class="js-html pg-{{ page.key }}{% if page.layout contains 'old' %}{% else %}{% if page.layout contains 'page' %} pg-inner{% else %} pg-welcome{% endif %}{% endif %}">
 	<head>
 		{% include components/meta-tags.html %}
 	</head>
 	
 	<body>
-{{ content }}
+		{{ content }}
 	</body>
 </html>

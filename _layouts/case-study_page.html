@@ -1,0 +1,74 @@
+---
+layout: default
+---
+		<input id="chkbx4mobileMenu" type="checkbox" name="chkbx4mobileMenu" checked />
+		<input id="chkbx4TOC" type="checkbox" name="chkbx4TOC" />
+
+		<main>
+			<footer class="footer"><div class="footer-wrap">
+				The entire website is being completly redesigned. You can still view the 2023 snapshot. <a href="/richfield-case-study/archives/2023/">Click here!</a>
+			</div></footer>
+			
+			<section class="main_dock">
+				<aside class="aside"><div class="aside_dock">
+					<label for="chkbx4mobileMenu" class="aside-button">...</label>
+				
+					<div class="aside-message">
+						<p class="aside-message-p">Send your testimony! You can contact Madam Ella directly: <a href="mailto:madam.ella@intobinary.org">madam.ella<br />@intobinary.org</a>.</p>
+					
+						<video class="aside-message-video" poster="/assets/videos/intro-sample.png" controls>
+							<source src="/assets/videos/intro-placeholder.mp4" type="video/mp4" />
+							<!--
+							<source src="/assets/videos/intro-sample.mp4" type="video/mp4" />
+							<source src="/assets/videos/intro-sample.webm" type="video/webm" />
+							<source src="/assets/videos/intro-sample.ogg" type="video/ogg" />
+							-->
+							<!--
+							<object data="/assets/videos/intro-sample.mp4" />
+								<embed src="/assets/videos/intro-sample.swf" />
+							</object>
+							-->
+						</video>
+					</div>
+					<div class="aside-toc"><div class="aside-toc_dock">
+						<label for="chkbx4TOC" class="aside-toc-title" title="Click to open">Table of Content</label>
+						
+						<div class="aside-toc-list_wrap"><ul class="aside-toc-list">{% assign currentCategory = "" %}{% for pg in site.case-study-toc %}{% capture iCategory %}{{ pg.url | remove: '/richfield-case-study/' | split: '/' | first }}{% endcapture %}
+							{% if iCategory == currentCategory %}<!--yes-->{% else %}{% unless forloop.first %}{% if pg.url contains iCategory %}</ul>{% endif %}
+							</li>{% endunless %}{% unless forloop.first %}
+							<!--.-->
+							{% endunless %}<li class="aside-toc-list-item">
+								<span class="aside-toc-category">{{ iCategory | replace: '-', ' ' | upcase }}</span>{% if pg.url contains iCategory %}
+								<ul class="aside-toc-sublist">{% endif %}{% assign currentCategory = iCategory %}{% endif %}
+									<li class="aside-toc-sublist-item"><a href="{{ pg.url }}" class="aside-toc-link">{{ pg.title }}</a></li>{% if forloop.last %}{% if pg.url contains iCategory %}
+								</ul>{% endif %}
+							</li>{% endif %}{% endfor %}
+						</ul></div>
+					</div></div>
+					<p>&copy; Copyright 2024.</p>
+				</div></aside>
+				
+				<section class="page">
+					<nav class="page-nav">
+						<div class="page-nav-breadcrumbs"><a href="/richfield-case-study/">Richfield Case-Study</a> > <span>{{ page.url | remove: '/richfield-case-study/' | split: '/' | first | replace: '-', ' ' | upcase }}</span> > <a href="">{{ page.url | split: '/' | last | replace: '-', ' ' | capitalize }}</a></div>
+						
+						<figure class="page-nav-logo">
+							<img src="/assets/images/logo_green.png" class="page-nav-logo-img" />
+						</figure>
+					</nav>
+					<div class="page-content">
+						<header class="page-content-banner">
+							<span class="page-content-banner-placeholder"></span>
+							<h1 class="page-content-banner-title">{{ page.title }}</h1>
+						</header>
+						<div class="page-content-text">
+							<p>{% if page.description == null or page.description == "" %}[...]{% else %}{{ page.description }}{% endif %}</p>
+						</div>
+					</div>
+				</section>
+			</section>
+		</main>
+	
+		<aside class="d-background"><video class="d-background-video" autoplay loop muted>
+			<source type="video/mp4" src="/assets/videos/math-background.mp4" />
+		</video></aside>
