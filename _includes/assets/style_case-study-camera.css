@@ -1,0 +1,171 @@
+/*** CANCEL ***/
+html, body, main { width: 100%; height: 100%; }
+/*** END CANCEL ***/
+
+/*** Z-INDEXES ***/
+/*** END Z-INDEXES ***/
+
+/*** COLORS ***/ {% assign vColorGreen = "#03EA60" %}
+.header { background-color: {{ vColorGreen }}; }
+
+.aside { background-color: #eee; }
+/*** END COLORS ***/
+
+/*** FONTS ***/
+@font-face{font-family:"OCR A Extended";src:url("../../assets/fonts/OCRAEXT.TTF");}
+
+* { font-family: "OCR A Extended"; }
+/*** END FONTS ***/
+
+/*** MEDIA ***/
+/*** END MEDIA ***/
+
+/*** UTILITIES ***/
+    /*** .u-card ***/
+    .u-card {
+        position: relative;
+    }
+    .u-card .u-card-front, .u-card .u-card-back {
+		position: absolute; top: 0; left: 0;
+		width: 100%; height: 100%;
+        display: block;
+        transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        transition-duration: 0.5s;
+        transition-property: transform, opacity;
+    }
+    .u-card .u-card-front {
+        transform: rotateY(0deg);
+    }
+        .u-card:hover .u-card-front,
+        .u-card:active .u-card-front,
+        .u-card:focus .u-card-front {
+			opacity: 0;
+            transform: rotateY(180deg);
+        }
+    .u-card  .u-card-back {
+        opacity: 0;
+        transform: rotateY(-180deg);
+    }
+        .u-card:hover .u-card-back,
+        .u-card:active .u-card-back,
+        .u-card:focus .u-card-back {
+            opacity: 1;
+            transform: rotateY(0deg);
+        }
+    .u-card_static .u-card-back-data { opacity: 0; }
+/*** END UTILITIES ***/
+
+/*** COMPONENTS ***/
+	/*** COMMONS ***/
+	.aside,
+	.header { position: fixed; }
+	.aside,
+	.content,
+	.header {
+		padding: 1em;
+	}
+	
+	.content { height: 900%; }
+/*** END COMPONENTS ***/
+
+/*** PAGE: CAMERA ***/
+        /*** COMMONS ***/
+	
+/*** END PAGE: CAMERA ***/
+
+/*** INTERACTIVITY ***/
+ { cursor: pointer; }
+/*** END INTERACTIVITY ***/
+
+/*** MEDIA-QUERIES ***/
+@media all and (max-width: 50em) {
+    body, html, main { font-size: 16px; }
+
+	.aside { left: 0; bottom: 0; }
+	.header { position: sticky; top: 0; }
+	
+    .d-background-video {
+        height: 100%; width: auto;
+    }
+}
+@media all and (min-width: 50em) {
+    body, html, main { font-size: 18px; }
+	
+	.aside,
+	.content,
+	.header {
+			height: 100%;
+	}
+	.aside,
+	.header {
+			top: 0;
+		width: 20%;
+	}
+	.aside { right: 0; }
+	.content {
+		width: 60%;
+		display: block;
+		margin: 0 auto;
+	}
+	.header { position: fixed; left: 0; }
+	
+    .d-background-video {
+        min-width: 100vw; min-height: 100vh;
+    }
+}
+/*** END MEDIA-QUERIES ***/
+
+/*** DECORATION ***/
+    /*** .d-background ***/
+    .d-background {
+        position: absolute; top: 0; left: 0;
+        width: 100%; height: 100%;
+        overflow: hidden;
+    }
+    .d-background-video {
+        position: fixed; top: 0; left: 0;
+        /*
+        position: absolute; top: 0; right: 0;
+        min-width: 100vw;// min-height: 100% !important;
+        */
+        filter: grayscale(1);
+        opacity: .4;
+    }
+	
+	/*** .d-matrix ***/
+	.d-matrix {
+		position: absolute; top: 0; left: 0;
+		width: 100%; height: 100%;
+	}
+	
+.d-cssCentered {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.d-midWrap {
+    max-width: 70em;
+    margin: 0 auto;
+}
+.d-midDock {
+    max-width: 50em;
+    margin: 0 auto;
+}
+/*** END DECORATION ***/
+
+/*** ANIMATION ***/
+/*** END ANIMATION ***/
+
+/*** CSS HACKS ***/
+.d-background,
+.d-matrix { display: none !important; }
+.d-matrix {
+    background-color: transparent;
+    backdrop-filter: blur(7px);
+    filter: blur(7px);
+}
+/*** END CSS HACKS ***/
+
+/*** TO DELETE ***/
+/*** END TO DELETE ***/
