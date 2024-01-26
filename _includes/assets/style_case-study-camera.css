@@ -66,6 +66,8 @@ html, body, main { width: 100%; height: 100%; }
 	}
 	
 	.content { height: 900%; }
+	.content-reviews * { display: inline-block; }
+	.content-reviews img { width: auto; height: 4em; }
 /*** END COMPONENTS ***/
 
 /*** PAGE: CAMERA ***/
@@ -81,6 +83,9 @@ html, body, main { width: 100%; height: 100%; }
 @media all and (max-width: 50em) {
     body, html, main { font-size: 16px; }
 
+	.aside,
+	.content,
+	.header { width: 100%; }
 	.aside { left: 0; bottom: 0; }
 	.header { position: sticky; top: 0; }
 	
