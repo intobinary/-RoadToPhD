@@ -13,6 +13,8 @@ main { position: relative; z-index: 20; }
 .page { position: relative; z-index: 50; }
 .aside { position: relative; z-index: 60; }
 .page a { position: relative; z-index: 70; }
+
+.cameraRollButton { position: relative; z-index: 80; }
 /*** END Z-INDEXES ***/
 
 /*** COLORS ***/ {% assign vColorGreen = "#03EA60" %}
@@ -35,6 +37,7 @@ main { position: relative; z-index: 20; }
 
  { background-color: #AAA; }
 
+.cameraRollButton,
 .menu-box.nthChild-2,
 .menu-box.nthChild-3,
 .menu-box.nthChild-5 { background-color: #eee; }
@@ -531,6 +534,11 @@ main { position: relative; z-index: 20; }
 }
 
 .pg-inner .footer { padding-bottom: 0; padding-top: 1em; }
+
+.cameraRollButton {
+	position: fixed; top: 1em; right: 1em;
+	width: 1em; height: 1em;
+}
 /*** END CSS HACKS ***/
 
 /*** TO DELETE ***/
