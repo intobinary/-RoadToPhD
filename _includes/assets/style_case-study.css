@@ -37,7 +37,6 @@ main { position: relative; z-index: 20; }
 
  { background-color: #AAA; }
 
-.cameraRollButton,
 .menu-box.nthChild-2,
 .menu-box.nthChild-3,
 .menu-box.nthChild-5 { background-color: #eee; }
@@ -537,7 +536,11 @@ main { position: relative; z-index: 20; }
 
 .cameraRollButton {
 	position: fixed; top: 1em; right: 1em;
-	width: 1em; height: 1em;
+	width: 1.9em; height: 1.9em;
+	background-image: url("../../assets/images/richfield-case-study/icon_truth_tinted.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
 }
 /*** END CSS HACKS ***/
 
