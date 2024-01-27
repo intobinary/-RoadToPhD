@@ -13,10 +13,12 @@ html, body, main { width: 100%; height: 100%; }
 .menu-box.is-message { background-color: {{ vColorGreen }} !important; }
 
 .menu-box-extra { background-color: black; }
+.menu-box:nth-child(7) { background-color: black !important; }
 
 .menu-box { background-color: #AAA; }
 
 .menu-box-extra-text { color: white; }
+.menu-box:nth-child(7) { color: white !important; }
 /*** END COLORS ***/
 
 /*** FONTS ***/
@@ -73,11 +75,21 @@ html, body, main { width: 100%; height: 100%; }
 		padding: 1em;
 		overflow: hidden;
 	}
+	.menu-box:nth-child(1) { left: 20%; }
+	.menu-box:nth-child(2) { left: 30%; }
+	.menu-box:nth-child(3) { left: 5%; }
+	.menu-box:nth-child(4) { left: 25%; }
+	.menu-box:nth-child(5) { left: 35%; }
+	.menu-box:nth-child(6) { left: 15%; }
+	.menu-box:nth-child(7) { left: 5%; }
+	
+	/*
 	.menu-box:nth-child(1) { left: 30%; }
 	.menu-box:nth-child(2) { left: 5%; }
 	.menu-box:nth-child(3) { left: 25%; }
 	.menu-box:nth-child(4) { left: 35%; }
 	.menu-box:nth-child(5) { left: 15%; }
+	*/
 	
 	.menu-box-extra {
 		position: absolute; left: 0;
@@ -144,6 +156,7 @@ html, body, main { width: 100%; height: 100%; }
 /*** END ANIMATION ***/
 
 /*** CSS HACKS ***/
+.menu-box b { font-weight: bold; }
 /*** END CSS HACKS ***/
 
 /*** TO DELETE ***/
