@@ -1,5 +1,5 @@
 ---
 key: ""
-title: "MONTH: January 2024"
+title: "All of January 2024"
 description: "..."
 ---
