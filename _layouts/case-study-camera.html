@@ -4,7 +4,12 @@ layout: default
 <main>
 	<header class="header">January 19, 2024. The "manufacturing" has started! <br /><br />Here, the archives of all videos and photos. <br /><br />Stay tuned with the pages to get details.</header>
 	
-	<aside class="aside">Meta-Data</aside>
+	<aside class="aside">
+		<h5 class="aside-title" style="font-weight: bold; text-decoration: underline;">Community Emails</h5>
+		<br />
+		<p>{% for file in site.data.richfield-case-study.camera-roll.community-emails %}{% for data in file.meta-data %}
+	{{ data }}{% endfor %}{% endfor %}</p>
+	</aside>
 	
 	<section class="content">
 		<div class="content-reviews">
@@ -14,8 +19,8 @@ layout: default
 			</ul>
 		</div>
 		
-		<div>
-			<img src="/assets/images/richfield-case-study/community-emails/email-1.png" />
+		<div>{% for file in site.data.richfield-case-study.camera-roll.community-emails %}{% for data in file.emails %}
+			<img src="/assets/images/richfield-case-study/community-emails/{{ data }}" />{% endfor %}{% endfor %}
 		</div>
 	</section>
 </main>
