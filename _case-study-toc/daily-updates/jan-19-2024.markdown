@@ -2,4 +2,7 @@
 key: ""
 title: "January 19; they're starting!"
 description: "January 19... Richfield has started Richfielding! Add the verb to the dictionary, Britannica! Here comes another wave of manufactured problems!"
+faq:
+  "What is the significance of January 19 in the context of the Richfield Case-Study?": "(content coming soon...)"
+  "Can you provide more information about the nature of the 'manufactured problems' referenced here?": "(content coming soon...)"
 ---

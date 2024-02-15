@@ -22,7 +22,9 @@ main { position: relative; z-index: 20; }
 .aside-toc,
 .menu-box.nthChild-1 .menu-box-header,
 .menu-box.nthChild-4 .menu-box-header,
-.page-content-banner-placeholder:before { background-color: {{ vColorGreen }}; }
+.page-content-banner-placeholder:before,
+.page-faq-content-box-question-figure,
+.page-faq-review-figure { background-color: {{ vColorGreen }}; }
 .menu-aside-h1 {// color: {{ vColorGreen }}; }
 
 .aside-button,
@@ -33,13 +35,22 @@ main { position: relative; z-index: 20; }
 .footer-wrap,
 .menu-box.nthChild-1 .menu-box-content,
 .menu-box.nthChild-4 .menu-box-content,
-.menu-box-veil { background-color: black; }
+.menu-box-veil,
+.u-button { background-color: black; }
+.u-button:hover,
+.u-button:active,
+.u-button:focus { color: black; }
 
  { background-color: #AAA; }
+.page-faq-content-list,
+.page-faq-content-list-item { border-color: #AAA; }
 
 .menu-box.nthChild-2,
 .menu-box.nthChild-3,
-.menu-box.nthChild-5 { background-color: #eee; }
+.menu-box.nthChild-5,
+.u-button:hover,
+.u-button:active,
+.u-button:focus { background-color: #eee; }
 
 .menu-aside-wrap { background-color: white; }
 .aside-button,
@@ -57,7 +68,8 @@ main { position: relative; z-index: 20; }
 .menu-box.nthChild-3:focus .menu-box-header,
 .menu-box.nthChild-5:hover .menu-box-header,
 .menu-box.nthChild-5:active .menu-box-header,
-.menu-box.nthChild-5:focus .menu-box-header { color: white; }
+.menu-box.nthChild-5:focus .menu-box-header,
+.u-button { color: white; }
 /*** END COLORS ***/
 
 /*** FONTS ***/
@@ -72,7 +84,9 @@ main { position: relative; z-index: 20; }
 .aside-toc-title,
 .menu-aside-h1,
 .menu-box-header,
-.page-content-banner-title { font-weight: bold; }
+.page-content-banner-title,{% for i in (1..19) %}
+#rdb4faq{{ i }}:checked ~ main .page-faq-content-list-item:nth-child({{ i }}) .page-faq-content-box-question-q,{% endfor %}
+.page-faq-title { font-weight: bold; }
 .page-content-banner-title { font-variant: small-caps; }
 .aside-button,
 .aside-toc-title,
@@ -87,6 +101,7 @@ main { position: relative; z-index: 20; }
 .aside-toc-link:active,
 .aside-toc-link:focus,
 .footer a,
+.page-faq-review-text a,
 .page-nav-breadcrumbs a { text-decoration: underline; }
 .aside-toc-title { text-transform: uppercase; }
 /*** END FONTS ***/
@@ -107,8 +122,12 @@ main { position: relative; z-index: 20; }
 
 .menu-aside-img { filter: grayscale(100%); }
 
-.page-content-banner-placeholder { background-image: url("../../assets/images/richfield-case-study/background_page-inner.png"); }
-.page-content-banner-placeholder {
+.page-content-banner-placeholder,
+.page-faq-content-box-question-figure,
+.page-faq-review-figure { background-image: url("../../assets/images/richfield-case-study/background_page-inner.png"); }
+.page-content-banner-placeholder,
+.page-faq-content-box-question-figure,
+.page-faq-review-figure {
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
@@ -118,6 +137,13 @@ main { position: relative; z-index: 20; }
 /*** END MEDIA ***/
 
 /*** UTILITIES ***/
+	/*** .u-button ***/
+	.u-button {
+		display: inline-block;
+		padding: .5em;
+		border-radius: .5em;
+	}
+
     /*** .u-card ***/
     .u-card {
         position: relative;
@@ -310,8 +336,16 @@ main { position: relative; z-index: 20; }
 	.page-content,
 	.page-content-text { flex: 1; }
 	
-	.main_dock,
-	.page { height: 100%; }
+	.main_dock { height: 100%; }
+	
+	.page {
+		flex: 1;
+		overflow-y: scroll;
+	}
+	.page_dock:nth-child(1) { min-height: 100%; }
+	.page_dock {
+//		min-height: 100%;
+	}
 	
 	.page-content-banner {
 		position: relative;
@@ -335,6 +369,35 @@ main { position: relative; z-index: 20; }
 		padding-top: 1.9em;
 	}
 	
+	.page-faq-content-box-question { display: flex; }
+	.page-faq-content-box-question-q { flex: 1; }
+	.page-faq-content-list,
+	.page-faq-content-list-item {
+		border-width: .1em 0; border-style: solid;
+	}
+	.page-faq-content-list-item {
+		padding: 1em;
+	}
+	.page-faq-content-box-question-figure {
+		width: 40%; height: 3em;
+		border-radius: .5em;
+	}
+	.page-faq-content-box-question-q {
+	}
+	.page-faq-content-button {
+		margin: 1em;
+	}
+	
+	.page-faq-review-figure {
+		width: 70%; height: 7em;
+		margin: 1em 0;
+		margin-top: 3em;
+		border-radius: .5em;
+	}
+	.page-faq-review-figure-button {
+		position: relative; left: 1em; top: -1em;
+	}
+	
 	.page-nav-logo-img {
 		margin: 1em 0;
 	}
@@ -342,7 +405,8 @@ main { position: relative; z-index: 20; }
 
 /*** INTERACTIVITY ***/
 .aside-button,
-.aside-toc-title { cursor: pointer; }
+.aside-toc-title,
+.u-button { cursor: pointer; }
 
 .aside-toc-list { display: none; }
 #chkbx4TOC:checked ~ main .aside-toc-list { display: block; }
@@ -354,6 +418,16 @@ main { position: relative; z-index: 20; }
 .menu-box:active .menu-box-veil,
 .menu-box:focus .menu-box-veil { animation: appear 1.9s ease-in; opacity: 1; }
 	.menu-box:hover .menu-box-header { animation-delay: 1.9s; }
+	
+.page-faq-content-list-item.isMore { display: none; }
+	#rdb4faqMore:checked ~ main .page-faq-content-list-item.isMore { display: block; }
+	
+#rdb4faqMore:checked ~ main .page-faq-content-button { display: none; }
+
+.page-faq-content-box-answer,
+.page-faq-content-box-question-figure { display: none; }{% for i in (1..19) %}
+	#rdb4faq{{ i }}:checked ~ main .page-faq-content-list-item:nth-child({{ i }}) .page-faq-content-box-answer { display: block; }
+	#rdb4faq{{ i }}:checked ~ main .page-faq-content-list-item:nth-child({{ i }}) .page-faq-content-box-question-figure { display: block; }{% endfor %}
 /*** END INTERACTIVITY ***/
 
 /*** MEDIA-QUERIES ***/
@@ -377,6 +451,7 @@ main { position: relative; z-index: 20; }
 	
 	/*** PAGE: INNER ***/
 	.page-content-banner-title { font-size: 3em; }
+	.page-faq-title { font-size: 1.25em; }
 
 	#chkbx4mobileMenu:checked ~ main .aside { width: 1.9em; }
 		#chkbx4mobileMenu:checked ~ main .aside-button ~ * { display: none; }
@@ -444,6 +519,7 @@ main { position: relative; z-index: 20; }
 	.aside-button { display: none !important; }
 	
 	.page-content-banner-title { font-size: 5em; }
+	.page-faq-title { font-size: 1.9em; }
 
 	.pg-inner main,
 	.pg-inner .main_dock { display: flex; }
@@ -461,6 +537,24 @@ main { position: relative; z-index: 20; }
 	
 	.page-content-banner-placeholder {
 		height: 25vw;
+	}
+	
+	.page-faq {
+		width: 100%; height: 100%;
+		display: grid;
+		grid-template-columns: 50% 50%;
+	}
+	.page-faq-title {
+		grid-column-start: 1; grid-column-end: 2;
+		grid-row-start: 2; grid-row-end: 3;
+	}
+	.page-faq-content {
+		grid-column-start: 2; grid-column-end: 3;
+		grid-row-start: 1; grid-row-end: 3;
+	}
+	.page-faq-title {
+		grid-column-start: 1; grid-column-end: 2;
+		grid-row-start: 1; grid-row-end: 2;
 	}
 	
     .d-background-video {
@@ -547,6 +641,8 @@ main { position: relative; z-index: 20; }
 /*** TO DELETE ***/
 .menu-header-logo-img.is-icon { display: none; }
 
-.page-content-banner-placeholder { filter: grayscale(100%); }
+.page-content-banner-placeholder,
+.page-faq-content-box-question-figure,
+.page-faq-review-figure { filter: grayscale(100%); }
 .page-content-banner-placeholder:before {// display: none; }
 /*** END TO DELETE ***/

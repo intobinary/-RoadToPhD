@@ -3,6 +3,8 @@ layout: default
 ---
 		<input id="chkbx4mobileMenu" type="checkbox" name="chkbx4mobileMenu" checked />
 		<input id="chkbx4TOC" type="checkbox" name="chkbx4TOC" />
+		<input id="rdb4faqMore" type="radio" name="rdb4faqMore" />
+		{% for i in (1..19) %}<input id="rdb4faq{{ i }}" type="radio" name="rdb4faqs"{% if forloop.first %} checked{% endif %} />{% endfor %}
 
 		<main>
 			<footer class="footer"><div class="footer-wrap">
@@ -49,20 +51,58 @@ layout: default
 				</div></aside>
 				
 				<section class="page">
-					<nav class="page-nav">
-						<div class="page-nav-breadcrumbs"><a href="/richfield-case-study/">Richfield Case-Study</a> > <span>{{ page.url | remove: '/richfield-case-study/' | split: '/' | first | replace: '-', ' ' | upcase }}</span> > <a href="">{{ page.url | split: '/' | last | replace: '-', ' ' | capitalize }}</a></div>
-						
-						<figure class="page-nav-logo">
-							<img src="/assets/images/logo_green.png" class="page-nav-logo-img" />
-						</figure>
-					</nav>
-					<div class="page-content">
-						<header class="page-content-banner">
-							<span class="page-content-banner-placeholder"></span>
-							<h1 class="page-content-banner-title">{{ page.title }}</h1>
-						</header>
-						<div class="page-content-text">
-							<p>{% if page.description == null or page.description == "" %}[...]{% else %}{{ page.description }}{% endif %}</p>
+					<div class="page_dock">
+						<nav class="page-nav">
+							<div class="page-nav-breadcrumbs"><a href="/richfield-case-study/">Richfield Case-Study</a> > <span>{{ page.url | remove: '/richfield-case-study/' | split: '/' | first | replace: '-', ' ' | upcase }}</span> > <a href="">{{ page.url | split: '/' | last | replace: '-', ' ' | capitalize }}</a></div>
+							
+							<figure class="page-nav-logo">
+								<img src="/assets/images/logo_green.png" class="page-nav-logo-img" />
+							</figure>
+						</nav>
+						<div class="page-content">
+							<header class="page-content-banner">
+								<span class="page-content-banner-placeholder"></span>
+								<h1 class="page-content-banner-title">{{ page.title }}</h1>
+							</header>
+							<div class="page-content-text">
+								<p>{% if page.description == null or page.description == "" %}[...]{% else %}{{ page.description }}{% endif %}</p>
+							</div>
+						</div>
+					</div>
+					
+					<div class="page_dock">
+						<div class="page-faq">
+							<h5 class="page-faq-title">Discover the insights of the case-study, as you hold the conversations in your communities.</h5>
+							
+							<div class="page-faq-content">
+								<ul class="page-faq-content-list">{% for faq in page.faq %}
+									<li class="page-faq-content-list-item{% if forloop.index > 3 %} isMore{% endif %}"><div class="page-faq-content-box">
+										<header class="page-faq-content-box-question">
+											<label for="rdb4faq{{ forloop.index }}" class="page-faq-content-box-question-q">({{ forloop.index }}) {{ faq[0] }}</label>
+											<figure class="page-faq-content-box-question-figure"></figure>
+										</header>
+										<div class="page-faq-content-box-answer">
+											<p>{{ faq[1] }}</p>
+										</div>
+									</div></li>{% endfor %}
+									<!--
+									<div class="page-faq-content-sublist">{% for i in (4..10) %}
+										<li class="page-faq-content-list-item">
+										{% include components/case-study/code_faqBox.html vI=i %}
+										</li>{% endfor %}
+									</div>
+									-->
+								</ul>{% for faq in page.faq %}{% if forloop.length > 3 %}
+								
+								<label for="rdb4faqMore" class="page-faq-content-button u-button">View all!</label>{% break %}{% endif %}{% endfor %}
+							</div>
+							
+							<div class="page-faq-review">
+								<figure class="page-faq-review-figure">
+									<span class="page-faq-review-figure-button u-button">Put a like here!</span>
+								</figure>
+								<p class="page-faq-review-text">I am open for reviews and feedback. <a href="mailto:madam.ella@intobinary.org">Tell me</a> what you think of this page content, in all of its rawness; and I will create more of what you find useful.</p>
+							</div>
 						</div>
 					</div>
 				</section>
