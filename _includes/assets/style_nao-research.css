@@ -11,7 +11,8 @@
 .menu-button:active,
 .menu-button:focus,
 #chkbx4menu:checked ~ main .menu-button,
-.m-thesis-header { background-color: {{ vColorGreen }}; }
+.m-thesis-header,
+.documents-file-content-details-button { background-color: {{ vColorGreen }}; }
 .banner-title { color: {{ vColorGreen }}; }
 
 .menu-tooltip { background-color: black; }
@@ -38,7 +39,8 @@
 .menu-tooltip { font-size: .9em; }
 .menu-link,
 .m-thesis-header { font-size: 1.19em; }
-.banner-title { font-size: 2.5em; }
+.banner-title,
+.documents-file-title { font-size: 2.5em; }
 
 .banner-title,
 .menu,
@@ -51,12 +53,14 @@
 
 .menu-button,
 .menu-link { font-variant: small-caps; }
-.banner-title { font-weight: bold; }
+.banner-title,
+.u-bold { font-weight: bold; }
 .menu-button { text-transform: uppercase; }
 /*** END FONTS ***/
 
 /*** MEDIA ***/{% for i in (1..6) %}
-.banner-placeholder:nth-child({{ i }}) { background-image: url("../../assets/images/nao-research/gallery/banner-{{ i }}.jpg"); }{% endfor %}
+.banner-placeholder:nth-child({{ i }}) { background-image: url("../../assets/images/nao-research/gallery/banner-{{ i }}.jpg"); }
+	.pg-inner .banner-placeholder:nth-child({{ i }}) { background-image: url("../../../assets/images/nao-research/gallery/banner-{{ i }}.jpg"); }{% endfor %}
 .banner-placeholder {
 	background-position: center;
 	background-repeat: no-repeat;
@@ -64,6 +68,7 @@
 }
 
 .banner-placeholder,
+.documents-file-content-details-figure,
 .robot360 img,
 .robot360-placeholder { filter: grayscale(100%); }
 /*** END MEDIA ***/
@@ -123,9 +128,12 @@
 /*** COMPONENTS ***/
 	/*** .banner ***/
 	.banner-placeholder {
+			height: 50%;
 		display: block;
 		float: left;
 	}
+		.pg-inner .banner-placeholder { height: 100%; } {% for i in (4..7) %}
+		.pg-inner .banner-placeholder:nth-child({{ i }}) { display: none; }{% endfor %}
 	.banner-title {
 		position: absolute; bottom: 1em; left: 0; right: 0;
 	}
@@ -169,8 +177,32 @@
 	}
 /*** END COMPONENTS ***/
 
-/*** PAGES ***/
-/*** END PAGES ***/
+/*** PAGE: RESOURCES ***/
+	/*** .documents ***/
+	.documents-file {
+		padding: 1em;
+	}
+	.documents-file-content {
+		padding: 1em 0;
+	}
+	.documents-file-content-description {
+		padding: 0 1em;
+	}
+	.documents-file-content-details-button {
+		padding: .5em 1em;
+		margin: 0 auto;
+		border-radius: .5em;
+	}
+	.documents-file-content-details-figure {
+		width: 100%;
+	}
+	.documents-file-content-details a {
+		display: inline-block;
+	}
+	.documents-file-content-details img {
+		width: 100%;
+	}
+/*** END PAGE: RESOURCES ***/
 
 /*** INTERACTIVITY ***/
 .menu-button { cursor: pointer; }
@@ -188,7 +220,7 @@
 	.partners {// background-color: rgba(0, 0, 0, .1); }
 	
 	.banner { height: 70vh; }
-	.banner-placeholder { height: 50%; }
+		.pg-inner .banner { height: 35vh; }
 	.banner-placeholder:nth-child(1),
 	.banner-placeholder:nth-child(3),
 	.banner-placeholder:nth-child(4),
@@ -225,7 +257,8 @@
 	.partners-logos-figure-img.is-icon { display: none; }
 	
 	.banner { height: 60vh; }
-	.banner-placeholder { width: 33.333%; height: 50%; }
+		.pg-inner .banner { height: 30vh; }
+	.banner-placeholder { width: 33.333%; }
 	
 	.content {
 		grid-template-columns: 25% 50% 25%;
@@ -251,6 +284,11 @@
 	.partners-text-p { padding: 1em; }
 	
 	.partners-text { width: 90%; margin: 0 auto; }
+	
+	.documents-file-content { display: flex; }
+	.documents-file-content { flex-direction: row-reverse; }
+	
+	.documents-file-content-description { width: 75%; }
 }
 /*** END MEDIA-QUERIES ***/
 
