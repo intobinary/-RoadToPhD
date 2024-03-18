@@ -124,10 +124,10 @@ main { position: relative; z-index: 20; }
 
 .page-content-banner-placeholder,
 .page-faq-content-box-question-figure,
-.page-faq-review-figure { background-image: url("../../assets/images/richfield-case-study/background_page-inner.png"); }
+.page-faq-review-figure-placeholder { background-image: url("../../assets/images/richfield-case-study/background_page-inner.png"); }
 .page-content-banner-placeholder,
 .page-faq-content-box-question-figure,
-.page-faq-review-figure {
+.page-faq-review-figure-placeholder {
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
@@ -143,6 +143,7 @@ main { position: relative; z-index: 20; }
 		padding: .5em;
 		border-radius: .5em;
 	}
+		.u-button.page-faq-review-figure-button { border-radius: .5em .5em 0 0; }
 
     /*** .u-card ***/
     .u-card {
@@ -388,14 +389,35 @@ main { position: relative; z-index: 20; }
 		margin: 1em;
 	}
 	
+	.page-faq-review {
+	}
 	.page-faq-review-figure {
+		position: relative;
 		width: 70%; height: 7em;
 		margin: 1em 0;
 		margin-top: 3em;
 		border-radius: .5em;
 	}
 	.page-faq-review-figure-button {
-		position: relative; left: 1em; top: -1em;
+		position: absolute; bottom: 100%; left: 0;
+	}
+	.page-faq-review-figure-button:before {
+		content: "";
+		position: absolute; bottom: 0; left: 100%;
+		width: 1em; height: 1em;
+		background-image: radial-gradient(circle at 100% -10%, transparent 1em, black 1em);
+		
+		/*
+		border-radius: 0 0 0 .5em;
+		box-shadow: -.5em .5em 0 0 white;
+		*/
+	}
+	.page-faq-review-figure-placeholder {
+		position: relative; top: -.25em;
+		width: 100%; height: 100%;
+		display: block;
+		border-width: .25em; border-style: solid; border-color: black;
+		border-radius: 0 .5em .5em .5em;
 	}
 	
 	.page-nav-logo-img {
@@ -643,6 +665,6 @@ main { position: relative; z-index: 20; }
 
 .page-content-banner-placeholder,
 .page-faq-content-box-question-figure,
-.page-faq-review-figure { filter: grayscale(100%); }
+.page-faq-review-figure-placeholder { filter: grayscale(100%); }
 .page-content-banner-placeholder:before {// display: none; }
 /*** END TO DELETE ***/
