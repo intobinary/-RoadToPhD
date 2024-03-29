@@ -9,3 +9,19 @@ faq:
   "What role can social media play in amplifying the cause and raising awareness?": "Social media can play a crucial role in amplifying the cause by reaching a wider audience, fostering community engagement, sharing stories and testimonials, and mobilizing support for activism efforts aimed at eradicating subpar institutions. Individuals can get involved in social media advocacy efforts by sharing posts, using relevant hashtags, engaging with content from advocacy organizations, participating in online discussions, and spreading awareness."
   "What impact can individuals' support and activism efforts have on the broader goal of bringing about change in the education landscape?": "Individuals' support and activism efforts can have a significant impact on the broader goal of fixing Africa's educational landscape by raising awareness, mobilizing resources, influencing policy changes, and ultimately improving the quality of education for all students."
 ---
+<section class="merch"><div class="merch-dock">
+	<hgroup class="merch-header">
+		<h2 class="merch-header-category">Green Ceramic Mug</h2>
+		<h3 class="merch-header-price">R90</h3>
+	</hgroup>
+	
+	<div class="merch-banner">
+		<figure class="merch-banner-figure"><img src="/assets/images/richfield-case-study/merch/green-ceramic-mug_item.png" class="merch-banner-figure-img" /></figure>
+		<h1 class="merch-banner-name">"What Would You Do?"</h1>
+	</div>
+	
+	<div class="merch-extra">
+		<img src="/assets/images/richfield-case-study/merch/green-ceramic-mug_photography.png" />
+		<h4>10% Donation to the Babylon19 Cadets!</h4>
+	</div>
+</div></section>

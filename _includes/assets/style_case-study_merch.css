@@ -1,0 +1,105 @@
+/*** Z-INDEXES ***/
+.merch-banner-figure-img { position: relative; z-index: 10; }
+.merch-banner-name { position: relative; z-index: 20; }
+/*** END Z-INDEXES ***/
+
+/*** COLORS ***/
+.merch-banner-figure { background-color: green; }
+
+.merch-extra { background-color: black; }
+
+.merch-extra, .merch-extra * { color: white; }
+/*** END COLORS ***/
+
+/*** FONTS ***/
+.merch-banner-name { font-size: 3em; }
+.merch-header-category { font-size: 2.5em; }
+.merch-header-price { font-size: 1.9em; }
+
+.merch-header-category { font-weight: bold; }
+.merch-header-category { text-align: right; }
+/*** END FONTS ***/
+
+/*** MEDIA ***/
+.merch-banner-figure { background-image: url("/assets/images/richfield-case-study/merch/green-ceramic-mug_background-2.png"); }
+.merch-banner-figure {
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.merch-banner-figure { filter: grayscale(100%); }
+.merch-banner-figure-img { filter: grayscale(0) !important; }
+
+.merch-banner-figure-img { transform: rotate(19deg); }
+/*** END MEDIA ***/
+
+/*** COMPONENTS ***/
+	/*** .merch ***/
+	.merch-banner-figure {
+		position: relative;
+		width: 100%;
+	}
+	
+	.merch-extra {
+		padding: 1em;
+	}
+	
+/*** END COMPONENTS ***/
+
+/*** MEDIA-QUERIES ***/
+@media all and (max-width: 50em) {
+	/*** COMPONENTS: .merch ***/
+	.merch { margin-top: 5.5em; }
+	.merch-banner-figure {
+//			height: 50vh;
+	}
+	.merch-banner-figure-img {
+		width: 50%;
+		margin-top: 3em;
+	}
+	.merch-banner-name {
+		margin: .55em 0;
+	}
+}
+@media all and (min-width: 50em) {
+	/*** COMPONENTS: .merch ***/
+	.merch-dock { width: 30%; margin-left: 70%; }
+	.merch-banner { width: 70%; }
+
+	.merch {
+		position: relative;
+	}
+	.merch-banner,
+	.merch-banner-figure-img { padding-right: 1em; }
+	.merch-banner {
+		position: absolute; top: 0; left: 0;
+			height: 100%;
+	}
+	.merch-banner-figure {
+		position: relative;
+			height: 50%;
+	}
+	.merch-banner-figure-img {
+		left: 0;
+	}
+	.merch-banner-figure-img {
+		position: absolute; bottom: -50%;
+		width: auto; height: 90%;
+		display: block;
+	}
+	.merch-banner-name {
+		position: absolute; bottom: 0; left: 0;
+	}
+}
+/*** END MEDIA-QUERIES ***/
+
+/*** CSS-HACKS ***/
+.merch {
+	margin-bottom: 5.5em;
+}
+/*** END CSS-HACKS ***/
+
+/*** TO-DELETE ***/
+.page_dock {// display: none !important; }
+/*** TO-DELETE ***/
