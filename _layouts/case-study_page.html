@@ -5,6 +5,8 @@ layout: default
 		<input id="chkbx4TOC" type="checkbox" name="chkbx4TOC" />
 		<input id="rdb4faqMore" type="radio" name="rdb4faqMore" />
 		{% for i in (1..19) %}<input id="rdb4faq{{ i }}" type="radio" name="rdb4faqs"{% if forloop.first %} checked{% endif %} />{% endfor %}
+		
+		{% for i in (1..31) %}<input id="chkbx4dailyUpdate{{ i }}" type="checkbox" name="chkbxs4dailyUpdates" />{% endfor %}
 
 		<main>
 			<footer class="footer"><div class="footer-wrap">

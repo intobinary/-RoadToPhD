@@ -14,24 +14,31 @@ main { position: relative; z-index: 20; }
 .aside { position: relative; z-index: 60; }
 .page a { position: relative; z-index: 70; }
 
-.cameraRollButton { position: relative; z-index: 80; }
+	.daily-box-header-dock { position: relative; z-index: 80; }
+	.daily-box-header-date { position: relative; z-index: 90; }
+
+.cameraRollButton { position: relative; z-index: 100; }
 /*** END Z-INDEXES ***/
 
 /*** COLORS ***/ {% assign vColorGreen = "#03EA60" %}
 .aside_dock,
 .aside-toc,
+.daily-box-header-dock,
+.daily-box-header-date,
 .menu-box.nthChild-1 .menu-box-header,
 .menu-box.nthChild-4 .menu-box-header,
 .page-content-banner-placeholder:before,
 .page-faq-content-box-question-figure,
 .page-faq-review-figure { background-color: {{ vColorGreen }}; }
 .menu-aside-h1 {// color: {{ vColorGreen }}; }
+.daily-box-header-date:before {// border-color: transparent {{ vColorGreen }} {{ vColorGreen }} transparent; }
 
 .aside-button,
 .aside-toc-category:before,
 .aside-toc-link:before,
 .aside-toc-link:after,
 .aside-toc-title,
+.daily-box-content,
 .footer-wrap,
 .menu-box.nthChild-1 .menu-box-content,
 .menu-box.nthChild-4 .menu-box-content,
@@ -56,6 +63,7 @@ main { position: relative; z-index: 20; }
 .aside-button,
 .aside-toc-title,
 .aside-toc-title *,
+.daily-box-content *,
 .footer *,
 .menu-box.nthChild-1 .menu-box-content,
 .menu-box.nthChild-4 .menu-box-content,
@@ -107,6 +115,15 @@ main { position: relative; z-index: 20; }
 /*** END FONTS ***/
 
 /*** MEDIA ***/
+	.daily-box-header-people-img.is-jane-netsienda { background-image: url("/assets/images/richfield-case-study/people/unknown.png"); }
+	.daily-box-header-people-img.is-khanyisile-ngcobo { background-image: url("/assets/images/richfield-case-study/people/unknown.png"); }
+	.daily-box-header-people-img.is-rodney-r { background-image: url("/assets/images/richfield-case-study/people/unknown.png"); }
+	.daily-box-header-people-img.is-sagi-murali { background-image: url("/assets/images/richfield-case-study/people/unknown.png"); }
+	.daily-box-header-people-img {
+		background-size: cover;
+		background-color: white;
+	}
+
 .d-matrix { background-image: url("../../assets/images/richfield-case-study/logo_background_black.png"); }
 .d-matrix {
 	background-position: center;
@@ -431,6 +448,66 @@ main { position: relative; z-index: 20; }
 	}
 /*** END PAGE: INNER ***/
 
+/*** PAGE: DAILY UPDATES ***/
+	/*** .daily ***/
+	.daily-box {// background-color: purple; }
+	.daily-box-header-date {// background-color: green; }
+	.daily-box-header-hgroup-title { font-weight: bold; }
+
+	.daily-box-content img,
+	.daily-box-content p {
+		padding: 1em;
+	}
+	
+	.daily-box-header {
+		text-align: right;
+	}
+		.daily-box-header-dock {
+			position: relative;
+			padding: .5em;
+			border-width: .1em .1em .1em .1em; border-style: solid;
+			text-align: left;
+		}
+	.daily-box-header-date {
+		position: relative; top: .1em;
+		/*
+		position: absolute; bottom: 100%; right: -.1em;
+		*/
+		display: inline-block;
+		padding: .5em;
+		
+		border-width: .1em .1em 0 0; border-style: solid;
+	}
+	.daily-box-header-date:before {
+		content: "";
+		position: absolute; top: 0; right: 100%;
+		border-width: 1em; border-style: solid;
+		border-color: transparent {{ vColorGreen }} {{ vColorGreen }} transparent;
+	}
+	.daily-box-header-hgroup-subtitle {
+		width: 90%;
+		display: block;
+		padding: 1em 0;
+	}
+	
+	.daily-list-item { margin: 1em 0; }
+	
+	.daily-box-header-people {
+		position: relative;
+	}
+	.daily-box-header-people-img {
+		position: absolute;
+		width: 3em;
+		border: .1em; border-style: solid;
+	}
+	.daily-box-header-people-img:nth-child(1) { position: relative !important; z-index: 19; }{% for i in (2..19) %}
+	.daily-box-header-people-img:nth-child({{ i }}) { left: {{ 2.5 | times: i | divided_by: 2 }}em; z-index: {{ i }}; }{% endfor %}
+	
+	.daily-box-header-toggle {
+		position: absolute; top: .5em; right: .5em;
+	}
+/*** END PAGE: DAILY UPDATES ***/
+
 /*** INTERACTIVITY ***/
 .aside-button,
 .aside-toc-title,
@@ -456,6 +533,9 @@ main { position: relative; z-index: 20; }
 .page-faq-content-box-question-figure { display: none; }{% for i in (1..19) %}
 	#rdb4faq{{ i }}:checked ~ main .page-faq-content-list-item:nth-child({{ i }}) .page-faq-content-box-answer { display: block; }
 	#rdb4faq{{ i }}:checked ~ main .page-faq-content-list-item:nth-child({{ i }}) .page-faq-content-box-question-figure { display: block; }{% endfor %}
+
+.daily-box-content { height: 0; overflow: hidden; }{% for i in (1..31) %}
+	#chkbx4dailyUpdate{{ i }}:checked ~ main .daily-list-item:nth-child({{ i }}) .daily-box-content { height: auto !important; } {% endfor %}
 /*** END INTERACTIVITY ***/
 
 /*** MEDIA-QUERIES ***/
@@ -588,6 +668,13 @@ main { position: relative; z-index: 20; }
     .d-background-video {
         min-width: 100vw; min-height: 100vh;
     }
+	
+	/*** PAGE: DAILY-UPDATES ***/
+	.daily-list {
+		width: 50%;
+		// column-count: 2;
+		margin-bottom: 3em;
+	}
 }
 /*** END MEDIA-QUERIES ***/
 
