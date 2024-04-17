@@ -1,0 +1,12 @@
+- "January 20":
+  - meta-data:
+    - title: "New Year, What Problem Now?"
+    - subtitle: "New Year. And Richfield still Richfielding with new manufactured problems."
+    - details: true
+  - details:
+    - people: ["Sagi Murali", "Jane Netsienda", "Rodney R", "Felicia T", "Munyaradzi C", "N Mtshali", "Stanley T", "W Mlangeni", "Issan", "Kuda Kwashem", "T Maphakene", "K Gaugelor", "Eniolal", "Frans M", "Nobel M", "Prominen M", "Newmand", "Mosemanek", "Sphelelet"]
+    - emails: ["screenshot-1", "screenshot-2"]
+    - videos: ["video-1", "video-2"]
+  - stack:
+    - text: "What was clearly resolved last year, is coming back again. Here is Richfield always attempting to fail me, with no basis. Day one was getting the news on the 19th. Here is day two: the query."
+    - email: "date-january-20_1.png"

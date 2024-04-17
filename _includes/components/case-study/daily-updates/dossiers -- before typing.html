@@ -1,0 +1,29 @@
+<section class="daily"><ul class="daily-list">{% for file in site.data.richfield-case-study.daily-updates[page.key] %}{% assign countDossiers = forloop.index %}
+	<li class="daily-list-item"><div class="daily-box">{% for data in file %}
+		<header class="daily-box-header">
+			<div class="daily-box-header-date">{{ data[0] }}</div>
+
+			<div class="daily-box-header-dock">
+			<hgroup class="daily-box-header-hgroup">
+				<h5 class="daily-box-header-hgroup-title">{% for content in data[1] %}{% for metadata in content.meta-data %}{{ metadata.title }}{% endfor %}{% endfor %}</h5>
+				<span class="daily-box-header-hgroup-subtitle">{% for content in data[1] %}{% for metadata in content.meta-data %}{{ metadata.subtitle }}{% endfor %}{% endfor %}</span>
+				{% for content in data[1] %}{% for metadata in content.meta-data %}{% if metadata.details == true %}
+				<label for="chkbx4dailyUpdate{{ countDossiers }}" class="daily-box-header-toggle u-button">+</label>{% endif %}{% endfor %}{% endfor %}
+			</hgroup>
+			
+			<div class="daily-box-header-people">{% for content in data[1] %}{% for details in content.details %}{% for culprit in details.people %}
+				<img src="/assets/images/placeholder-1x1.png" class="daily-box-header-people-img is-{{ culprit | downcase | replace: ' ', '-' }}" title="{{ culprit }}" />{% endfor %}{% endfor %}{% endfor %}
+				<img src="/assets/images/placeholder-1x1.png" class="daily-box-header-people-img is-placeholder" />
+			</div>
+			</div>
+		</header>
+		
+		{% for content in data[1] %}{% for metadata in content.meta-data %}{% if metadata.details == true %}
+		<div class="daily-box-content">{% for content in data[1] %}{% for stack in content.stack %}
+			<div class="daily-box-content-stack is-{% for stackContent in stack %}{{ stackContent[0] }}{% endfor %}">{% for stackContent in stack %}
+				{% if stackContent[0] == "text" %}<p>"{{ stackContent[1] }}"</p>{% endif %}
+				{% if stackContent[0] == "email" %}<img src="/assets/images/richfield-case-study/emails/{{ stackContent[1] }}" />{% endif %}{% endfor %}
+			</div>{% endfor %}{% endfor %}
+		</div>{% endif %}{% endfor %}{% endfor %}
+	{% endfor %}</div></li>{% endfor %}
+</ul></section>

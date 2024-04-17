@@ -6,8 +6,7 @@
   - details:
     - people: ["Khanyisile Ngcobo"]
     - emails: ["screenshot-1", "screenshot-2"]
-    - audios: ["audio-1", "audio-2"]
-    - media-proof: ["proof-1", "proof-2"]
+    - videos: ["video-1", "video-2"]
   - stack:
     - text: "I just received an email with, yet again, extra courses. Every time they give the list of modules, there are always new things on it. I will start sharing them."
     - email: "date-april-16_1.png"
