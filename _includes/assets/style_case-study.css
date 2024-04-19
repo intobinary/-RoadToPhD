@@ -119,10 +119,14 @@ main { position: relative; z-index: 20; }
 /*** END FONTS ***/
 
 /*** MEDIA ***/
+	/*
 	.daily-box-header-people-img.is-jane-netsienda { background-image: url("/assets/images/richfield-case-study/people/unknown.png"); }
 	.daily-box-header-people-img.is-khanyisile-ngcobo { background-image: url("/assets/images/richfield-case-study/people/unknown.png"); }
 	.daily-box-header-people-img.is-rodney-r { background-image: url("/assets/images/richfield-case-study/people/unknown.png"); }
 	.daily-box-header-people-img.is-sagi-murali { background-image: url("/assets/images/richfield-case-study/people/unknown.png"); }
+	*/
+	.daily-box-header-people-img { background-image: url("/assets/images/richfield-case-study/people/unknown.png"); }
+	.daily-box-header-people-img.is-placeholder { background-image: initial !important; }
 	.daily-box-header-people-img {
 		background-size: cover;
 		background-color: white;
@@ -506,6 +510,7 @@ main { position: relative; z-index: 20; }
 		position: absolute;
 		width: 3em;
 		border: .1em; border-style: solid;
+		border-color: white;
 	}
 	.daily-box-header-people-img:nth-child(1) { position: relative !important; z-index: 19; }{% for i in (2..19) %}
 	.daily-box-header-people-img:nth-child({{ i }}) { left: {{ 2.5 | times: i | divided_by: 2 }}em; z-index: {{ i }}; }{% endfor %}
