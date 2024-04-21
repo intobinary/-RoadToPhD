@@ -97,7 +97,8 @@ main { position: relative; z-index: 20; }
 .menu-box-header,
 .page-content-banner-title,{% for i in (1..19) %}
 #rdb4faq{{ i }}:checked ~ main .page-faq-content-list-item:nth-child({{ i }}) .page-faq-content-box-question-q,{% endfor %}
-.page-faq-title { font-weight: bold; }
+.page-faq-title,
+.d-font_bold { font-weight: bold; }
 .page-content-banner-title { font-variant: small-caps; }
 .aside-button,
 .aside-toc-title,
