@@ -22,7 +22,9 @@
 		<div class="daily-box-content">{% for content in data[1] %}{% for stack in content.stack %}
 			<div class="daily-box-content-stack is-{% for stackContent in stack %}{{ stackContent[0] }}{% endfor %}">{% for stackContent in stack %}
 				{% if stackContent[0] == "text" %}<p>"{{ stackContent[1] }}"</p>{% endif %}
-				{% if stackContent[0] == "email" %}<img src="/assets/images/richfield-case-study/emails/{{ stackContent[1] }}" />{% endif %}{% endfor %}
+				{% if stackContent[0] == "email" %}<img src="/assets/images/richfield-case-study/daily-updates/{{ stackContent[1] }}" />{% endif %}
+				{% if stackContent[0] == "document" %}<img src="/assets/images/richfield-case-study/daily-updates/{{ stackContent[1] }}" />{% endif %}
+				{% if stackContent[0] == "screenshot" %}<img src="/assets/images/richfield-case-study/daily-updates/{{ stackContent[1] }}" />{% endif %}{% endfor %}
 			</div>{% endfor %}{% endfor %}
 		</div>{% endif %}{% endfor %}{% endfor %}
 	{% endfor %}</div></li>{% endfor %}

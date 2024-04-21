@@ -684,9 +684,12 @@ main { position: relative; z-index: 20; }
 	
 	/*** PAGE: DAILY-UPDATES ***/
 	.daily-list {
-		width: 50%;
-		// column-count: 2;
+//		width: 50%;
+		column-count: 2;
 		margin-bottom: 3em;
+	}
+	.daily-box {
+		break-inside: avoid-column;
 	}
 }
 /*** END MEDIA-QUERIES ***/
