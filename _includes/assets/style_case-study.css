@@ -58,6 +58,7 @@ main { position: relative; z-index: 20; }
 .menu-box.nthChild-2,
 .menu-box.nthChild-3,
 .menu-box.nthChild-5,
+.refunds-box-course-details,
 .u-button:hover,
 .u-button:active,
 .u-button:focus { background-color: #eee; }
@@ -90,6 +91,8 @@ main { position: relative; z-index: 20; }
 @font-face{font-family:"OCR A Extended";src:url("../../assets/fonts/OCRAEXT.TTF");}
 
 * { font-family: "OCR A Extended"; }
+
+.refunds-box-course-name { font-size: 1.9em; }
 
 .aside-toc-category,
 .aside-toc-link,
@@ -538,7 +541,7 @@ main { position: relative; z-index: 20; }
 		padding: .5em;
 	}
 	.refunds-box-course-name {
-		min-height: 10em;
+		min-height: 7em;
 		padding: .5em;
 	}
 	.refunds-box-course-price {
@@ -730,7 +733,7 @@ main { position: relative; z-index: 20; }
 	.refunds-box-course-name { grid-column-start: 2; grid-column-end: 3; }
 	.refunds-box-course-price { grid-column-start: 2; grid-column-end: 4; }
 	
-	.refunds-box-course-description { grid-row-start: 1; grid-row-end: 3; }
+	.refunds-box-course-description { grid-row-start: 1; grid-row-end: 2; }
 	.refunds-box-course-details { grid-row-start: 2; grid-row-end: 3; }
 	.refunds-box-course-name { grid-row-start: 1; grid-row-end: 2; }
 	.refunds-box-course-price { grid-row-start: 3; grid-row-end: 4; }
