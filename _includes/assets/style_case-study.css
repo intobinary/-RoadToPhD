@@ -45,6 +45,7 @@ main { position: relative; z-index: 20; }
 .menu-box.nthChild-1 .menu-box-content,
 .menu-box.nthChild-4 .menu-box-content,
 .menu-box-veil,
+.refunds-box-course-price,
 .u-button { background-color: black; }
 .u-button:hover,
 .u-button:active,
@@ -81,6 +82,7 @@ main { position: relative; z-index: 20; }
 .menu-box.nthChild-5:hover .menu-box-header,
 .menu-box.nthChild-5:active .menu-box-header,
 .menu-box.nthChild-5:focus .menu-box-header,
+.refunds-box-course-price,
 .u-button { color: white; }
 /*** END COLORS ***/
 
@@ -534,7 +536,6 @@ main { position: relative; z-index: 20; }
 	.refunds-box-course-details {
 		min-height: 5.5em;
 		padding: .5em;
-		background-color: #eee;
 	}
 	.refunds-box-course-name {
 		min-height: 10em;
@@ -542,8 +543,6 @@ main { position: relative; z-index: 20; }
 	}
 	.refunds-box-course-price {
 		padding: .5em;
-		
-		background-color: #eee;
 	}
 /*** END PAGE: UNMASKING RICHFIELD ***/
 
@@ -789,6 +788,8 @@ main { position: relative; z-index: 20; }
 /*** END ANIMATION ***/
 
 /*** CSS HACKS ***/
+.aside-button { max-width: 2em; }
+
 .menu-aside-wrap { display: flex; }
 .menu-aside-wrap { flex-direction: row; }
 
