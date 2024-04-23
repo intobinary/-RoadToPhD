@@ -617,6 +617,10 @@ main { position: relative; z-index: 20; }
     .d-background-video {
         height: 100%; width: auto;
     }
+	
+	/*** PAGE: UNMASKING RICHFIELD ***/
+	.refunds-box { margin: 3em 0; }
+	.refunds-box-course-description { padding: 1em 0; }
 }
 @media all and (min-width: 50em) {
     body, html, main { font-size: 18px; }
@@ -727,7 +731,7 @@ main { position: relative; z-index: 20; }
 	.refunds-box-course-name { grid-column-start: 2; grid-column-end: 3; }
 	.refunds-box-course-price { grid-column-start: 2; grid-column-end: 4; }
 	
-	.refunds-box-course-description { grid-row-start: 1; grid-row-end: 4; }
+	.refunds-box-course-description { grid-row-start: 1; grid-row-end: 3; }
 	.refunds-box-course-details { grid-row-start: 2; grid-row-end: 3; }
 	.refunds-box-course-name { grid-row-start: 1; grid-row-end: 2; }
 	.refunds-box-course-price { grid-row-start: 3; grid-row-end: 4; }
