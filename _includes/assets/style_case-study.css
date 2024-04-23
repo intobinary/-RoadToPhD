@@ -30,7 +30,8 @@ main { position: relative; z-index: 20; }
 .menu-box.nthChild-4 .menu-box-header,
 .page-content-banner-placeholder:before,
 .page-faq-content-box-question-figure,
-.page-faq-review-figure { background-color: {{ vColorGreen }}; }
+.page-faq-review-figure,
+.refunds-box-course-name { background-color: {{ vColorGreen }}; }
 .menu-aside-h1 {// color: {{ vColorGreen }}; }
 .daily-box-header-date:before {// border-color: transparent {{ vColorGreen }} {{ vColorGreen }} transparent; }
 
@@ -521,6 +522,31 @@ main { position: relative; z-index: 20; }
 	}
 /*** END PAGE: DAILY UPDATES ***/
 
+/*** PAGE: UNMASKING RICHFIELD ***/
+	/*** refunds ***/
+	.refunds-box-course * {
+		margin: .5em;
+	}
+	.refunds-box-course-description {
+		display: flex;
+		align-items: flex-end;
+	}
+	.refunds-box-course-details {
+		min-height: 5.5em;
+		padding: .5em;
+		background-color: #eee;
+	}
+	.refunds-box-course-name {
+		min-height: 10em;
+		padding: .5em;
+	}
+	.refunds-box-course-price {
+		padding: .5em;
+		
+		background-color: #eee;
+	}
+/*** END PAGE: UNMASKING RICHFIELD ***/
+
 /*** INTERACTIVITY ***/
 .aside-button,
 .aside-toc-title,
@@ -691,6 +717,25 @@ main { position: relative; z-index: 20; }
 	}
 	.daily-box {
 		break-inside: avoid-column;
+	}
+	
+	/*** PAGE: UNMASKING RICHFIELD ***/
+	.refunds-box-course { display: grid; }
+	
+	.refunds-box-course-description { grid-row-start: 1; grid-column-end: 2; }
+	.refunds-box-course-details { grid-column-start: 3; grid-column-end: 4; }
+	.refunds-box-course-name { grid-column-start: 2; grid-column-end: 3; }
+	.refunds-box-course-price { grid-column-start: 2; grid-column-end: 4; }
+	
+	.refunds-box-course-description { grid-row-start: 1; grid-row-end: 4; }
+	.refunds-box-course-details { grid-row-start: 2; grid-row-end: 3; }
+	.refunds-box-course-name { grid-row-start: 1; grid-row-end: 2; }
+	.refunds-box-course-price { grid-row-start: 3; grid-row-end: 4; }
+	
+	.refunds-box-course-description,
+	.refunds-box-course-name { width: 20vw; }
+	.refunds-box {
+		margin-bottom: 5.5em;
 	}
 }
 /*** END MEDIA-QUERIES ***/
