@@ -29,6 +29,16 @@
     - text: "In my first two years at Richfield, I didn't keep proof of anything, and I deeply regret it! In the timeline of events, preserving the proof in the face of so much deliberate malpractice is crucial. Gratitude the state services of notarization, for ensuring the preservation of legal reference points throughout this matter."
     - document: "date-april-20_1.png"
     - text: "And on the same Saturday evening, I came home to find a text message from my kin saying I'm, quote-on-quote, <span class='d-font_bold'>'starting to study Monday!'</span> What does that even mean? They refused to answer me, but instead, gave conclusions to my kin! They have this habit, every time they are caught! Every time!"
+- "April 22":
+  - meta-data:
+    - title: "Moodle Portal View"
+    - subtitle: "It is Monday; see what's on my portal."
+    - details: true
+  - details:
+    - people: ["Richfield"]
+  - stack:
+    - text: "No course list. No timeline calendar notification of assignments or CA tests. Nothing! It is April 22! <br /><br />Meanwhile, Richfield administration and faculty have all received my email without any willingness to fix the errors of my provided list of modules. They all know! And yet, here is April 22!"
+    - screenshot: "date-april-22_1.png"
 - "April 25":
   - meta-data:
     - title: "Registration and Fraud Notice"
@@ -38,4 +48,4 @@
     - people: ["Sagi Murali", "Khanyisile Ngcobo", "Governmental Eyes", "Father", "Mother"]
   - stack:
     - text: "I quote: 'Today is the registration of two courses of the first semester,' ... 'Information Systems 621 and Computer Architecture 600' ... 'As mentioned above, the only grounds for the registering of these two courses is due to the emergency caused by Richfield's refusal to acknowledge nor resolve the matter.'"
-    - document: "date-april-25_1.png"
+    - email: "date-april-25_1.png"
