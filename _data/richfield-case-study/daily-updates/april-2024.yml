@@ -49,3 +49,13 @@
   - stack:
     - text: "I quote: 'Today is the registration of two courses of the first semester,' ... 'Information Systems 621 and Computer Architecture 600' ... 'As mentioned above, the only grounds for the registering of these two courses is due to the emergency caused by Richfield's refusal to acknowledge nor resolve the matter.'"
     - email: "date-april-25_1.png"
+- "April 26":
+  - meta-data:
+    - title: "Moodle Portal View"
+    - subtitle: "It's April 26. See what's on my portal."
+    - details: true
+  - details:
+    - people: ["Richfield"]
+  - stack:
+    - text: "AAA"
+    - video: "date-april-26_1.mp4"
