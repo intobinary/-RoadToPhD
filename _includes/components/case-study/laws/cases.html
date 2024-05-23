@@ -1,0 +1,18 @@
+<section class="cases"><ul class="cases-list">{% for i in (1..7) %}
+	<li class="cases-list-item"><div class="cases-box">
+		<header class="cases-header"><div class="cases-header-dock">
+			<h4 class="cases-header-title">Find, trade digital art from tracks to memes</h4>
+			<nav class="cases-header-nav">
+				<label for="rdb4law{{ i | minus: 1 }}" class="cases-header-nav-before">&lt;</label>
+				<span class="cases-header-nav-line">&nbsp;</span>
+				<label for="rdb4law{{ i | plus: 1 }}" class="cases-header-nav-after">&gt;</label>
+			</nav>
+		</div></header>
+		<div class="cases-content">
+			Content
+		</div>
+		<div class="cases-aside">
+			Aside
+		</div>
+	</div></li>{% endfor %}
+</ul></section>

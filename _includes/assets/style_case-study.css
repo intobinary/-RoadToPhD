@@ -527,6 +527,36 @@ main { position: relative; z-index: 20; }
 	}
 /*** END PAGE: DAILY UPDATES ***/
 
+/*** PAGE: LAWS ***/
+	/*** .cases ***/
+	.cases-box,
+	.cases-header,
+	.cases-header-nav { display: flex; }
+	.cases-header {// flex-direction: column; }
+	.cases-header { align-items: flex-end; }
+	.cases-header,
+	.cases-header-nav-line,
+	.cases-content,
+	.cases-aside { flex: 1; }
+	.cases-content {
+		min-height: 19em;
+		background-color: purple;
+	}
+	.cases-header-title {
+		display: inline-block;
+		font-size: 1.9em;
+		padding: 1em 0;
+	}
+	.cases-header-nav {
+//		border: 1px solid purple;
+	}
+	.cases-header-nav-line {
+		height: .25em;
+		background-color: black;
+	}
+	
+/*** END PAGE: LAWS ***/
+
 /*** PAGE: UNMASKING RICHFIELD ***/
 	/*** refunds ***/
 	.refunds-box-course * {
