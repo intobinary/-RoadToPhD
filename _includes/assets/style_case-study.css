@@ -1,5 +1,7 @@
 /*** CANCEL ***/
 html, body, main { width: 100%; height: 100%; }
+
+.pg-welcome.pg-richfield { min-width: 30em; }
 /*** END CANCEL ***/
 
 /*** Z-INDEXES ***/
@@ -617,6 +619,9 @@ main { position: relative; z-index: 20; }
 	/*** PAGE: WELCOME ***/
 	.menu-aside-h1 { font-size: 2em; }
 	.menu-box-header { font-size: 1.5em; }
+	
+	.cameraRollButton { right: initial !important; left: 1em; }
+	
 	.menu-box {
 		margin: 1em .5em;
 	}
