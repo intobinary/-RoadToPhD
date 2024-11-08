@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Grading System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .question {
+            margin-bottom: 20px;
+        }
+
+        .result {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #e7f3fe;
+            border: 1px solid #b3d4fc;
+            border-radius: 5px;
+        }
+        
+        label {
+            display: block;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Test Grading System</h1>
+        <form id="grading-form">
+            <div class="question">
+                <p>1. What is the capital of France?</p>
+                <p><strong>Answer:</strong> Paris</p>
+                <label for="score1">Score (0-10): <input type="number" id="score1" name="score1" min="0" max="10" required></label>
+            </div>
+            <div class="question">
+                <p>2. What is 2 + 2?</p>
+                <p><strong>Answer:</strong> 4</p>
+                <label for="score2">Score (0-10): <input type="number" id="score2" name="score2" min="0" max="10" required></label>
+            </div>
+            <div class="question">
+                <p>3. Who wrote 'Romeo and Juliet'?</p>
+                <p><strong>Answer:</strong> William Shakespeare</p>
+                <label for="score3">Score (0-10): <input type="number" id="score3" name="score3" min="0" max="10" required></label>
+            </div>
+            <button type="submit">Submit Grades</button>
+        </form>
+        <div id="result" class="result"></div>
+    </div>
+
+    <script>
+        document.getElementById('grading-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            const scores = [
+                parseInt(document.getElementById('score1').value) || 0,
+                parseInt(document.getElementById('score2').value) || 0,
+                parseInt(document.getElementById('score3').value) || 0
+            ];
+
+            const totalScore = scores.reduce((a, b) => a + b, 0);
+            const maxScore = scores.length * 10; // Assuming each question is out of 10
+            const result = document.getElementById('result');
+            result.innerHTML = `Total Score: ${totalScore} out of ${maxScore}.`;
+        });
+    </script>
+</body>
+</html>
