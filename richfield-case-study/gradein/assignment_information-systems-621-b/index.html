@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html class="js-html pg-GENERATE pgStatus_is-off" data-status="off/iddle/search">
+	<head>
+		
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		
+		<meta name="HandheldFriendly" content="true" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-title" content="SeenIn" />
+		<meta name="apple-mobile-touch-fullscreen" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+		
+		<meta name="theme-color" content="#03EA60" />
+
+		<meta name="description" content="" />
+		<title>GradeIn App</title>
+		
+		<link rel="index" content="https://gradein.intobinary.org" />
+		<link rel="webmention" content="" />
+		
+		<link rel="icon" href="/favicon.png" />
+
+		<!--
+		
+		<link rel="icon" type="image/png" sizes="196x196" href="assets/images/favicons/-logo-icon-196.png" />
+		<link rel="icon" type="image/png" sizes="128x128" href="assets/images/favicons/-logo-icon-128.png" />
+		<link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicons/-logo-icon-32.png" />
+		<link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicons/-logo-icon-16.png" />
+		
+		<link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicons/-logo-icon-180.png" />
+		<link rel="apple-touch-icon" sizes="167x167" href="assets/images/favicons/-logo-icon-167.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="assets/images/favicons/-logo-icon-152.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="assets/images/favicons/-logo-icon-144.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="assets/images/favicons/-logo-icon-120.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="assets/images/favicons/-logo-icon-76.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="assets/images/favicons/-logo-icon-72.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="assets/images/favicons/-logo-icon-60.png" />
+		<link rel="apple-touch-icon" sizes="57x57" href="assets/images/favicons/-logo-icon-57.png" />
+		
+		<link rel="apple-touch-icon-precomposed" sizes="152x152" href="assets/images/favicons/-logo-icon-152.png" />
+		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/images/favicons/-logo-icon-144.png" />
+		<link rel="apple-touch-icon-precomposed" sizes="120x120" href="assets/images/favicons/-logo-icon-120.png" />
+		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/images/favicons/-logo-icon-72.png" />
+		<link rel="apple-touch-icon-precomposed" sizes="57x57" href="assets/images/favicons/-logo-icon-57.png" />
+		<link rel="apple-touch-icon-precomposed" sizes="32x32" href="assets/images/favicons/-logo-icon-32.png" />
+		-->
+		
+		<meta name="msapplication-TileColor" content="#ffffff" />
+		<meta name="msapplication-TileImage" content="favicon.png" />
+		<!--
+		<meta name="msapplication-TileImage" content="assets/images/favicons/-logo-icon-144.png" />
+		<meta name="msapplication-square310x310.png" content="assets/images/favicons/-logo-icon-310.png" />
+		<meta name="msapplication-square150x150.png" content="assets/images/favicons/-logo-icon-150.png" />
+		<meta name="msapplication-square70x70.png" content="assets/images/favicons/-logo-icon-70.png" /><meta name="msapplication-square310x150.png" content="assets/images/-logo-name-black-310x150.png" />
+		-->
+		
+		<meta rel="author" href="humans.txt" type="text/plain" />
+		<meta name="copyright" content="SeenIn" />
+		<meta name="generator" content="Jekyll 4.2.2" />
+		
+		<!--
+		<meta name="google-site-verification" content="" />
+		<meta name="yandex-verification" content="" />
+		<meta name="msvalidate.01" content="" />
+		<meta name="alexaVerifyID" content="" />
+		<meta name="norton-safeweb-site-verification" content="" />
+		-->
+		
+		<!--
+		<link rel="stylesheet" href="/assets/stylesheets/www-dot-gradein-dot-intobinary-dot-org.css" />
+		-->
+		<style>
+			/*** RESET ***/
+			*{margin:0;padding:0;border:0;outline:0;font-weight:inherit;font-family:inherit;vertical-align:baseline;font-size:1em;font-style:normal;-webkit-font-smoothing:antialiased;box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;-o-box-sizing:border-box;/*user-select:none;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;-o-user-select:none;*/tap-highlight-color:transparent;-webkit-tap-highlight-color:transparent;-moz-tap-highlight-color:transparent;-o-tap-highlight-color:transparent;}*, *::before, *::after{-webkit-transition:.5s;-box-transition:.5s;-o-transition:.5s;transition:.5s;}:hover,:active,:focus{outline:0 !important;}html, body{min-height:100%;font-family:sans-serif;font-size:1rem;position:relative;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;}body{margin:0;padding:0;line-height:1;}article, footer, header, section{display:block;}ol, ul{list-style:none;}a{display:inline-block;text-decoration:none;background-color:transparent;color:initial;}a img{border:none;}a, button, input[type="submit"], label{cursor:pointer !important;}button{// background-color:transparent;}img{width:100%;height:auto;}img::selection{fill:none;color:none;display:none;background:none;}input[type="text"], input[type="number"], input[type="search"], input[type="email"], textarea{text-align:left;max-width:100%;}input[type="checkbox"], input[type="radio"]{display:none;}input[type="submit"]{background-color:transparent;}label{display:inline;}textarea{resize:vertical;}
+			/*** END RESET ***/
+
+			/*** JEKYLL ***/
+.m-gallery.companies .m-gallery-list {  width: 0%; }
+.m-gallery.gigs .m-gallery-list {  width: 0%; }
+/*** END JEKYLL ***/
+			/*** CANCEL ***/
+html, body { width: 100%; height: 100%; }
+main { min-height: 100%; }
+
+* { line-height: 1.25em; }
+/*** END CANCEL ***/
+
+/*** Z-INDEXES ***/
+.document,
+.header-button { position: relative; // }
+/*** END Z-INDEXES ***/
+
+/*** COLORS ***/
+.document-figure-figcaption a,
+.header-button { background-color: #03EA60; }
+
+.document-scores.is-good .document-scores-gradein,
+.quiz-item-gradein-score.is-good .quiz-item-gradein-score_wrap { background-color: green; color: white; }
+.document-scores.is-bad .document-scores-gradein,
+.quiz-item-gradein-score.is-bad .quiz-item-gradein-score_wrap { background-color: red; color: white; }
+
+.quiz-item-gradein-score-digits-span { border-color: transparent; }
+
+.document-scores-gradein,
+.quiz-item,
+.quiz-item-gradein-score_wrap { background-color: white; }
+.document-scores-button { color: white; }
+
+html, body,
+main,
+.document { background-color: #eee; }
+
+.quiz-item-gradein-score-digits-span.is-editable { border-color: #aaa; }
+
+.quiz-item-gradein-content-answer p.is-dot:before { background-color: black; }
+.document-scores-button { background: black !important; }
+/*** END COLORS ***/
+
+/*** FONTS ***/
+@font-face{
+	font-family:"OCR A";src:url("ocraext.ttf");/*src:url("../../assets/fonts/ALPHABETH.eot") format("embedded-opentype"),url("../../assets/fonts/ALPHABETH.woff2") format("woff2"),url("../../assets/fonts/ALPHABETH.woff") format("woff"),url("../../assets/fonts/ALPHABETH.ttf") format("trutype"),url("../../assets/fonts/ALPHABETH.svg") format("svg");*/}
+@font-face{
+	font-family:"Calibri";src:url("calibri.ttf");/*src:url("../../assets/fonts/ALPHABETH.eot") format("embedded-opentype"),url("../../assets/fonts/ALPHABETH.woff2") format("woff2"),url("../../assets/fonts/ALPHABETH.woff") format("woff"),url("../../assets/fonts/ALPHABETH.ttf") format("trutype"),url("../../assets/fonts/ALPHABETH.svg") format("svg");*/}
+
+.header-title-sub { font-family: "OCR A", sans-serif; }
+body { font-family:"Calibri", serif; }
+ {font-family:"Arial Black", sans-serif;}
+ 
+	
+ 
+.document-scores-gradein-digits.is-main { font-size: 1.9em; }
+
+.document-figure,
+.document-figure-figcaption,
+.quiz-item-gradein-score-digits-span.is-editable { text-align: center; }
+.footer,
+.header-logo { text-align: right; }
+
+.document-figure-figcaption a { font-variant: small-caps; }
+.quiz-item-context p.is-bold,
+.quiz-item-title { font-weight: bold; }
+.quiz-item-title { text-transform: uppercase; }
+
+.d-bold { font-weight: bold; }
+.d-underline { text-decoration: underline; }
+/*** END FONTS ***/
+
+/*** MEDIA ***/
+.header-button { background-image: url("icon_certificate_black.png"); }
+.header-button {
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 75%;
+}
+/*** END MEDIA ***/
+
+/*** PAGE: APP ***/
+	/*** COMMONS ***/
+	.quiz-item,
+	.quiz-item-gradein-score_wrap { border-radius: .25em 0 0 .25em; }
+
+	/*** .document ***/
+	.document-scores-gradein-digits { display: flex; }
+	.document-scores-gradein-digits { justify-content: center; }
+	
+	.document {
+		position: fixed; top: 0; left: 0;
+		height: 100%;
+		padding: 1em;
+//		border: 1px solid purple;
+	}
+	
+	.document-figure {
+		position: relative;
+	}
+	.document-figure-figcaption {
+		position: absolute; top: 55%; left: 0;
+		width: 100%;
+		display: block;
+	}
+	.document-figure-figcaption a {
+		padding: .5em 1em;
+	}
+	.document-figure-img {
+//		filter: grayscale(100%);
+		filter: blur(.19em) grayscale(100%);
+	}
+	
+	.document-scores {
+		position: absolute; bottom: 1em; left: 0; right: 0;
+		display: block;
+		margin: 0 auto;
+		
+		text-align: center;
+	}
+	.document-scores-button,
+	.document-scores-gradein {
+		border-radius: .19em;
+	}
+	.document-scores-button {
+		display: inline-block;
+		padding: .25em .75em;
+		margin-top: 1em;
+		box-shadow: 0 0 .1em #000;
+	}
+	.document-scores-gradein {	
+		display: inline-block;
+		padding: .5em .75em;
+			
+		box-shadow: 0 0 .19em #000;
+	}
+	.document-scores-gradein-digits.is-main {
+		padding: 0 .19em;
+	}
+	.document-scores-gradein-digits .document-scores-gradein-digits-span:first-child { min-width: 1.9em; }
+	
+	/*** .footer ***/
+	.footer {
+		padding: 1em;
+	}
+	
+	/*** .header ***/
+	.header {
+		padding: 1.9em 1.9em 0 0;
+		padding-bottom: 0;
+	}
+	.header-button {
+		width: 2.5em; height: 2.5em;
+		
+		text-indent: -9999px;
+	}
+	.header-logo-img {
+		width: auto; height: 4em;
+	}
+	
+	/*** .quiz ***/
+	.quiz-item-gradein-score-digits { display: flex; }
+	.quiz-item-gradein-score-digits { justify-content: center; }
+	
+	.quiz {
+//		border: 1px solid purple;
+	}
+	.quiz-item {
+		box-shadow: 0 0 .19em #000;
+		
+//		min-height: 100em;
+	}
+	.quiz-item {
+		padding: 1.9em;
+		margin: 4em 0;
+	}
+	.quiz-item div:first-child,
+	.quiz-item div:first-child p:first-child { padding-top: 0; }
+	.quiz-item-gradein-content-answer,
+	.quiz-item-context,
+	.quiz-item-gradein-content-question {
+		padding: .5em 0;
+	}
+	.quiz-item-gradein-content-answer p,
+	.quiz-item-context p,
+	.quiz-item-gradein-content-question p {
+		padding: .5em 0;
+	}
+	.quiz-item-gradein-content-answer p.is-dot {
+		position: relative;
+		padding-left: 4em;
+	}
+		.quiz-item-gradein-content-answer p.is-dot:before {
+			content: ""; position: absolute; top: .75em; left: 3em;
+			width: .5em; height: .5em;
+			display: block;
+			border-radius: 50%;
+		}
+	.quiz-item-gradein-score {
+		position: sticky; top: 0; left: 0;
+		display: inline-block;
+		
+//		border: 1px solid purple;
+	}
+		.quiz-item-gradein-score_wrap {
+			position: absolute; top: 0; right: 100%;
+			margin-right: 1.9em;
+			
+			box-shadow: -.1em 0 .1em #000;
+		}
+	.quiz-item-gradein-score-digits {
+	}
+	.quiz-item-gradein-score-digits-span {
+		padding: .19em;
+		border-width: 0 0 .1em 0; border-style: solid;
+	}
+	.quiz-item-gradein-score-title {
+		font-weight: bold;
+		white-space: nowrap;
+	}
+/*** END PAGE: APP ***/
+
+/*** INTERRACTIVITY ***/
+.header-logo-img { cursor: pointer; }
+
+.document-figure-figcaption a:hover,
+.document-figure-figcaption a:active,
+.document-figure-figcaption a:focus { text-decoration: underline; }
+/*** END INTERRACTIVITY ***/
+
+/*** MEDIA QUERIES ***/
+@media screen and (max-width: 50em) {
+	body { font-size: 16px; }
+	
+	/*** PAGE: APP ***/
+	.document { z-index: 10; }
+	.header-button { z-index: 20; }
+	
+	.document { width: 100%; }
+	.header,
+	.quiz { width: 75%; position: relative; left: 25%; }
+	
+	.document-figure-img {
+		width: auto; max-height: 75vh;
+		
+		border: 1px solid green;
+	}
+	
+	.header-button {
+		position: fixed; top: 7em; left: 1.9em;
+	}
+	
+	.quiz-item-gradein-score_wrap {
+		padding: .25em .5em .35em .5em !important;
+	}
+	
+	.document { display: none; }
+	#chkbx4menu:checked ~ main .document { display: block !important; }
+}
+@media screen and (min-width: 50em) {
+	body { font-size: 19px; }
+	
+	/*** PAGE: APP ***/
+	.document-figure {// display: flex; }
+	
+	.document { width: 35%; }
+	.header,
+	.quiz { width: 65%; position: relative; left: 35%; }
+	
+	.document {
+		padding-right: 4em;
+	}
+	
+	.header-button { display: none; }
+	
+	.quiz-item-gradein-score_wrap {
+		padding: .5em .75em !important;
+	}
+}
+/*** MEDIA QUERIES ***/
+
+/*** DECORATION ***/
+	/*** .d-cssCentered ***/
+	.d-cssCentered { display: flex; }
+	.d-cssCentered.m-gallery-quote { flex-direction: column; }
+	.d-cssCentered { align-items: center; justify-content: center; }
+	.d-cssCentered.nav-aside { justify-content: flex-end; }
+
+	/*** .d-midWrap ***/
+	.d-midWrap {
+		max-width: 75em;
+		margin: 0 auto;
+	}
+/*** END DECORATION ***/
+
+/*** CSS-HACKS ***/
+	.header-logo-caption { width: 0; height: 0; color: transparent; visibility: hidden; }
+/*** END CSS-HACKS ***/
+
+/*** SANDBOX ***/
+	.quiz-item-gradein-score-digits-span.is-editable {
+		min-width: 1.9em;
+		width: 2.5em !important;
+		background-color: transparent !important;
+		text-align: right;
+		color: white !important;
+	}
+	.quiz-item-gradein-score-digits-span.is-editable:active,
+	.quiz-item-gradein-score-digits-span.is-editable:focus { background-color: #eee !important; background: #eee !important; color: black !important; }
+/*** END SANDBOX ***/
+		</style>
+		<!--
+		<link rel="manifest" href="manifest.json" />
+		-->
+		
+		<meta name="geo.region" content="ZA-GT" />
+		<meta name="geo.placename" content="Johannesburg" />
+		
+		<link rel="canonical" href="https://gradein.intobinary.org" />
+		<link rel="shortlink" href="https://gradein.intobinary.org" />
+	</head>
+	
+	<body>
+		<input type="checkbox" id="chkbx4menu" name="chkbx4menu" />
+		<main><form>
+			<header class="header">
+				<figure class="header-logo">
+					<a href="https://intobinary.org"><img src="logo_gradein_black.png" class="header-logo-img" alt="Logo of 'GradeIn' by Into Binary" /></a>
+					<figcaption class="header-logo-caption">Logo of GradeIn by Into Binary</figcaption>
+				</figure>
+				
+				<div class="header-hgroup">
+					<h5><span class="d-bold">Course:</span> Information Systems 621</h5>
+					<h5><span class="d-bold">Type:</span> Assignment</h5>
+					<h5><span class="d-bold">Semester:</span> (nb) A semester 1 course done in semester 2.</h5>
+				</div>
+				
+				<label for="chkbx4menu" class="header-button">Menu</label>
+			</header>
+		
+			<section class="document">
+				<figure class="document-figure">
+					<img src="Information-Systems-621-B.png" class="document-figure-img" />
+					
+					<figcaption class="document-figure-figcaption"><a href="assignments/2024/Information-Systems-621-B.pdf" download>Download</a></figcaption>
+				</figure>
+				
+				<div class="document-scores js-gradein_wrap">
+					<div class="document-scores-gradein">
+						<div class="document-scores-gradein-digits is-sub">
+							<span class="document-scores-gradein-digits-span js-gradein-1"></span>
+							<span class="document-scores-gradein-digits-span">/</span>
+							<span class="document-scores-gradein-digits-span">90</span>
+						</div>
+						
+						<div class="document-scores-gradein-digits is-main">
+							<span class="document-scores-gradein-digits-span js-gradein-2"></span>
+							<span class="document-scores-gradein-digits-span">/</span>
+							<span class="document-scores-gradein-digits-span">100</span>
+						</div>
+					</div>
+					
+					<br />
+					<input type="submit" class="document-scores-button" value="Validate GradeIn" onsubmit="doValidation()" />
+				</div>
+			</section>
+			
+			<section class="quiz">
+				<div class="quiz-item"><!--
+				/{"context"=>["A multinational corporation is facing challenges in efficiently managing and storing vast amounts of data generated across its diverse business units. The organization is exploring various enterprise storage solutions to enhance data accessibility, security, and overall management. As a data management consultant, you are tasked with analyzing and recommending the most suitable enterprise storage solution for the corporation. The two primary forms under consideration are network-attached storage (NAS) and storage area networks (SANs)."]}
+				/{"questions"=>[{1.1=>[{"question"=>"Analyze the suitability of Storage Area Networks (SANs) in addressing the corporation's need for high-performance and secure data storage."}, {"points"=>10}, {"answer"=>["Storage Area Networks (SANs) are ideal for multinational corporations managing large volumes of data because they are built as specialized, high-speed networks that directly link data storage devices to computers throughout the organization. One of the main benefits of SANs is that they handle storage-related network traffic on a separate network, which helps boost overall system performance.", "SANs combine various storage devices, like RAID systems and magnetic tape drives, into a unified storage solution. This makes it easier to manage backups and set up disaster recovery plans, ensuring data security and protection against loss.", "By centralizing storage management, SANs allow organizations to apply consistent data storage policies across all their locations. This is especially important for managing data efficiently and securely across different regions. For example, NorthgateArinso, a global HR services company, used SAN technology to merge separate servers, applications, and databases into a more manageable and adaptable system capable of handling changing workloads."]}]}, {1.2=>[{"question"=>"Evaluate the benefits of adopting Network-Attached Storage (NAS) for centralized data management and accessibility across the organization."}, {"points"=>10}, {"answer"=>["Network-Attached Storage (NAS) is another great option for centralized data management, especially for ensuring easy access across different business units. NAS is assigned its own network address, and its main advantage is that it takes the burden of storage management off individual computers, freeing up resources and allowing faster access to applications and data.", "Users from various departments or locations can share and access the same data across multiple systems, making NAS ideal for large organizations. It's particularly useful for storing data in a central location, managing online applications, and handling digital media, which is perfect for environments that need quick and reliable access to data.", "For example, the Davos Klosters resort implemented NAS to meet the needs of its digital infrastructure, from online ticketing to secure data backups. The system made it easy to expand storage as needed, ensuring the resort could grow its data management as the business scaled.", "In summary, SAN is designed for high-performance, secure enterprise-wide storage, while NAS focuses on efficient data access and centralized management. The best choice between these two solutions depends on the specific needs and priorities of the organization."]}]}]}-->
+					<div class="quiz-item-title">Question 1/3</div>
+				
+					<div class="quiz-item-context">
+						<p>A multinational corporation is facing challenges in efficiently managing and storing vast amounts of data generated across its diverse business units. The organization is exploring various enterprise storage solutions to enhance data accessibility, security, and overall management. As a data management consultant, you are tasked with analyzing and recommending the most suitable enterprise storage solution for the corporation. The two primary forms under consideration are network-attached storage (NAS) and storage area networks (SANs).</p>
+					</div>
+					
+					<!--/1.1{"question"=>"Analyze the suitability of Storage Area Networks (SANs) in addressing the corporation's need for high-performance and secure data storage."}{"points"=>10}{"answer"=>["Storage Area Networks (SANs) are ideal for multinational corporations managing large volumes of data because they are built as specialized, high-speed networks that directly link data storage devices to computers throughout the organization. One of the main benefits of SANs is that they handle storage-related network traffic on a separate network, which helps boost overall system performance.", "SANs combine various storage devices, like RAID systems and magnetic tape drives, into a unified storage solution. This makes it easier to manage backups and set up disaster recovery plans, ensuring data security and protection against loss.", "By centralizing storage management, SANs allow organizations to apply consistent data storage policies across all their locations. This is especially important for managing data efficiently and securely across different regions. For example, NorthgateArinso, a global HR services company, used SAN technology to merge separate servers, applications, and databases into a more manageable and adaptable system capable of handling changing workloads."]}-->
+					<div class="quiz-item-gradein">
+						<div class="quiz-item-gradein-score js-score_wrap"><div class="quiz-item-gradein-score_wrap">
+							<span class="quiz-item-gradein-score-title">Score 1.1</span>
+							<div class="quiz-item-gradein-score-digits">
+								<!--
+								<span class="quiz-item-gradein-score-digits-span is-editable js-score" contenteditable>10</span>
+								-->
+								<input type="number" class="quiz-item-gradein-score-digits-span is-editable js-score" onkeyup="doGradeIn()" min="1" max="10" step="1" required />
+								<span class="quiz-item-gradein-score-digits-span">/</span>
+								<span class="quiz-item-gradein-score-digits-span">10<span>
+							</div>
+						</div></div>
+					
+						<div class="quiz-item-gradein-content">
+							<div class="quiz-item-gradein-content-question">
+								<p>1.1 Analyze the suitability of Storage Area Networks (SANs) in addressing the corporation's need for high-performance and secure data storage. (10)</p>
+							</div>
+							
+							<div class="quiz-item-gradein-content-answer">
+								<p>Storage Area Networks (SANs) are ideal for multinational corporations managing large volumes of data because they are built as specialized, high-speed networks that directly link data storage devices to computers throughout the organization. One of the main benefits of SANs is that they handle storage-related network traffic on a separate network, which helps boost overall system performance.</p>
+								<p>SANs combine various storage devices, like RAID systems and magnetic tape drives, into a unified storage solution. This makes it easier to manage backups and set up disaster recovery plans, ensuring data security and protection against loss.</p>
+								<p>By centralizing storage management, SANs allow organizations to apply consistent data storage policies across all their locations. This is especially important for managing data efficiently and securely across different regions. For example, NorthgateArinso, a global HR services company, used SAN technology to merge separate servers, applications, and databases into a more manageable and adaptable system capable of handling changing workloads.</p>
+							</div>
+						</div>
+					</div>
+					<!--/1.2{"question"=>"Evaluate the benefits of adopting Network-Attached Storage (NAS) for centralized data management and accessibility across the organization."}{"points"=>10}{"answer"=>["Network-Attached Storage (NAS) is another great option for centralized data management, especially for ensuring easy access across different business units. NAS is assigned its own network address, and its main advantage is that it takes the burden of storage management off individual computers, freeing up resources and allowing faster access to applications and data.", "Users from various departments or locations can share and access the same data across multiple systems, making NAS ideal for large organizations. It's particularly useful for storing data in a central location, managing online applications, and handling digital media, which is perfect for environments that need quick and reliable access to data.", "For example, the Davos Klosters resort implemented NAS to meet the needs of its digital infrastructure, from online ticketing to secure data backups. The system made it easy to expand storage as needed, ensuring the resort could grow its data management as the business scaled.", "In summary, SAN is designed for high-performance, secure enterprise-wide storage, while NAS focuses on efficient data access and centralized management. The best choice between these two solutions depends on the specific needs and priorities of the organization."]}-->
+					<div class="quiz-item-gradein">
+						<div class="quiz-item-gradein-score js-score_wrap"><div class="quiz-item-gradein-score_wrap">
+							<span class="quiz-item-gradein-score-title">Score 1.2</span>
+							<div class="quiz-item-gradein-score-digits">
+								<!--
+								<span class="quiz-item-gradein-score-digits-span is-editable js-score" contenteditable>10</span>
+								-->
+								<input type="number" class="quiz-item-gradein-score-digits-span is-editable js-score" onkeyup="doGradeIn()" min="1" max="10" step="1" required />
+								<span class="quiz-item-gradein-score-digits-span">/</span>
+								<span class="quiz-item-gradein-score-digits-span">10<span>
+							</div>
+						</div></div>
+					
+						<div class="quiz-item-gradein-content">
+							<div class="quiz-item-gradein-content-question">
+								<p>1.2 Evaluate the benefits of adopting Network-Attached Storage (NAS) for centralized data management and accessibility across the organization. (10)</p>
+							</div>
+							
+							<div class="quiz-item-gradein-content-answer">
+								<p>Network-Attached Storage (NAS) is another great option for centralized data management, especially for ensuring easy access across different business units. NAS is assigned its own network address, and its main advantage is that it takes the burden of storage management off individual computers, freeing up resources and allowing faster access to applications and data.</p>
+								<p>Users from various departments or locations can share and access the same data across multiple systems, making NAS ideal for large organizations. It's particularly useful for storing data in a central location, managing online applications, and handling digital media, which is perfect for environments that need quick and reliable access to data.</p>
+								<p>For example, the Davos Klosters resort implemented NAS to meet the needs of its digital infrastructure, from online ticketing to secure data backups. The system made it easy to expand storage as needed, ensuring the resort could grow its data management as the business scaled.</p>
+								<p>In summary, SAN is designed for high-performance, secure enterprise-wide storage, while NAS focuses on efficient data access and centralized management. The best choice between these two solutions depends on the specific needs and priorities of the organization.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="quiz-item"><!--
+				/{"context"=>["[is-bold]Enhancing University Administrative Processes with a Computer-Based Information System (CBIS)", "A renowned university is grappling with challenges in its administrative processes, such as student  enrollment, course registration, and faculty management. The university administration is considering the implementation of a Computer-Based Information System (CBIS) to streamline these processes and enhance overall efficiency.", "The university currently manages student records, course schedules, and faculty information through traditional paper-based systems, leading to delays, errors, and inefficiencies. The administration envisions a CBIS that integrates various components such as hardware, software, databases, telecommunications, people, and procedures to transform data into valuable information, ultimately improving administrative workflows."]}
+				/{"questions"=>[{2.1=>[{"question"=>"Identify and analyze the specific hardware components required for implementing the proposed CBIS in the university."}, {"points"=>10}, {"answer"=>["The key hardware components needed to set up a Computer-Based Information System (CBIS) in a university include devices for input, processing, data storage, and output. These components are essential for managing tasks like student records, course schedules, and faculty information. They include:", "[is-dot]Input Devices: Tools like keyboards, mice, scanners, and magnetic ink character readers, which allow users to enter data into the system for digital management of university information.", "[is-dot]Processing Devices: The central processing unit (CPU), including the arithmetic/logic unit (ALU) and control unit, handles data processing, performing necessary calculations and logical comparisons for managing large amounts of university data.", "[is-dot]Memory: The system will require both primary memory (RAM) for quick access to active data and secondary storage for long-term data retention.", "[is-dot]Output Devices: Monitors display information on-screen, while printers generate physical reports when needed.", "[is-dot]Storage: Hard drives, solid-state drives (SSDs), and network-attached storage (NAS) provide the space to store large volumes of student and faculty data securely."]}]}, {2.2=>[{"question"=>"Evaluate the telecommunication infrastructure required to ensure seamless connectivity within the university's CBIS."}, {"points"=>10}, {"answer"=>["To ensure seamless connectivity within the university's CBIS, a well-structured telecommunication infrastructure is essential. This system would include Local Area Networks (LANs) for intra-campus communication, enabling different departments to share information efficiently. Wide Area Networks (WANs) would be used for communication between various campuses or external partners. For mobility, Wi-Fi networks are essential, allowing students, staff, and faculty to connect wirelessly to the CBIS using laptops, smartphones, or tablets. In addition, Internet Protocol (IP) Networks would manage voice-over-IP services, enabling efficient communication over the internet. This infrastructure ensures that all users can access the CBIS without interruptions, regardless of their physical location on or off-campus."]}]}, {2.3=>[{"question"=>"Propose training programs and change management strategies to facilitate the transition from traditional processes to the new system."}, {"points"=>10}, {"answer"=>["Transitioning from traditional paper-based processes to a CBIS requires comprehensive training programs and a structured change management strategy. User training should be provided to all key stakeholders, including administrative staff, faculty members, and students. These training sessions should be tailored to their specific roles, focusing on how the CBIS can enhance day-to-day activities like course registration, grading, and managing student records. Additionally, hands-on workshops will allow users to familiarize themselves with the system through practical exercises, resolving any issues they may encounter. A robust change management strategy is crucial for addressing resistance to the new system. This strategy should involve clear communication about the benefits of CBIS, ongoing updates about the implementation process, and support services, such as a dedicated help desk, to address any post-deployment issues and ensure a smooth transition."]}]}, {2.4=>[{"question"=>"Identify potential challenges and risks associated with implementing the CBIS in a university setting."}, {"points"=>10}, {"answer"=>["Several challenges and risks are associated with implementing a CBIS in a university setting. Technical challenges may arise, particularly when integrating the CBIS with existing legacy systems, which could cause disruptions during the data migration process. The cost of implementation is another potential issue, as acquiring new hardware, developing software, and providing training can be expensive. Data security risks are also a concern since the CBIS will store sensitive information related to students and faculty. Robust security measures such as encryption, regular audits, and access controls will be necessary to prevent data breaches. User resistance is another possible risk, particularly from staff members or faculty who are used to traditional systems. Without proper training and support, they may resist adopting the new system. Lastly, ongoing maintenance will be required to keep the CBIS functional and up-to-date, presenting a long-term cost and resource commitment for the university."]}]}]}-->
+					<div class="quiz-item-title">Question 2/3</div>
+				
+					<div class="quiz-item-context">
+						<p class="is-bold">Enhancing University Administrative Processes with a Computer-Based Information System (CBIS)</p>
+						<p>A renowned university is grappling with challenges in its administrative processes, such as student  enrollment, course registration, and faculty management. The university administration is considering the implementation of a Computer-Based Information System (CBIS) to streamline these processes and enhance overall efficiency.</p>
+						<p>The university currently manages student records, course schedules, and faculty information through traditional paper-based systems, leading to delays, errors, and inefficiencies. The administration envisions a CBIS that integrates various components such as hardware, software, databases, telecommunications, people, and procedures to transform data into valuable information, ultimately improving administrative workflows.</p>
+					</div>
+					
+					<!--/2.1{"question"=>"Identify and analyze the specific hardware components required for implementing the proposed CBIS in the university."}{"points"=>10}{"answer"=>["The key hardware components needed to set up a Computer-Based Information System (CBIS) in a university include devices for input, processing, data storage, and output. These components are essential for managing tasks like student records, course schedules, and faculty information. They include:", "[is-dot]Input Devices: Tools like keyboards, mice, scanners, and magnetic ink character readers, which allow users to enter data into the system for digital management of university information.", "[is-dot]Processing Devices: The central processing unit (CPU), including the arithmetic/logic unit (ALU) and control unit, handles data processing, performing necessary calculations and logical comparisons for managing large amounts of university data.", "[is-dot]Memory: The system will require both primary memory (RAM) for quick access to active data and secondary storage for long-term data retention.", "[is-dot]Output Devices: Monitors display information on-screen, while printers generate physical reports when needed.", "[is-dot]Storage: Hard drives, solid-state drives (SSDs), and network-attached storage (NAS) provide the space to store large volumes of student and faculty data securely."]}-->
+					<div class="quiz-item-gradein">
+						<div class="quiz-item-gradein-score js-score_wrap"><div class="quiz-item-gradein-score_wrap">
+							<span class="quiz-item-gradein-score-title">Score 2.1</span>
+							<div class="quiz-item-gradein-score-digits">
+								<!--
+								<span class="quiz-item-gradein-score-digits-span is-editable js-score" contenteditable>10</span>
+								-->
+								<input type="number" class="quiz-item-gradein-score-digits-span is-editable js-score" onkeyup="doGradeIn()" min="1" max="10" step="1" required />
+								<span class="quiz-item-gradein-score-digits-span">/</span>
+								<span class="quiz-item-gradein-score-digits-span">10<span>
+							</div>
+						</div></div>
+					
+						<div class="quiz-item-gradein-content">
+							<div class="quiz-item-gradein-content-question">
+								<p>2.1 Identify and analyze the specific hardware components required for implementing the proposed CBIS in the university. (10)</p>
+							</div>
+							
+							<div class="quiz-item-gradein-content-answer">
+								<p>The key hardware components needed to set up a Computer-Based Information System (CBIS) in a university include devices for input, processing, data storage, and output. These components are essential for managing tasks like student records, course schedules, and faculty information. They include:</p>
+								<p class="is-dot">Input Devices: Tools like keyboards, mice, scanners, and magnetic ink character readers, which allow users to enter data into the system for digital management of university information.</p>
+								<p class="is-dot">Processing Devices: The central processing unit (CPU), including the arithmetic/logic unit (ALU) and control unit, handles data processing, performing necessary calculations and logical comparisons for managing large amounts of university data.</p>
+								<p class="is-dot">Memory: The system will require both primary memory (RAM) for quick access to active data and secondary storage for long-term data retention.</p>
+								<p class="is-dot">Output Devices: Monitors display information on-screen, while printers generate physical reports when needed.</p>
+								<p class="is-dot">Storage: Hard drives, solid-state drives (SSDs), and network-attached storage (NAS) provide the space to store large volumes of student and faculty data securely.</p>
+							</div>
+						</div>
+					</div>
+					<!--/2.2{"question"=>"Evaluate the telecommunication infrastructure required to ensure seamless connectivity within the university's CBIS."}{"points"=>10}{"answer"=>["To ensure seamless connectivity within the university's CBIS, a well-structured telecommunication infrastructure is essential. This system would include Local Area Networks (LANs) for intra-campus communication, enabling different departments to share information efficiently. Wide Area Networks (WANs) would be used for communication between various campuses or external partners. For mobility, Wi-Fi networks are essential, allowing students, staff, and faculty to connect wirelessly to the CBIS using laptops, smartphones, or tablets. In addition, Internet Protocol (IP) Networks would manage voice-over-IP services, enabling efficient communication over the internet. This infrastructure ensures that all users can access the CBIS without interruptions, regardless of their physical location on or off-campus."]}-->
+					<div class="quiz-item-gradein">
+						<div class="quiz-item-gradein-score js-score_wrap"><div class="quiz-item-gradein-score_wrap">
+							<span class="quiz-item-gradein-score-title">Score 2.2</span>
+							<div class="quiz-item-gradein-score-digits">
+								<!--
+								<span class="quiz-item-gradein-score-digits-span is-editable js-score" contenteditable>10</span>
+								-->
+								<input type="number" class="quiz-item-gradein-score-digits-span is-editable js-score" onkeyup="doGradeIn()" min="1" max="10" step="1" required />
+								<span class="quiz-item-gradein-score-digits-span">/</span>
+								<span class="quiz-item-gradein-score-digits-span">10<span>
+							</div>
+						</div></div>
+					
+						<div class="quiz-item-gradein-content">
+							<div class="quiz-item-gradein-content-question">
+								<p>2.2 Evaluate the telecommunication infrastructure required to ensure seamless connectivity within the university's CBIS. (10)</p>
+							</div>
+							
+							<div class="quiz-item-gradein-content-answer">
+								<p>To ensure seamless connectivity within the university's CBIS, a well-structured telecommunication infrastructure is essential. This system would include Local Area Networks (LANs) for intra-campus communication, enabling different departments to share information efficiently. Wide Area Networks (WANs) would be used for communication between various campuses or external partners. For mobility, Wi-Fi networks are essential, allowing students, staff, and faculty to connect wirelessly to the CBIS using laptops, smartphones, or tablets. In addition, Internet Protocol (IP) Networks would manage voice-over-IP services, enabling efficient communication over the internet. This infrastructure ensures that all users can access the CBIS without interruptions, regardless of their physical location on or off-campus.</p>
+							</div>
+						</div>
+					</div>
+					<!--/2.3{"question"=>"Propose training programs and change management strategies to facilitate the transition from traditional processes to the new system."}{"points"=>10}{"answer"=>["Transitioning from traditional paper-based processes to a CBIS requires comprehensive training programs and a structured change management strategy. User training should be provided to all key stakeholders, including administrative staff, faculty members, and students. These training sessions should be tailored to their specific roles, focusing on how the CBIS can enhance day-to-day activities like course registration, grading, and managing student records. Additionally, hands-on workshops will allow users to familiarize themselves with the system through practical exercises, resolving any issues they may encounter. A robust change management strategy is crucial for addressing resistance to the new system. This strategy should involve clear communication about the benefits of CBIS, ongoing updates about the implementation process, and support services, such as a dedicated help desk, to address any post-deployment issues and ensure a smooth transition."]}-->
+					<div class="quiz-item-gradein">
+						<div class="quiz-item-gradein-score js-score_wrap"><div class="quiz-item-gradein-score_wrap">
+							<span class="quiz-item-gradein-score-title">Score 2.3</span>
+							<div class="quiz-item-gradein-score-digits">
+								<!--
+								<span class="quiz-item-gradein-score-digits-span is-editable js-score" contenteditable>10</span>
+								-->
+								<input type="number" class="quiz-item-gradein-score-digits-span is-editable js-score" onkeyup="doGradeIn()" min="1" max="10" step="1" required />
+								<span class="quiz-item-gradein-score-digits-span">/</span>
+								<span class="quiz-item-gradein-score-digits-span">10<span>
+							</div>
+						</div></div>
+					
+						<div class="quiz-item-gradein-content">
+							<div class="quiz-item-gradein-content-question">
+								<p>2.3 Propose training programs and change management strategies to facilitate the transition from traditional processes to the new system. (10)</p>
+							</div>
+							
+							<div class="quiz-item-gradein-content-answer">
+								<p>Transitioning from traditional paper-based processes to a CBIS requires comprehensive training programs and a structured change management strategy. User training should be provided to all key stakeholders, including administrative staff, faculty members, and students. These training sessions should be tailored to their specific roles, focusing on how the CBIS can enhance day-to-day activities like course registration, grading, and managing student records. Additionally, hands-on workshops will allow users to familiarize themselves with the system through practical exercises, resolving any issues they may encounter. A robust change management strategy is crucial for addressing resistance to the new system. This strategy should involve clear communication about the benefits of CBIS, ongoing updates about the implementation process, and support services, such as a dedicated help desk, to address any post-deployment issues and ensure a smooth transition.</p>
+							</div>
+						</div>
+					</div>
+					<!--/2.4{"question"=>"Identify potential challenges and risks associated with implementing the CBIS in a university setting."}{"points"=>10}{"answer"=>["Several challenges and risks are associated with implementing a CBIS in a university setting. Technical challenges may arise, particularly when integrating the CBIS with existing legacy systems, which could cause disruptions during the data migration process. The cost of implementation is another potential issue, as acquiring new hardware, developing software, and providing training can be expensive. Data security risks are also a concern since the CBIS will store sensitive information related to students and faculty. Robust security measures such as encryption, regular audits, and access controls will be necessary to prevent data breaches. User resistance is another possible risk, particularly from staff members or faculty who are used to traditional systems. Without proper training and support, they may resist adopting the new system. Lastly, ongoing maintenance will be required to keep the CBIS functional and up-to-date, presenting a long-term cost and resource commitment for the university."]}-->
+					<div class="quiz-item-gradein">
+						<div class="quiz-item-gradein-score js-score_wrap"><div class="quiz-item-gradein-score_wrap">
+							<span class="quiz-item-gradein-score-title">Score 2.4</span>
+							<div class="quiz-item-gradein-score-digits">
+								<!--
+								<span class="quiz-item-gradein-score-digits-span is-editable js-score" contenteditable>10</span>
+								-->
+								<input type="number" class="quiz-item-gradein-score-digits-span is-editable js-score" onkeyup="doGradeIn()" min="1" max="10" step="1" required />
+								<span class="quiz-item-gradein-score-digits-span">/</span>
+								<span class="quiz-item-gradein-score-digits-span">10<span>
+							</div>
+						</div></div>
+					
+						<div class="quiz-item-gradein-content">
+							<div class="quiz-item-gradein-content-question">
+								<p>2.4 Identify potential challenges and risks associated with implementing the CBIS in a university setting. (10)</p>
+							</div>
+							
+							<div class="quiz-item-gradein-content-answer">
+								<p>Several challenges and risks are associated with implementing a CBIS in a university setting. Technical challenges may arise, particularly when integrating the CBIS with existing legacy systems, which could cause disruptions during the data migration process. The cost of implementation is another potential issue, as acquiring new hardware, developing software, and providing training can be expensive. Data security risks are also a concern since the CBIS will store sensitive information related to students and faculty. Robust security measures such as encryption, regular audits, and access controls will be necessary to prevent data breaches. User resistance is another possible risk, particularly from staff members or faculty who are used to traditional systems. Without proper training and support, they may resist adopting the new system. Lastly, ongoing maintenance will be required to keep the CBIS functional and up-to-date, presenting a long-term cost and resource commitment for the university.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="quiz-item"><!--
+				/{"context"=>["[is-bold]Case Study: Analyzing Competitive Forces in the Smartphone Industry", "The smartphone industry is highly dynamic and competitive, with constant technological advancements, shifting consumer preferences, and fierce rivalry among key players. Michael Porter's Five Forces model provides a valuable framework for understanding the competitive landscape within this industry.", "Imagine you are a business consultant hired to analyze the competitive forces in the smartphone industry. Your client is a new entrant planning to introduce an innovative smartphone to the market. They seek strategic insights into the industry dynamics to make informed decisions and gain a competitive edge."]}
+				/{"questions"=>[{3.1=>[{"question"=>"Evaluate the barriers to entry in the smartphone industry and provide recommendations on how your client, as a new entrant, can overcome these barriers and establish a foothold in the market."}, {"points"=>15}, {"answer"=>["The smartphone industry presents several barriers to entry for new players. One of the most significant is economies of scale. Established companies like Apple and Samsung have extensive production capacities, allowing them to produce devices at a lower cost per unit. New entrants may struggle to compete on price unless they can scale quickly. Another key barrier is brand loyalty. Consumers are often attached to established brands due to their reputation for quality, reliability, and innovation. This loyalty can make it difficult for a new entrant to attract a customer base.", "Capital requirements are another major barrier. Developing a smartphone requires substantial investment in research and development (R&D), manufacturing facilities, and marketing efforts. Additionally, patents and intellectual property rights play a huge role in the industry. Many technologies used in smartphones are patented by existing players, making it challenging for newcomers to develop devices without infringing on these patents.", "To overcome these barriers, your client could focus on product differentiation by offering unique features that aren't present in existing smartphones. For example, they could emphasize a superior user experience or provide groundbreaking technology that addresses an unmet need in the market, such as improved battery life or enhanced durability. Partnering with component suppliers and contract manufacturers could help lower production costs and reduce the impact of economies of scale. Additionally, building a strong marketing campaign focused on innovation and value for money could help overcome the brand loyalty barrier. Offering competitive pricing strategies or even leveraging niche markets may also allow your client to carve out a foothold in the industry."]}]}, {3.2=>[{"question"=>"Investigate potential substitute products or technologies that could pose a threat to the traditional smartphone market and advise your client on how to adapt to emerging trends."}, {"points"=>15}, {"answer"=>["In the dynamic smartphone industry, several substitute products or technologies pose a threat to traditional smartphones. For instance, wearable technology such as smartwatches is becoming more sophisticated, offering many of the same functionalities as smartphones, such as messaging, internet browsing, and voice calling. Another potential substitute is virtual assistants and smart home devices, which are increasingly capable of handling tasks traditionally performed on smartphones.", "Additionally, tablets and laptops continue to improve in terms of portability and connectivity, making them viable alternatives for many consumers who may not require the constant connectivity of a smartphone. There is also a growing trend towards multi-functional devices, like augmented reality (AR) glasses or foldable smartphones, which could alter consumer preferences.", "To adapt to these emerging trends, your client should focus on integrating new technologies into their smartphones, such as compatibility with wearable devices and smart home systems. By positioning their smartphone as part of an ecosystem of connected devices, they can stay relevant in a changing technological landscape. They should also keep an eye on advancements in 5G and AI to offer enhanced capabilities that could make their smartphones indispensable to consumers who might otherwise consider substitutes."]}]}]}-->
+					<div class="quiz-item-title">Question 3/3</div>
+				
+					<div class="quiz-item-context">
+						<p class="is-bold">Case Study: Analyzing Competitive Forces in the Smartphone Industry</p>
+						<p>The smartphone industry is highly dynamic and competitive, with constant technological advancements, shifting consumer preferences, and fierce rivalry among key players. Michael Porter's Five Forces model provides a valuable framework for understanding the competitive landscape within this industry.</p>
+						<p>Imagine you are a business consultant hired to analyze the competitive forces in the smartphone industry. Your client is a new entrant planning to introduce an innovative smartphone to the market. They seek strategic insights into the industry dynamics to make informed decisions and gain a competitive edge.</p>
+					</div>
+					
+					<!--/3.1{"question"=>"Evaluate the barriers to entry in the smartphone industry and provide recommendations on how your client, as a new entrant, can overcome these barriers and establish a foothold in the market."}{"points"=>15}{"answer"=>["The smartphone industry presents several barriers to entry for new players. One of the most significant is economies of scale. Established companies like Apple and Samsung have extensive production capacities, allowing them to produce devices at a lower cost per unit. New entrants may struggle to compete on price unless they can scale quickly. Another key barrier is brand loyalty. Consumers are often attached to established brands due to their reputation for quality, reliability, and innovation. This loyalty can make it difficult for a new entrant to attract a customer base.", "Capital requirements are another major barrier. Developing a smartphone requires substantial investment in research and development (R&D), manufacturing facilities, and marketing efforts. Additionally, patents and intellectual property rights play a huge role in the industry. Many technologies used in smartphones are patented by existing players, making it challenging for newcomers to develop devices without infringing on these patents.", "To overcome these barriers, your client could focus on product differentiation by offering unique features that aren't present in existing smartphones. For example, they could emphasize a superior user experience or provide groundbreaking technology that addresses an unmet need in the market, such as improved battery life or enhanced durability. Partnering with component suppliers and contract manufacturers could help lower production costs and reduce the impact of economies of scale. Additionally, building a strong marketing campaign focused on innovation and value for money could help overcome the brand loyalty barrier. Offering competitive pricing strategies or even leveraging niche markets may also allow your client to carve out a foothold in the industry."]}-->
+					<div class="quiz-item-gradein">
+						<div class="quiz-item-gradein-score js-score_wrap"><div class="quiz-item-gradein-score_wrap">
+							<span class="quiz-item-gradein-score-title">Score 3.1</span>
+							<div class="quiz-item-gradein-score-digits">
+								<!--
+								<span class="quiz-item-gradein-score-digits-span is-editable js-score" contenteditable>10</span>
+								-->
+								<input type="number" class="quiz-item-gradein-score-digits-span is-editable js-score" onkeyup="doGradeIn()" min="1" max="15" step="1" required />
+								<span class="quiz-item-gradein-score-digits-span">/</span>
+								<span class="quiz-item-gradein-score-digits-span">15<span>
+							</div>
+						</div></div>
+					
+						<div class="quiz-item-gradein-content">
+							<div class="quiz-item-gradein-content-question">
+								<p>3.1 Evaluate the barriers to entry in the smartphone industry and provide recommendations on how your client, as a new entrant, can overcome these barriers and establish a foothold in the market. (15)</p>
+							</div>
+							
+							<div class="quiz-item-gradein-content-answer">
+								<p>The smartphone industry presents several barriers to entry for new players. One of the most significant is economies of scale. Established companies like Apple and Samsung have extensive production capacities, allowing them to produce devices at a lower cost per unit. New entrants may struggle to compete on price unless they can scale quickly. Another key barrier is brand loyalty. Consumers are often attached to established brands due to their reputation for quality, reliability, and innovation. This loyalty can make it difficult for a new entrant to attract a customer base.</p>
+								<p>Capital requirements are another major barrier. Developing a smartphone requires substantial investment in research and development (R&D), manufacturing facilities, and marketing efforts. Additionally, patents and intellectual property rights play a huge role in the industry. Many technologies used in smartphones are patented by existing players, making it challenging for newcomers to develop devices without infringing on these patents.</p>
+								<p>To overcome these barriers, your client could focus on product differentiation by offering unique features that aren't present in existing smartphones. For example, they could emphasize a superior user experience or provide groundbreaking technology that addresses an unmet need in the market, such as improved battery life or enhanced durability. Partnering with component suppliers and contract manufacturers could help lower production costs and reduce the impact of economies of scale. Additionally, building a strong marketing campaign focused on innovation and value for money could help overcome the brand loyalty barrier. Offering competitive pricing strategies or even leveraging niche markets may also allow your client to carve out a foothold in the industry.</p>
+							</div>
+						</div>
+					</div>
+					<!--/3.2{"question"=>"Investigate potential substitute products or technologies that could pose a threat to the traditional smartphone market and advise your client on how to adapt to emerging trends."}{"points"=>15}{"answer"=>["In the dynamic smartphone industry, several substitute products or technologies pose a threat to traditional smartphones. For instance, wearable technology such as smartwatches is becoming more sophisticated, offering many of the same functionalities as smartphones, such as messaging, internet browsing, and voice calling. Another potential substitute is virtual assistants and smart home devices, which are increasingly capable of handling tasks traditionally performed on smartphones.", "Additionally, tablets and laptops continue to improve in terms of portability and connectivity, making them viable alternatives for many consumers who may not require the constant connectivity of a smartphone. There is also a growing trend towards multi-functional devices, like augmented reality (AR) glasses or foldable smartphones, which could alter consumer preferences.", "To adapt to these emerging trends, your client should focus on integrating new technologies into their smartphones, such as compatibility with wearable devices and smart home systems. By positioning their smartphone as part of an ecosystem of connected devices, they can stay relevant in a changing technological landscape. They should also keep an eye on advancements in 5G and AI to offer enhanced capabilities that could make their smartphones indispensable to consumers who might otherwise consider substitutes."]}-->
+					<div class="quiz-item-gradein">
+						<div class="quiz-item-gradein-score js-score_wrap"><div class="quiz-item-gradein-score_wrap">
+							<span class="quiz-item-gradein-score-title">Score 3.2</span>
+							<div class="quiz-item-gradein-score-digits">
+								<!--
+								<span class="quiz-item-gradein-score-digits-span is-editable js-score" contenteditable>10</span>
+								-->
+								<input type="number" class="quiz-item-gradein-score-digits-span is-editable js-score" onkeyup="doGradeIn()" min="1" max="15" step="1" required />
+								<span class="quiz-item-gradein-score-digits-span">/</span>
+								<span class="quiz-item-gradein-score-digits-span">15<span>
+							</div>
+						</div></div>
+					
+						<div class="quiz-item-gradein-content">
+							<div class="quiz-item-gradein-content-question">
+								<p>3.2 Investigate potential substitute products or technologies that could pose a threat to the traditional smartphone market and advise your client on how to adapt to emerging trends. (15)</p>
+							</div>
+							
+							<div class="quiz-item-gradein-content-answer">
+								<p>In the dynamic smartphone industry, several substitute products or technologies pose a threat to traditional smartphones. For instance, wearable technology such as smartwatches is becoming more sophisticated, offering many of the same functionalities as smartphones, such as messaging, internet browsing, and voice calling. Another potential substitute is virtual assistants and smart home devices, which are increasingly capable of handling tasks traditionally performed on smartphones.</p>
+								<p>Additionally, tablets and laptops continue to improve in terms of portability and connectivity, making them viable alternatives for many consumers who may not require the constant connectivity of a smartphone. There is also a growing trend towards multi-functional devices, like augmented reality (AR) glasses or foldable smartphones, which could alter consumer preferences.</p>
+								<p>To adapt to these emerging trends, your client should focus on integrating new technologies into their smartphones, such as compatibility with wearable devices and smart home systems. By positioning their smartphone as part of an ecosystem of connected devices, they can stay relevant in a changing technological landscape. They should also keep an eye on advancements in 5G and AI to offer enhanced capabilities that could make their smartphones indispensable to consumers who might otherwise consider substitutes.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			
+			<footer class="footer">
+				<p>&copy; 2024 <a href="https://intobinary.org" class="d-underline">Into Binary</a>. All rights reserved.</p>
+			</footer>
+		</form></main>
+		
+		<script>
+			var vTotalScores;
+var vInputValue = 0;
+
+var tagGradeIn2 = document.querySelector(".js-gradein-2");
+var tagGradeInParent = document.querySelector(".js-gradein_wrap");
+var tagScoreParent;
+var tagsScores = document.querySelectorAll(".js-score");
+
+function doGradeIn() {
+	vTotalScores = 0;
+	tagsScores.forEach((input) => {
+		vInputValue = input.value;
+		tagScoreParent = input.closest(".js-score_wrap");
+		
+		if(vInputValue == "") { vInputValue = 0; }
+		else { vInputValue = parseInt(input.value, 10); }
+		if(vInputValue > input.getAttribute("max")) { vInputValue = 0; }
+		if(vInputValue < input.getAttribute("min")) { vInputValue = 0; }
+		
+		vTotalScores += parseInt(vInputValue, 10);
+		
+		tagScoreParent.classList.remove("is-good");
+		tagScoreParent.classList.remove("is-bad");
+		if(input.value != "") {
+			if(vInputValue >= (input.getAttribute("max") / 2)) { tagScoreParent.classList.add("is-good"); }
+			if(vInputValue < (input.getAttribute("max") / 2)) { tagScoreParent.classList.add("is-bad"); }
+		}
+	});
+	
+	document.querySelector(".js-gradein-1").textContent = vTotalScores;
+	document.querySelector(".js-gradein-2").textContent = vTotalScores;
+}
+
+function doValidation() {
+	e.preventDefault();
+	
+	tagGradeInParent.classList.remove("is-good");
+	tagGradeInParent.classList.remove("is-bad");
+	if(tagGradeIn2.value != "") {
+		if(vTotalScores >= 50) { tagGradeInParent.classList.add("is-good"); }
+		if(vTotalScores < 50) { tagGradeInParent.classList.add("is-bad"); }
+	}
+}
+		</script>
+	</body>
+</html>
